@@ -3,8 +3,29 @@ body {
   text-align: center;
 }
 
+h1 {
+	font-size: 6em;
+	margin: 0;
+}
+
+hr {
+	margin: 2.5em auto;
+}
+
+.medium {
+	width: 40%;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+.smaller {
+	font-weight: 100;
+}
+
 .btn {
-	background: rgb(52, 94, 179);
+	background: rgb(175, 175, 175);
 	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
 	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 	color: rgb(243, 243, 243) !important;
@@ -15,3 +36,16 @@ body {
 	text-decoration: none;
 	transition: background-color 0.15s ease-in-out;
 }
+
+.btn.btn-a { 
+	background: rgb(52, 94, 179);	
+}
+
+.btn.btn-b {
+	background-color: #51a351;
+}
+
+.btn.btn-c {
+	background-color: rgb(218, 39, 39);
+}
+
