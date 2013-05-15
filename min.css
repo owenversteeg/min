@@ -1,3 +1,14 @@
 body {
   font-family: Helvetica, sans-serif;
 }
+
+.btn {
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	color: rgb(243, 243, 243) !important;
+	display: inline-block;
+	font-size: 2.5em;
+	padding: 15px 40px 16px;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.15s ease-in-out;
+}
