@@ -12,7 +12,7 @@ hr {
 	margin: 2.5em auto;
 }
 
-.medium {
+.mediumwidth {
 	width: 40%;
 }
 
@@ -20,7 +20,7 @@ h2 {
 	font-size: 2em;
 }
 
-.smaller {
+.thin {
 	font-weight: 100;
 }
 
