@@ -1,8 +1,11 @@
 body {
   font-family: Helvetica, sans-serif;
+  text-align: center;
 }
 
 .btn {
+	background: rgb(52, 94, 179);
+	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
 	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 	color: rgb(243, 243, 243) !important;
 	display: inline-block;
