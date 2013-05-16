@@ -10,7 +10,7 @@ body {
 h1 {
 	font-size: 4em;
 	margin: 0;
-	title {
+	&title {
 		font-size: 7em;
 	}
 }
@@ -43,7 +43,7 @@ h2 {
 	text-decoration: none;
 	margin: auto .7em;
 	border: 1px solid rgb(0, 0, 0);
-	.smooth {
+	&.smooth {
 		transition: background-color 0.15s ease-in-out;
 	}
 }
@@ -88,7 +88,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 	border: 1px solid lightgray;
 	outline: none;
 	padding: 6px;
-	.smooth {
+	&.smooth {
 		transition: border 0.15s ease-in-out;
 	}
 }
