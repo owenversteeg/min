@@ -31,11 +31,6 @@ h2 {
 	font-weight: 100;
 }
 
-.smooth {
-	transition: background-color 0.15s ease-in-out;
-	transition: border 0.15s ease-in-out;
-}
-
 .btn {
 	background: rgb(175, 175, 175);
 	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
@@ -48,6 +43,9 @@ h2 {
 	text-decoration: none;
 	margin: auto .7em;
 	border: 1px solid rgb(0, 0, 0);
+	.smooth {
+		transition: background-color 0.15s ease-in-out;
+	}
 }
 
 .btn.btn-a.smooth:hover {
@@ -90,6 +88,9 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 	border: 1px solid lightgray;
 	outline: none;
 	padding: 6px;
+	.smooth {
+		transition: border 0.15s ease-in-out;
+	}
 }
 
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
