@@ -46,42 +46,37 @@ h2 {
 	&.smooth {
 		transition: background-color 0.15s ease-in-out;
 	}
-}
-
-.btn.btn-a.smooth:hover {
-	background: darken(@btn-a-bg, 10%);
-}
-
-.btn.btn-b.smooth:hover {
-	background: darken(@btn-b-bg, 10%);
-}
-
-.btn.btn-c.smooth:hover {
-	background: darken(@btn-c-bg, 10%);
-}
-
-.btn.btn-a.smooth:active {
-	background: darken(@btn-a-bg, 20%);
-}
-
-.btn.btn-b.smooth:active {
-	background: darken(@btn-b-bg, 20%);
-}
-
-.btn.btn-c.smooth:active {
-	background: darken(@btn-c-bg, 20%);
-}
-
-.btn.btn-a { 
-	background: @btn-a-bg;	
-}
-
-.btn.btn-b {
-	background: @btn-b-bg;
-}
-
-.btn.btn-c {
-	background: @btn-c-bg;
+	&.btn-a { 
+		background: @btn-a-bg;	
+	}
+	&.btn-a:hover {
+		background: darken(@btn-a-bg, 10%);
+	}
+	&.btn-a:active {
+		background: darken(@btn-a-bg, 20%);
+	}
+	&.btn-b {
+		background: @btn-b-bg;
+	}
+	&.btn-b:hover {
+		background: darken(@btn-b-bg, 10%);
+	}
+	&.btn-b:active {
+		background: darken(@btn-b-bg, 20%);
+	}
+	&.btn-c {
+		background: @btn-c-bg;
+	}
+	&.btn-c:hover {
+		background: darken(@btn-c-bg, 10%);
+	}
+	&.btn-c:active {
+		background: darken(@btn-c-bg, 20%);
+	}
+	.btn-small {
+		padding: 7px 19px 10px;
+		font-size: 16px;
+	}
 }
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
