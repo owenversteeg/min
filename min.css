@@ -39,6 +39,7 @@ h2 {
 	text-align: center;
 	text-decoration: none;
 	margin: auto .7em;
+	border: 1px solid rgb(0, 0, 0);
 }
 
 .btn.btn-a { 
