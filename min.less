@@ -1,11 +1,50 @@
-@btn-a-bg: rgb(52, 94, 179);
-@btn-b-bg: #51a351;
-@btn-c-bg: rgb(218, 39, 39);
+/* 
+	General 
+*/
 
 body {
 	font-family: Helvetica, sans-serif;
 	text-align: center;
+	margin: 0px;
 }
+
+hr {
+	margin: 2.5em auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.mediumwidth {
+	width: 40%;
+	margin-left: 30%
+}
+
+@media (max-width:870px) {
+	.mediumwidth {
+		width: 70%;
+		margin-left: 15%
+	}
+}
+
+@media (max-width:520px) {
+	.mediumwidth {
+		width: 100%;
+		margin-left: 0%;
+	}
+	hr.mediumwidth {
+		width: auto;
+	}
+}
+
+.thin {
+	font-weight: 100;
+}
+
+/* 
+	Headings
+*/
 
 h1 {
 	font-size: 4em;
@@ -15,21 +54,17 @@ h1 {
 	}
 }
 
-hr {
-	margin: 2.5em auto;
-}
-
-.mediumwidth {
-	width: 40%;
-}
-
 h2 {
 	font-size: 2em;
 }
 
-.thin {
-	font-weight: 100;
-}
+/* 
+	Buttons 
+*/
+
+@btn-a-bg: rgb(52, 94, 179);
+@btn-b-bg: #51a351;
+@btn-c-bg: rgb(218, 39, 39);
 
 .btn {
 	background: rgb(175, 175, 175);
@@ -41,7 +76,7 @@ h2 {
 	padding: 15px 40px 16px;
 	text-align: center;
 	text-decoration: none;
-	margin: auto .7em;
+	margin: 0 .7em .6em .7em;
 	border: 1px solid rgb(0, 0, 0);
 	&.smooth {
 		transition: background-color 0.15s ease-in-out;
@@ -49,38 +84,42 @@ h2 {
 	&.btn-a { 
 		background: @btn-a-bg;
 		border: 1px solid darken(@btn-a-bg, 20%);
-	}
-	&.btn-a:hover {
-		background: darken(@btn-a-bg, 10%);
-	}
-	&.btn-a:active {
-		background: darken(@btn-a-bg, 20%);
+		&:hover {
+			background: darken(@btn-a-bg, 10%);
+		}
+		&:active {
+			background: darken(@btn-a-bg, 20%);
+		}
 	}
 	&.btn-b {
 		background: @btn-b-bg;
 		border: 1px solid darken(@btn-b-bg, 20%);
-	}
-	&.btn-b:hover {
-		background: darken(@btn-b-bg, 10%);
-	}
-	&.btn-b:active {
-		background: darken(@btn-b-bg, 20%);
+		&:hover {
+			background: darken(@btn-b-bg, 10%);
+		}
+		&:active {
+			background: darken(@btn-b-bg, 20%);
+		}
 	}
 	&.btn-c {
 		background: @btn-c-bg;
 		border: 1px solid darken(@btn-c-bg, 20%);
-	}
-	&.btn-c:hover {
-		background: darken(@btn-c-bg, 10%);
-	}
-	&.btn-c:active {
-		background: darken(@btn-c-bg, 20%);
+		&:hover {
+			background: darken(@btn-c-bg, 10%);
+		}
+		&:active {
+			background: darken(@btn-c-bg, 20%);
+		}
 	}
 	&.btn-small {
 		padding: 7px 19px 10px;
 		font-size: 16px;
 	}
 }
+
+/*
+	Inputs
+*/
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
 	border: 1px solid lightgray;
@@ -96,6 +135,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
 	border: 1px solid rgb(87, 171, 179);
 }
+
 .addon-front {
 	padding: 6px 11px 6px 10px;
 	margin-right: -2px;
@@ -105,4 +145,41 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 	border-right: 0;
 	font-size: .9em;
 	font-family: Arial Unicode MS Regular, sans-serif !important;
+}
+
+/*
+	Navigation
+*/
+
+.navbar {
+	width: 100%;
+	background: black;
+	color: white;
+	text-align: left;
+	height: 1.5em;
+	padding: 1em 0em 0.6em;
+}
+
+.pagename {
+	color: white;
+	padding: 0px 1em 0em 2em;
+	font-weight: bold;
+}
+
+.navbar-link {
+	padding: 0.5em;
+	color: rgb(170, 170, 170);
+	&:hover {
+		color: white;
+	}
+}
+
+@media (max-width:500px) {
+	.navbar a {
+		text-align: center;
+		display: block;
+	}
+	.navbar {
+		height: 7.5em;
+	}
 }
