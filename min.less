@@ -16,11 +16,6 @@ a {
 	text-decoration: none;
 }
 
-.mediumwidth {
-	width: 40%;
-	margin-left: 30%
-}
-
 @media (max-width:870px) {
 	.mediumwidth {
 		width: 70%;
@@ -36,6 +31,11 @@ a {
 	hr.mediumwidth {
 		width: auto;
 	}
+}
+
+.mediumwidth {
+	width: 40%;
+	margin-left: 30%
 }
 
 .thin {
@@ -224,4 +224,12 @@ message {
 	&.great {
 		background: #A7E4AE;
 	}
+}
+
+/*
+	IE hacks
+*/
+
+.ie .mediumwidth hr {
+	margin:100px auto; padding-left: 200px;
 }
