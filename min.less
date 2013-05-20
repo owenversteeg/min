@@ -184,3 +184,44 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 		height: 7.5em;
 	}
 }
+
+/*
+	Tables
+*/
+
+table {
+	width: 100%;
+	border-spacing: 0;
+}
+
+.table th, .table td {
+	padding: 0.5em;
+	line-height: 1.4em;
+	text-align: left;
+	vertical-align: top;
+}
+
+.table td {
+	border-top: 1px solid #dddddd;
+}
+
+tbody tr:nth-child(2n-1) {
+	background: #E0E0E0;
+}
+
+/*
+	Messages
+*/
+
+message {
+	width: 100%;
+	display: block;
+	padding: 2em 0;
+	background: #A7D3E4;
+	&.warning {
+		background: rgb(228, 167, 167);
+	}
+	&.great {
+		background: #A7E4AE;
+	}
+}
