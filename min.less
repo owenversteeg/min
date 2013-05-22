@@ -17,10 +17,15 @@ a {
 	text-decoration: none;
 }
 
+.mediumwidth {
+	width: 40%;
+	margin-left: 30%
+}
+
 @media (max-width:870px) {
 	.mediumwidth {
 		width: 70%;
-		margin-left: 15%
+		margin-left: 15%;
 	}
 }
 
@@ -32,11 +37,6 @@ a {
 	hr.mediumwidth {
 		width: auto;
 	}
-}
-
-.mediumwidth {
-	width: 40%;
-	margin-left: 30%
 }
 
 .thin {
@@ -70,7 +70,7 @@ h2 {
 button {
 	background: rgb(175, 175, 175);
 	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
 	color: rgb(243, 243, 243) !important;
 	display: inline-block;
 	font-size: 2.5em;
@@ -81,7 +81,7 @@ button {
 	border: 1px solid rgb(0, 0, 0);
 	cursor: pointer;
 	&.smooth {
-		transition: background-color 0.15s ease-in-out;
+		transition: background-color .15s ease-in-out;
 	}
 	&.btn-a { 
 		background: @btn-a-bg;
@@ -127,9 +127,9 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 	border: 1px solid lightgray;
 	outline: none;
 	padding: 6px;
-	font-size: 0.9em;
+	font-size: .8em;
 	&.smooth {
-		transition: border 0.15s ease-in-out;
+		transition: border .15s ease-in-out;
 	}
 	width: 13em;
 	font-family: Helvetica, sans-serif;
@@ -146,7 +146,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 	z-index: 400;
 	display: inline-block;
 	border-right: 0;
-	font-size: .9em;
+	font-size: .8em;
 	font-family: Arial Unicode MS Regular, sans-serif !important;
 }
 
@@ -160,7 +160,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 	color: white;
 	text-align: left;
 	height: 1.5em;
-	padding: 1em 0em 0.6em;
+	padding: 1em 0em .6em;
 }
 
 .pagename {
@@ -170,7 +170,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 }
 
 .navbar-link {
-	padding: 0.5em;
+	padding: .5em;
 	color: rgb(170, 170, 170);
 	&:hover {
 		color: white;
@@ -197,7 +197,7 @@ table {
 }
 
 .table th, .table td {
-	padding: 0.5em;
+	padding: .5em;
 	line-height: 1.4em;
 	text-align: left;
 	vertical-align: top;
