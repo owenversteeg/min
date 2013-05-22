@@ -123,7 +123,7 @@ button {
 	Inputs
 */
 
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+textarea, input {
 	border: 1px solid lightgray;
 	outline: none;
 	padding: 6px;
@@ -131,12 +131,14 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 	&.smooth {
 		transition: border .15s ease-in-out;
 	}
-	width: 13em;
 	font-family: Helvetica, sans-serif;
+	&:focus {
+		border: 1px solid rgb(87, 171, 179);
+	}
 }
 
-textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
-	border: 1px solid rgb(87, 171, 179);
+textarea, input[type="text"] {
+	width: 13em;
 }
 
 .addon-front {
@@ -232,6 +234,11 @@ message {
 	IE hacks
 */
 
-.ie .mediumwidth hr {
-	margin:100px auto; padding-left: 200px;
+.ie .mediumwidth {
+	width: 70%;
+	margin-left: 0;
+	hr {
+		margin:100px auto; 
+		padding-left: 200px;
+	}
 }
