@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if !IE]><html><![endif]--><!--[if lte IE 7]><html class="ie"><![endif]-->
+	<head>
+		<meta charset="UTF-8">
+		<title>min - download</title>
+		<link type="text/css" rel="stylesheet/less" href="min.less"/>
+		<link type="text/css" rel="stylesheet/less" href="download.less"/>
+		<script src="less.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h1 class="title">min</h1>
+		<h3>please select your components</h3>
+
+		<hr class="mediumwidth">
+		
+		<label><input name="general" type="checkbox" checked disabled/>General (required) - 517 - 338 - 213</label>
+
+		<label><input name="headings" type="checkbox" checked/>Headings - 105 - 66 - 76</label>
+
+		<label><input name="buttons" type="checkbox" checked/>Buttons - 1047 - 830 - 414</label>
+
+		<label><input name="inputs" type="checkbox" checked/>Inputs - 598 - 473 - 300</label>
+
+		<label><input name="navbar" type="checkbox"/>Navbar - 453 - 311 - 216</label>
+
+		<label><input name="tables" type="checkbox"/>Tables - 270 - 200 - 175</label>
+
+		<label><input name="messages" type="checkbox"/>Messages - 183 - 134 - 124</label>
+
+		<label><input name="icons" type="checkbox"/>Icons - 155 - 80 - 98</label>
+
+		<label><input name="iehacks" type="checkbox"/>IE hacks - 131 - 98 - 100</label>
+
+		<br>
+		<a href="javascript:prettyOutput()"><button class="smooth btn-a">Get CSS</button></a>
+
+		<br>
+
+		<div class="mediumwidth">
+			<textarea id="result" rows="5" class="smooth" onclick="this.select();" readonly></textarea>
+		</div>
+
+		<script type="text/javascript">
+			function prettyOutput() {
+				document.getElementById('result').style.display = "inline-block";
+				document.getElementById('result').innerText = calculateCSS();
+			}
+
+			function calculateCSS() {
+				var mincss = "";
+				if (document.getElementsByName('general')[0].checked === true) { 
+					mincss += "body{font-family:Helvetica,sans-serif;text-align:center;margin:0;font-size:16px}hr{margin:2.5em auto}a{text-decoration:none}.mediumwidth{width:40%;margin-left:30%}@media(max-width:870px){.mediumwidth{width:70%;margin-left:15%}}@media(max-width:520px){.mediumwidth{width:100%;margin-left:0}hr.mediumwidth{width:auto}}.thin{font-weight:100}";
+				}
+				if (document.getElementsByName('headings')[0].checked === true) { 
+					mincss += "h1{font-size:4em;margin:0}h1.title{font-size:7em}h2{font-size:2em}"; 
+				}
+
+				if (document.getElementsByName('buttons')[0].checked === true) { 
+					mincss += "button{background:#afafaf;font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;box-shadow:0 1px 0 rgba(255,255,255,0.5) inset;color:#f3f3f3 !important;display:inline-block;font-size:2.5em;padding:15px 40px 16px;text-align:center;text-decoration:none;margin:0 .7em .6em .7em;border:1px solid #000;cursor:pointer}button.smooth{transition:background-color .15s ease-in-out}button.btn-a{background:#345eb3;border:1px solid #1d3464}button.btn-a:hover{background:#29498b}button.btn-a:active{background:#1d3464}button.btn-b{background:#51a351;border:1px solid #2f5f2f}button.btn-b:hover{background:#408140}button.btn-b:active{background:#2f5f2f}button.btn-c{background:#da2727;border:1px solid #841717}button.btn-c:hover{background:#b01e1e}button.btn-c:active{background:#841717}button.btn-small{padding:7px 19px 10px;font-size:16px}";
+				}
+
+				if (document.getElementsByName('inputs')[0].checked === true) { 
+					mincss += "textarea,input{border:1px solid lightgray;outline:0;padding:6px;font-size:.8em;font-family:Helvetica,sans-serif}textarea.smooth,input.smooth{transition:border .15s ease-in-out}textarea:focus,input:focus{border:1px solid #57abb3}textarea,input[type='text']{width:13em}.addon-front{padding:6px 11px 6px 10px;margin-right:-2px;border:1px solid lightgray;z-index:400;display:inline-block;border-right:0;font-size:.8em;font-family:Arial Unicode MS Regular,sans-serif !important}"
+				}
+
+				if (document.getElementsByName('navbar')[0].checked === true) { 
+					mincss += ".navbar{width:100%;background:black;color:white;text-align:left;height:1.5em;padding:1em 0 .6em}.pagename{color:white;padding:0 1em 0 2em;font-weight:bold}.navbar-link{padding:.5em;color:#aaa}.navbar-link:hover{color:white}@media(max-width:500px){.navbar a{text-align:center;display:block}.navbar{height:7.5em}}";
+				}
+
+				if (document.getElementsByName('tables')[0].checked === true) { 
+					mincss += "table{width:100%;border-spacing:0}.table th,.table td{padding:.5em;line-height:1.4em;text-align:left;vertical-align:top}.table td{border-top:1px solid #ddd}tbody tr:nth-child(2n-1){background:#e0e0e0}";
+				}
+
+				if (document.getElementsByName('messages')[0].checked === true) { 
+					mincss += "message{width:100%;display:block;padding:2em 0;background:#a7d3e4}message.warning{background:#e4a7a7}message.great{background:#a7e4ae}";
+				}
+
+				if (document.getElementsByName('icons')[0].checked === true) { 
+					mincss += "ico{font-size:1.9375em;font-family:Lucida Sans Unicode,Lucida Grande,sans-serif}";
+				}
+
+				if (document.getElementsByName('iehacks')[0].checked === true) { 
+					mincss += ".ie .mediumwidth{width:70%;margin-left:0}.ie .mediumwidth hr{margin:100px auto;padding-left:200px}";
+				}
+				return mincss;
+			}
+		</script>
+		<br>
+	</body>
+</html>
