@@ -40,15 +40,23 @@
 			<textarea id="result" rows="5" class="smooth" onclick="this.select();" readonly></textarea>
 		</div>
 
+		<h4 id="details"></h4>
+
+		<h6 id="warning">Please note that the input size does not always correlate directly to the output size with gzip (e.g. deselecting some options can increase the gzipped file size)</h6>
+
 		<script type="text/javascript">
 			function prettyOutput() {
 				document.getElementById('result').style.display = "inline-block";
+				document.getElementById('warning').style.display = "inline-block";
 				document.getElementById('result').innerText = calculateCSS();
 			}
 
 			function getNums (input) {
 				input = input.split(' - ');
 				input.shift();
+				input.forEach(function(n, i) {
+					input[i]=parseInt(n);
+				});
 				return input;
 			}
 
@@ -68,6 +76,7 @@
 					totalmin: 0,
 					totalmingzip: 0
 				};
+
 				if (document.getElementsByName('general')[0].checked === true) { 
 					mincss += "body{font-family:Helvetica,sans-serif;text-align:center;margin:0;font-size:16px}hr{margin:2.5em auto}a{text-decoration:none}.mediumwidth{width:40%;margin-left:30%}@media(max-width:870px){.mediumwidth{width:70%;margin-left:15%}}@media(max-width:520px){.mediumwidth{width:100%;margin-left:0}hr.mediumwidth{width:auto}}.thin{font-weight:100}";
 					details.general = true;
@@ -148,7 +157,21 @@
 					details.totalmin += det[1];
 					details.totalmingzip += det[2];
 				}
-				console.log({'general' : details.general, 'headings' : details.headings, buttons: details.buttons, 'inputs': details.inputs, 'navbar': details.navbar, 'tables': details.tables, 'messages': details.messages, 'icons':details.icons, 'iehacks': details.iehacks});
+
+				oRequest = new XMLHttpRequest();
+				var sURL  = "http://8b51d1abd8.test-url.ws/gzipsize.php?encode="+mincss;
+
+				oRequest.open("GET",sURL,false);
+				oRequest.send(null);
+
+				
+
+				document.getElementById('details').innerHTML = "Your download of min is " + details.total + " bytes unminified, " + details.totalmin + " bytes minified (above), and " + oRequest.responseText + " bytes <a href='http://8b51d1abd8.test-url.ws/gzip.php?encode="+mincss+"'>minified and gzipped</a>."
+
+				details.totalmingzip = parseInt(oRequest.responseText);
+
+				mixpanel.track('calcCSS', details);
+
 				console.log(details);
 				return mincss;
 			}
