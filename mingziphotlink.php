@@ -40,7 +40,7 @@ $totalcss .= "ico{font-size:1.9375em;font-family:Lucida Sans Unicode,Lucida Gran
 }
 
 if ($_GET['grid']) {
-$totalcss .= "row{display:block;line-height:2em;margin-top:2%;height:2em}column{display:inline-block;float:left;margin:auto 1%}.c10{width:98%}.c9{width:88%}.c8{width:78%}.c7{width:68%}.c6{width:58%}.c5{width:48%}.c4{width:38%}.c3{width:28%}.c2{width:18%}.c1{width:8%}@media(max-width:720px){row [class*='c']{width:100%;display:block;margin:1% auto}row:last-child column{margin-bottom:2.5em}}";
+$totalcss .= ".row{display:block;line-height:2em;margin-top:2%;height:2em}.ie column{margin:auto .7%}column{display:inline-block;float:left;margin:auto 1%}.c10{width:98%}.c9{width:88%}.c8{width:78%}.c7{width:68%}.c6{width:58%}.c5{width:48%}.c4{width:38%}.c3{width:28%}.c2{width:18%}.c1{width:8%}@media(max-width:720px){row [class*='c']{width:100%;display:block;margin:1% auto}row:last-child column{margin-bottom:2.5em}}";
 }
 
 if ($_GET['iehacks']) {
