@@ -28,11 +28,11 @@
 
 		<hr class="mediumwidth">
 		
-		<label><input name="general" type="checkbox" checked disabled/>General (required) - 517 - 338 - 213</label>
+		<label><input name="general" type="checkbox" checked disabled/>General (required) - 604 - 421 - 239</label>
 
 		<label><input name="headings" type="checkbox" checked/>Headings - 105 - 66 - 76</label>
 
-		<label><input name="buttons" type="checkbox" checked/>Buttons - 1047 - 830 - 414</label>
+		<label><input name="buttons" type="checkbox" checked/>Buttons - 1048 - 833 - 413</label>
 
 		<label><input name="inputs" type="checkbox" checked/>Inputs - 598 - 473 - 300</label>
 
@@ -43,6 +43,8 @@
 		<label><input name="messages" type="checkbox"/>Messages - 183 - 134 - 124</label>
 
 		<label><input name="icons" type="checkbox"/>Icons - 155 - 80 - 98</label>
+
+		<label><input name="grid" type="checkbox"/>Grid - 588 - 377 - 237</label>
 
 		<label><input name="iehacks" type="checkbox"/>IE hacks - 131 - 98 - 100</label>
 
@@ -87,13 +89,14 @@
 					messages: false,
 					icons: false,
 					iehacks: false,
+					grid: false,
 					total: 0,
 					totalmin: 0,
 					totalmingzip: 0
 				};
 
 				if (document.getElementsByName('general')[0].checked === true) { 
-					mincss += "body{font-family:Helvetica,sans-serif;text-align:center;margin:0;font-size:16px}hr{margin:2.5em auto}a{text-decoration:none}.mediumwidth{width:40%;margin-left:30%}@media(max-width:870px){.mediumwidth{width:70%;margin-left:15%}}@media(max-width:520px){.mediumwidth{width:100%;margin-left:0}hr.mediumwidth{width:auto}}.thin{font-weight:100}";
+					mincss += "body{font-family:Helvetica,sans-serif;text-align:center;margin:0;font-size:16px}hr{margin:2.5em auto}hr.mediumwidth{margin:2.5em auto}a{text-decoration:none}.mediumwidth{font-size:16px;width:40%;margin-left:30%;margin-top:.3em;margin-bottom:.3em}@media(max-width:870px){.mediumwidth{width:70%;margin-left:15%}}@media(max-width:520px){.mediumwidth{width:100%;margin-left:0}hr.mediumwidth{width:auto}}.thin{font-weight:100}";
 					details.general = true;
 					var det = getNums(document.getElementsByName('general')[0].parentElement.innerText);
 					details.total += det[0];
@@ -111,7 +114,7 @@
 				}
 
 				if (document.getElementsByName('buttons')[0].checked === true) { 
-					mincss += "button{background:#afafaf;font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;box-shadow:0 1px 0 rgba(255,255,255,0.5) inset;color:#f3f3f3 !important;display:inline-block;font-size:2.5em;padding:15px 40px 16px;text-align:center;text-decoration:none;margin:0 .7em .6em .7em;border:1px solid #000;cursor:pointer}button.smooth{transition:background-color .15s ease-in-out}button.btn-a{background:#345eb3;border:1px solid #1d3464}button.btn-a:hover{background:#29498b}button.btn-a:active{background:#1d3464}button.btn-b{background:#51a351;border:1px solid #2f5f2f}button.btn-b:hover{background:#408140}button.btn-b:active{background:#2f5f2f}button.btn-c{background:#da2727;border:1px solid #841717}button.btn-c:hover{background:#b01e1e}button.btn-c:active{background:#841717}button.btn-small{padding:7px 19px 10px;font-size:16px}";
+					mincss += "button{background:#afafaf;font-family:Lucida Sans Unicode,Lucida Grande,sans-serif;box-shadow:0 1px 0 rgba(255,255,255,0.5) inset;color:#f3f3f3 !important;display:inline-block;font-size:2.5em;padding:15px 40px 16px;text-align:center;text-decoration:none;margin:.3em .7em .3em .7em;border:1px solid #000;cursor:pointer}button.smooth{transition:background-color .15s ease-in-out}button.btn-a{background:#345eb3;border:1px solid #1d3464}button.btn-a:hover{background:#29498b}button.btn-a:active{background:#1d3464}button.btn-b{background:#51a351;border:1px solid #2f5f2f}button.btn-b:hover{background:#408140}button.btn-b:active{background:#2f5f2f}button.btn-c{background:#da2727;border:1px solid #841717}button.btn-c:hover{background:#b01e1e}button.btn-c:active{background:#841717}button.btn-small{padding:7px 19px 10px;font-size:16px}";
 					details.buttons = true;
 					var det = getNums(document.getElementsByName('buttons')[0].parentElement.innerText);
 					details.total += det[0];
@@ -173,6 +176,15 @@
 					details.totalmingzip += det[2];
 				}
 
+				if (document.getElementsByName('grid')[0].checked === true) { 
+					mincss += "row{display:block;line-height:2em;margin-top:2%;height:2em}column{display:inline-block;float:left;margin:auto 1%}.c10{width:98%}.c9{width:88%}.c8{width:78%}.c7{width:68%}.c6{width:58%}.c5{width:48%}.c4{width:38%}.c3{width:28%}.c2{width:18%}.c1{width:8%}@media(max-width:720px){row [class*='c']{width:100%;display:block;margin:1% auto}row:last-child column{margin-bottom:2.5em}}";
+					details.grid = true;
+					var det = getNums(document.getElementsByName('grid')[0].parentElement.innerText);
+					details.total += det[0];
+					details.totalmin += det[1];
+					details.totalmingzip += det[2];
+				}
+
 				oRequest = new XMLHttpRequest();
 				var sURL  = "http://8b51d1abd8.test-url.ws/gzipsize.php?encode="+mincss;
 
@@ -181,9 +193,9 @@
 
 				
 
-				document.getElementById('details').innerHTML = "Your download of min is " + details.total + " bytes unminified, " + details.totalmin + " bytes minified (above), and " + oRequest.responseText + " bytes <a href='http://8b51d1abd8.test-url.ws/gzip.php?encode="+mincss+"'>minified and gzipped</a>."
+				document.getElementById('details').innerHTML = "Your download of min is " + details.total + " bytes unminified, " + details.totalmin + " bytes minified (above), and " + details.totalmingzip + " bytes <a href='http://8b51d1abd8.test-url.ws/gzip.php?encode="+mincss+"'>minified and gzipped</a>."
 
-				details.totalmingzip = parseInt(oRequest.responseText);
+				//details.totalmingzip = parseInt(oRequest.responseText);
 
 				mixpanel.track('Calculate CSS', details);
 
