@@ -3,9 +3,9 @@
 */
 
 body {
-	font-family: Helvetica, sans-serif;
+	font-family: sans-serif;
 	text-align: center;
-	margin: 0px;
+	margin: 0;
 	font-size: 16px;
 }
 
@@ -14,10 +14,6 @@ hr {
 	&.mediumwidth {
 		margin: 2.5em auto;
 	}
-}
-
-a {
-	text-decoration: none;
 }
 
 .mediumwidth {
@@ -33,6 +29,14 @@ a {
 		width: 70%;
 		margin-left: 15%;
 	}
+	.row [class*="c"]{
+		width: 100%;
+		display: block;
+		margin: 1% auto;
+	}
+	.row:last-child column {
+		margin-bottom: 2.5em;
+	}
 }
 
 @media (max-width:520px) {
@@ -43,10 +47,6 @@ a {
 	hr.mediumwidth {
 		width: auto;
 	}
-}
-
-.thin {
-	font-weight: 100;
 }
 
 /* 
@@ -69,25 +69,26 @@ h2 {
 	Buttons 
 */
 
-@btn-a-bg: rgb(0, 168, 233);
-@btn-b-bg: rgb(76, 201, 71);
-@btn-c-bg: rgb(214, 64, 64);
+@btn-a-bg: #0AE;
+@btn-b-bg: #3C5;
+@btn-c-bg: #D33;
+
+i, button {
+	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+}
 
 button {
-	background: rgb(175, 175, 175);
-	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+	background: #aaa;
 	box-shadow: 3px 3px 0 black;
 	color: rgb(243, 243, 243) !important;
-	display: inline-block;
 	font-size: 2.5em;
 	padding: 15px 40px 16px;
-	text-align: center;
 	text-decoration: none;
 	margin: .3em .7em .3em .7em;
 	cursor: pointer;
 	border: none;
 	&.smooth {
-		transition: background-color .15s ease-in-out;
+		transition: background .15s ease-in-out;
 	}
 	&.btn-a { 
 		background: @btn-a-bg;
@@ -127,14 +128,14 @@ button {
 */
 
 textarea, input {
-	border: 1px solid lightgray;
+	border: 1px solid #ccc;
 	outline: none;
 	padding: 6px;
 	font-size: .8em;
 	&.smooth {
 		transition: border .15s ease-in-out;
 	}
-	font-family: Helvetica, sans-serif;
+	font-family: sans-serif;
 	&:focus {
 		border: 1px solid rgb(87, 171, 179);
 	}
@@ -147,12 +148,9 @@ textarea, input[type="text"] {
 .addon-front {
 	padding: 6px 11px 6px 10px;
 	margin-right: -2px;
-	border: 1px solid lightgray;
-	z-index: 400;
-	display: inline-block;
+	border: 1px solid #ccc;
 	border-right: 0;
 	font-size: .8em;
-	font-family: Arial Unicode MS Regular, sans-serif !important;
 }
 
 /*
@@ -165,18 +163,22 @@ textarea, input[type="text"] {
 	color: white;
 	text-align: left;
 	height: 1.5em;
-	padding: 1em 0em .6em;
+	padding: 1em 0 .6em;
+}
+
+.navbar a {
+	text-decoration: none;
 }
 
 .pagename {
 	color: white;
-	padding: 0px 1em 0em 2em;
+	padding: 0 1em 0 2em;
 	font-weight: bold;
 }
 
 .navbar-link {
 	padding: .5em;
-	color: rgb(170, 170, 170);
+	color: #aaa;
 	&:hover {
 		color: white;
 	}
@@ -205,15 +207,10 @@ table {
 	padding: .5em;
 	line-height: 1.4em;
 	text-align: left;
-	vertical-align: top;
-}
-
-.table td {
-	border-top: 1px solid #dddddd;
 }
 
 tbody tr:nth-child(2n-1) {
-	background: #E0E0E0;
+	background: #CCC;
 }
 
 /*
@@ -221,15 +218,14 @@ tbody tr:nth-child(2n-1) {
 */
 
 message {
-	width: 100%;
 	display: block;
 	padding: 2em 0;
-	background: #A7D3E4;
+	background: #ACE;
 	&.warning {
-		background: rgb(228, 167, 167);
+		background: #D99;
 	}
 	&.great {
-		background: #A7E4AE;
+		background: #9D9;
 	}
 }
 
@@ -238,26 +234,23 @@ message {
 */
 
 ico {
-	font-size: 1.9375em;
-	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; /* If you have to fall back to sans-serif you're screwed */
+	font-size: 2.04em;
 }
 
 /*
 	Grid
 */
 .row {
-	display: block;
 	line-height: 2em;
 	margin-top: 2%;
 	height: 2em;
 }
 column {
-	display: inline-block;
 	float: left;
 	margin: auto 1%;
 }
-.ie column{
-	margin:auto .7%
+.ie column {
+	margin: auto .7%;
 }
 .c10 {
 	width: 98%;
@@ -287,18 +280,10 @@ column {
 	width: 18%;
 }
 .c1 {
-	width: 8%
+	width: 8%;
 }
-@media (max-width:720px) {
-	.row [class*="c"]{
-		width: 100%;
-		display: block;
-		margin: 1% auto;
-	}
-	.row:last-child column {
-		margin-bottom: 2.5em;
-	}
-}
+
+/* Grid system responsive code is up with general above */
 
 /*
 	IE hacks
@@ -308,7 +293,7 @@ column {
 	width: 70%;
 	margin-left: 0;
 	hr {
-		margin:100px auto; 
+		margin: 100px auto; 
 		padding-left: 200px;
 	}
 }
