@@ -69,14 +69,14 @@ h2 {
 	Buttons 
 */
 
-@btn-a-bg: rgb(52, 94, 179);
-@btn-b-bg: #51a351;
-@btn-c-bg: rgb(218, 39, 39);
+@btn-a-bg: rgb(0, 168, 233);
+@btn-b-bg: rgb(76, 201, 71);
+@btn-c-bg: rgb(214, 64, 64);
 
 button {
 	background: rgb(175, 175, 175);
 	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+	box-shadow: 3px 3px 0 black;
 	color: rgb(243, 243, 243) !important;
 	display: inline-block;
 	font-size: 2.5em;
@@ -84,39 +84,36 @@ button {
 	text-align: center;
 	text-decoration: none;
 	margin: .3em .7em .3em .7em;
-	border: 1px solid rgb(0, 0, 0);
 	cursor: pointer;
+	border: none;
 	&.smooth {
 		transition: background-color .15s ease-in-out;
 	}
 	&.btn-a { 
 		background: @btn-a-bg;
-		border: 1px solid darken(@btn-a-bg, 20%);
 		&:hover {
-			background: darken(@btn-a-bg, 10%);
+			background: darken(@btn-a-bg, 5%);
 		}
 		&:active {
-			background: darken(@btn-a-bg, 20%);
+			background: darken(@btn-a-bg, 10%);
 		}
 	}
 	&.btn-b {
 		background: @btn-b-bg;
-		border: 1px solid darken(@btn-b-bg, 20%);
 		&:hover {
-			background: darken(@btn-b-bg, 10%);
+			background: darken(@btn-b-bg, 5%);
 		}
 		&:active {
-			background: darken(@btn-b-bg, 20%);
+			background: darken(@btn-b-bg, 10%);
 		}
 	}
 	&.btn-c {
 		background: @btn-c-bg;
-		border: 1px solid darken(@btn-c-bg, 20%);
 		&:hover {
-			background: darken(@btn-c-bg, 10%);
+			background: darken(@btn-c-bg, 5%);
 		}
 		&:active {
-			background: darken(@btn-c-bg, 20%);
+			background: darken(@btn-c-bg, 10%);
 		}
 	}
 	&.btn-small {
