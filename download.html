@@ -28,25 +28,27 @@
 
 		<hr class="mediumwidth">
 		
-		<label><input name="general" type="checkbox" checked disabled/>General (required) - 604 - 421 - 239</label>
+		<div id="checkboxes">
+			<label><input name="general" type="checkbox" checked disabled/>General (required) - 604 - 421 - 239</label>
 
-		<label><input name="headings" type="checkbox" checked/>Headings - 105 - 66 - 76</label>
+			<label><input name="headings" type="checkbox" checked/>Headings - 105 - 66 - 76</label>
 
-		<label><input name="buttons" type="checkbox" checked/>Buttons - 1048 - 833 - 413</label>
+			<label><input name="buttons" type="checkbox" checked/>Buttons - 1048 - 833 - 413</label>
 
-		<label><input name="inputs" type="checkbox" checked/>Inputs - 598 - 473 - 300</label>
+			<label><input name="inputs" type="checkbox" checked/>Inputs - 598 - 473 - 300</label>
 
-		<label><input name="navbar" type="checkbox"/>Navbar - 453 - 311 - 216</label>
+			<label><input name="navbar" type="checkbox"/>Navbar - 453 - 311 - 216</label>
 
-		<label><input name="tables" type="checkbox"/>Tables - 270 - 200 - 175</label>
+			<label><input name="tables" type="checkbox"/>Tables - 270 - 200 - 175</label>
 
-		<label><input name="messages" type="checkbox"/>Messages - 183 - 134 - 124</label>
+			<label><input name="messages" type="checkbox"/>Messages - 183 - 134 - 124</label>
 
-		<label><input name="icons" type="checkbox"/>Icons - 155 - 80 - 98</label>
+			<label><input name="icons" type="checkbox"/>Icons - 155 - 80 - 98</label>
 
-		<label><input name="grid" type="checkbox"/>Grid - 588 - 377 - 237</label>
+			<label><input name="grid" type="checkbox"/>Grid - 588 - 377 - 237</label>
 
-		<label><input name="iehacks" type="checkbox"/>IE hacks - 131 - 98 - 100</label>
+			<label><input name="iehacks" type="checkbox"/>IE hacks - 131 - 98 - 100</label>
+		</div>
 
 		<br>
 		<a href="javascript:prettyOutput()"><button class="smooth btn-a">Get CSS</button></a>
@@ -95,11 +97,17 @@
 					totalmin: 0,
 					totalmingzip: 0
 				};
+				
+				for (var i=0; i<document.getElementById('checkboxes').children.length; i++) {
+					if (i/2 == Math.round(i/2) {
+						alert(document.getElementById('checkboxes').children[i].name)
+					}
+				}
 
 				if (document.getElementsByName('general')[0].checked === true) { 
 					mincss += "body{font-family:Helvetica,sans-serif;text-align:center;margin:0;font-size:16px}hr{margin:2.5em auto}hr.mediumwidth{margin:2.5em auto}a{text-decoration:none}.mediumwidth{font-size:16px;width:40%;margin-left:30%;margin-top:.3em;margin-bottom:.3em}@media(max-width:870px){.mediumwidth{width:70%;margin-left:15%}}@media(max-width:520px){.mediumwidth{width:100%;margin-left:0}hr.mediumwidth{width:auto}}.thin{font-weight:100}";
 					details.general = true;
-					var det = getNums(document.getElementsByName('general')[0].parentElement.innerText);
+					var det = getNums(document.getElementsByName('general')[0].parentElement.innerText || document.getElementsByName('general')[0].parentElement.textContent);
 					details.total += det[0];
 					details.totalmin += det[1];
 					details.totalmingzip += det[2];
