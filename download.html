@@ -99,9 +99,7 @@
 				};
 				
 				for (var i=0; i<document.getElementById('checkboxes').children.length; i++) {
-					if (i/2 == Math.round(i/2)) {
-						alert(document.getElementById('checkboxes').children[i].name)
-					}
+					alert(document.getElementById('checkboxes').children[i].children[0].name)
 				}
 
 				if (document.getElementsByName('general')[0].checked === true) { 
