@@ -102,16 +102,15 @@
 					var currentTypeName = document.getElementById('checkboxes').children[i].children[0].name;
 					details[currentTypeName] = document.getElementsByName(currentTypeName)[0].checked;
 					
-					var det = getNums(document.getElementsByName(currentTypeName)[0].parentElement.innerText || document.getElementsByName(currentTypeName)[0].parentElement.textContent);
+					var det = getNums(document.getElementsByName(currentTypeName)[0].parentElcement.innerText || document.getElementsByName(currentTypeName)[0].parentElement.textContent);
 					details.total += det[0];
 					details.totalmin += det[1];
 					details.totalmingzip += det[2];
 					
-					switch (currentNameType) {
+					switch (currentTypeName) {
 						case "general": 
 							mincss += "body{font-family:Helvetica,sans-serif;text-align:center;margin:0;font-size:16px}hr{margin:2.5em auto}hr.mediumwidth{margin:2.5em auto}a{text-decoration:none}.mediumwidth{font-size:16px;width:40%;margin-left:30%;margin-top:.3em;margin-bottom:.3em}@media(max-width:870px){.mediumwidth{width:70%;margin-left:15%}}@media(max-width:520px){.mediumwidth{width:100%;margin-left:0}hr.mediumwidth{width:auto}}.thin{font-weight:100}";
 							break;
-						
 						case "headings":
 							mincss += "h1{font-size:4em;margin:0}h1.title{font-size:7em}h2{font-size:2em}"; 
 							break;
