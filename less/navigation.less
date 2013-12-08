@@ -1,0 +1,36 @@
+.navbar {
+	width: 100%;
+	background: black;
+	color: white;
+	text-align: left;
+	height: 1.5em;
+	padding: 1em 0 .6em;
+}
+
+.navbar a {
+	text-decoration: none;
+}
+
+.pagename {
+	color: white;
+	padding: 0 1em 0 2em;
+	font-weight: bold;
+}
+
+.navbar-link {
+	padding: .5em;
+	color: #aaa;
+	&:hover {
+		color: white;
+	}
+}
+
+@media (max-width:500px) {
+	.navbar a {
+		text-align: center;
+		display: block;
+	}
+	.navbar {
+		height: 7.5em;
+	}
+}
