@@ -78,15 +78,6 @@ function calculateCSS() {
 		}
 	}
 
-	/*
-	oRequest = new XMLHttpRequest();
-	var sURL  = "http://8b51d1abd8.test-url.ws/gzipsize.php?encode="+mincss;
-
-	oRequest.open("GET",sURL,false);
-	oRequest.send(null);
-	*/
-	//Old XHR stuff above
-
 	var http = new XMLHttpRequest();
 	var url = "http://8b51d1abd8.test-url.ws/gzipsize.php";
 	var params = "encode="+mincss;
