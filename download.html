@@ -100,12 +100,16 @@
 				
 				for (var i=0; i<document.getElementById('checkboxes').children.length; i++) {
 					var currentTypeName = document.getElementById('checkboxes').children[i].children[0].name;
-					details[currentTypeName] = document.getElementsByName(currentTypeName)[0].checked;
+					var isChecked = document.getElementsByName(currentTypeName)[0].checked;
 					
-					var det = getNums(document.getElementsByName(currentTypeName)[0].parentElement.innerText || document.getElementsByName(currentTypeName)[0].parentElement.textContent);
-					details.total += det[0];
-					details.totalmin += det[1];
-					details.totalmingzip += det[2];
+					details[currentTypeName] = isChecked
+					
+					if (isChecked) {
+						var det = getNums(document.getElementsByName(currentTypeName)[0].parentElement.innerText || document.getElementsByName(currentTypeName)[0].parentElement.textContent);
+						details.total += det[0];
+						details.totalmin += det[1];
+						details.totalmingzip += det[2];
+					}
 					
 					switch (currentTypeName) {
 						case "general": 
