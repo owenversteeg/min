@@ -165,7 +165,6 @@
 				http.onreadystatechange = function() {
 					//Call a function when the state changes.
 					if (http.readyState == 4 && http.status == 200) {
-						alert(http.responseText);
 						details.totalmingzip = parseInt(http.responseText)
 						document.getElementById('details').innerHTML = document.getElementById('details').innerHTML.replace(' and', ',');
 						document.getElementById('details').innerHTML += ", and " + details.totalmingzip + " bytes <a href='http://8b51d1abd8.test-url.ws/gzip.php?encode="+mincss+"'>minified and gzipped</a>."
