@@ -1,0 +1,25 @@
+textarea, input {
+	border: 1px solid #ccc;
+	outline: none;
+	padding: 6px;
+	font-size: .8em;
+	&.smooth {
+		transition: border .15s ease-in-out;
+	}
+	font-family: sans-serif;
+	&:focus {
+		border: 1px solid rgb(87, 171, 179);
+	}
+}
+
+textarea, input[type="text"] {
+	width: 13em;
+}
+
+.addon-front {
+	padding: 6px 11px 6px 10px;
+	margin-right: -2px;
+	border: 1px solid #ccc;
+	border-right: 0;
+	font-size: .8em;
+}
