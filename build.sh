@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir compiled
 subtypes=(general buttons grid headings icons iehacks inputs messages navigation tables)
 rm -f compiledcss.js
 rm -f entireframework.js
