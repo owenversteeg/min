@@ -7,6 +7,6 @@ var css = {
 	"iehacks": ".ie .mediumwidth{width:70%;margin-left:0}.ie .mediumwidth hr{margin:100px auto;padding-left:200px}",
 	"inputs": "textarea,input{border:1px solid #ccc;outline:0;padding:6px;font-size:.8em;font-family:sans-serif}textarea.smooth,input.smooth{transition:border .15s ease-in-out}textarea:focus,input:focus{border:1px solid #57abb3}textarea,input[type='text']{width:13em}.addon-front{padding:6px 11px 6px 10px;margin-right:-2px;border:1px solid #ccc;border-right:0;font-size:.8em}",
 	"messages": "message{display:block;padding:2em 0;background:#ACE}message.warning{background:#D99}message.great{background:#9D9}",
-	"navigation": ".navbar{width:100%;background:black;color:white;text-align:left;height:1.5em;padding:1em 0 .6em}.navbar a{text-decoration:none}.pagename{color:white;padding:0 1em 0 2em;font-weight:bold}.navbar-link{padding:.5em;color:#aaa}.navbar-link:hover{color:white}@media(max-width:500px){.navbar a{text-align:center;display:block}.navbar{height:7.5em}}",
+	"navbar": ".navbar{width:100%;background:black;color:white;text-align:left;height:1.5em;padding:1em 0 .6em}.navbar a{text-decoration:none}.pagename{color:white;padding:0 1em 0 2em;font-weight:bold}.navbar-link{padding:.5em;color:#aaa}.navbar-link:hover{color:white}@media(max-width:500px){.navbar a{text-align:center;display:block}.navbar{height:7.5em}}",
 	"tables": "table{width:100%;border-spacing:0}.table th,.table td{padding:.5em;line-height:1.4em;text-align:left}tbody tr:nth-child(2n-1){background:#CCC}"
 }
