@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Bootstrap to Min converter</title>
-		<link type="text/css" rel="text/css" href="entireframework.min.css"/>
+    <head>
+	<title>Bootstrap to Min converter</title>
+	<link rel="stylesheet" href="http://minfwk.com/entireframework.min.css" type="text/css">
+        <style type="text/css">
+            iframe {
+                width: 800px;
+                height: 400px;
+            }
+            #convertedHTMLDiv {
+                max-width: 70%;
+                margin-left: 15%;
+            }
+        </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 	</head>
 	<body>
+        <br>
+        <h1>Bootstrap to Min converter</h1>
 		<textarea id="enteredHTML" placeholder="Enter your HTML here"></textarea>
-		<a onclick="convertHTML(this.value)"><button class="smooth btn-a">Convert HTML</button></a>
-
-		<iframe id="convertedHTMLIframe">
-			Your browser does not support iframes.
-		</iframe>
+        <br>
+		<a onclick="convertHTML(document.getElementById('enteredHTML').value)"><button class="smooth btn-a dontconvert">Convert HTML</button></a>
+        <br><br>
+		<div id="convertedHTMLDiv">
+		</div>
 		<script type="text/javascript">
 			function convertHTML(htmlToConvert) {
-				convertedHTMLIframe.src = htmlToConvert;	
+                convertedHTML = htmlToConvert;
+				convertedHTMLDiv.innerHTML = convertedHTML;
+                            
+                var columndivs = $('div[class^="col"]');
+
+                var widthUnaccountedFor = 0;
+
+                for (var i=0; i<columndivs.length; i++) {
+                    var htmlText = columndivs[i].innerHTML;
+                    var parentElement = $('div[class^="col"]')[0].parentElement;
+
+                    $('div[class^="col"]')[0].remove();
+
+                    widthUnaccountedFor += parseInt(columndivs[0].className.match(/\d+/)[0], 10)/1.2 - Math.round(parseInt(columndivs[0].className.match(/\d+/)[0], 10)/1.2)
+                    widthToSet = Math.round(parseInt(columndivs[0].className.match(/\d+/)[0], 10)/1.2)
+
+                    if (Math.round(widthUnaccountedFor)==1) {
+                        widthToSet += 1;
+                        widthUnaccountedFor = 0;
+                    }
+                
+                    parentElement.innerHTML += '<column class="c'+widthToSet+'">'+htmlText+"</column>";
+                }
+
+                $('button').not('[class*="dontconvert"]').addClass('btn-small');
 			}
 		</script>
 	</body>
