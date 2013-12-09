@@ -12,7 +12,7 @@ lessc "less/"$item".less" > "compiled/"$item".css"
 java -jar yuicompressor-2.4.8.jar "compiled/"$item".css" -o "compiled/"$item".min.css"
 echo -ne "	\""$item"\": \"" >> compiledcss.js
 cat "compiled/"$item".min.css" >> compiledcss.js
-cat -ne "compiled/"$item".min.css" >> entireframework.min.css
+cat "compiled/"$item".min.css" >> entireframework.min.css
 echo -ne "\"" >> compiledcss.js
 if [ $((i+1)) -ne ${#subtypes[*]} ]
 then
@@ -22,4 +22,3 @@ i=$i+1
 done
 echo "" >> compiledcss.js
 echo "}" >> compiledcss.js
-echo -n `cat entireframework.min.css` > entireframework.min.css
