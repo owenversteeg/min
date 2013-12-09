@@ -2,18 +2,18 @@
 <html>
 	<head>
 		<title>Bootstrap to Min converter</title>
-		<link type="text/css" rel="text/css" href="entreframework.min.css"/>
+		<link type="text/css" rel="text/css" href="entireframework.min.css"/>
 	</head>
 	<body>
 		<textarea id="enteredHTML" placeholder="Enter your HTML here"></textarea>
 		<a onclick="convertHTML(this.value)"><button class="smooth btn-a">Convert HTML</button></a>
 
-		<iframe srcdoc="">
+		<iframe id="convertedHTMLIframe">
 			Your browser does not support iframes.
 		</iframe>
 		<script type="text/javascript">
 			function convertHTML(htmlToConvert) {
-				enteredHTML.srcdoc = htmlToConvert;	
+				convertedHTMLIframe.src = htmlToConvert;	
 			}
 		</script>
 	</body>
