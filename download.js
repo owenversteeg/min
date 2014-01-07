@@ -93,7 +93,7 @@ function calculateCSS() {
 		if (http.readyState == 4 && http.status == 200) {
 			details.totalmingzip = parseInt(http.responseText)
 			document.getElementById('details').innerHTML = document.getElementById('details').innerHTML.replace(' and', ',');
-			document.getElementById('details').innerHTML += ", and " + details.totalmingzip + " bytes <a href='http://8b51d1abd8.test-url.ws/gzip.php?encode="+mincss+"'>minified and gzipped</a>."
+			document.getElementById('details').innerHTML += ", and " + details.totalmingzip + " bytes minified and gzipped."
 			mixpanel.track('Calculate CSS', details);
 		}
 	}
