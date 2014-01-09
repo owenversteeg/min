@@ -8,18 +8,16 @@ i, button {
 
 button {
 	background: #aaa;
-	box-shadow: 3px 3px #000;
+	box-shadow: 3px 3px #000; /* unshortenable */
 	color: #fff;
 	font-size: 2.5em;
 	padding: 15px 40px 16px;
 	text-decoration: none;
-	margin: .3em .7em .3em .7em;
+	margin: .3em .7em;
 	cursor: pointer;
 	border: none;
-	&.smooth {
-		transition: background .15s ease-in-out;
-	}
-	&.btn-a { 
+	transition: all .2s;
+	&.btn-a {
 		background: @btn-a-bg;
 		&:hover {
 			background: #09d; /* darken(@btn-a-bg, 5%) */
