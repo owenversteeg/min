@@ -1,14 +1,9 @@
 textarea, input {
-	border: 1px solid #ccc;
 	outline: none;
 	padding: 6px;
-	font-size: .8em;
-	&.smooth {
-		transition: border .15s ease-in-out;
-	}
 	font-family: sans-serif;
 	&:focus {
-		border: 1px solid rgb(87, 171, 179);
+		border: 1px solid #5ab;
 	}
 }
 
@@ -19,7 +14,10 @@ textarea, input[type='text'] {
 .addon-front {
 	padding: 6px 11px 6px 10px;
 	margin-right: -2px;
-	border: 1px solid #ccc;
 	border-right: 0;
+}
+
+textarea, input, .addon-front {
+	border: 1px solid #ccc;
 	font-size: .8em;
 }
