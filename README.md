@@ -7,6 +7,8 @@ Written in LESS, compiled to CSS. Access the current beta [here](http://minfwk.c
 
 To download Min, go [here](http://minfwk.com/download.html).
 
+###Go vote on new button styles [here](https://github.com/OwenVersteeg/min/issues/6)!
+
 ###Tiny
 995 bytes minified and gzipped.
 
