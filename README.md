@@ -20,6 +20,13 @@ Of course, modern browsers give you pretty transitions.
 ###License
 MIT licensed.
 
+###Building the latest Min
+
+WARNING! This will build the latest, pre-release version of Min. It may be broken. If you want to use an already-built Min, it's available in the file entireframework.min.css as well as through the [downloasd page](http://minfwk.com/download.html).
+
+wget https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.jar
+bash build.sh
+
 ###World's smallest? Really?
 Min really is is the world's smallest feature complete CSS framework, at 995 bytes (or less - check the Downloads page for its current size)
 
