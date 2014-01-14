@@ -1,3 +1,5 @@
+###PLEASE go vote on new button styles [here](https://github.com/OwenVersteeg/min/issues/6)!
+
 min
 ===
 
@@ -6,8 +8,6 @@ a tiny framework that makes websites pretty
 Written in LESS, compiled to CSS. Access the current beta [here](http://minfwk.com/beta.html). The "beta" page hotlinks the latest version of the Min LESS files.
 
 To download Min, go [here](http://minfwk.com/download.html).
-
-###Go vote on new button styles [here](https://github.com/OwenVersteeg/min/issues/6)!
 
 ###Tiny
 995 bytes minified and gzipped.
