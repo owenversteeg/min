@@ -1,0 +1,40 @@
+@if $import-inputs == true{
+//-------------------------------------------------------------------
+//  Inputs
+//-------------------------------------------------------------------
+
+// Styles to extend to all inputs
+%global-inputs {
+  border: 1px solid #ccc;
+  font-size: .8em;
+}
+
+
+textarea, input {
+  @extend %global-inputs;
+  font-family: sans-serif;
+  outline: none;
+  padding: 6px;
+
+  &:focus {
+    border: 1px solid #5ab;
+  }
+}
+
+
+textarea, input[type='text'] {
+  width: 13em;
+}
+
+
+.addon-front {
+  @extend %global-inputs;
+  border-right: 0;
+  margin-right: -2px;
+  padding: 6px 11px 6px 10px;
+}
+
+
+//-------------------------------------------------------------------
+// End @if
+}
