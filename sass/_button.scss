@@ -1,0 +1,60 @@
+//-------------------------------------------------------------------
+// Mixin to set btn background for inactive, active & hover states
+//-------------------------------------------------------------------
+
+@mixin btn-style($bg, $bg-hover, $bg-active) {
+  background: $bg;
+
+  &:hover {
+    background: $bg-hover;
+  }
+
+  &:active {
+    background: $bg-active;
+  }
+}
+
+
+
+@if $import-buttons == true{
+//-------------------------------------------------------------------
+// Button Styles & Classes
+//-------------------------------------------------------------------
+
+ico, button, .btn {
+  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+}
+
+button, .btn {
+  background: #aaa;
+  border: none;
+  box-shadow: 3px 3px #000; // unshortenable
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5em;
+  margin: .3em .7em;
+  padding: 15px 40px 16px;
+  text-decoration: none;
+}
+
+.btn-a {
+  @include btn-style(#0ae, #09d, #08b);
+}
+
+.btn-b {
+  @include btn-style(#3c5, #2b4, #2a4);
+}
+
+.btn-c {
+  @include btn-style(#d33, #c22, #b22);
+}
+
+.btn-small {
+  padding: 7px 19px;
+  font-size: 16px;
+}
+
+
+//-------------------------------------------------------------------
+// End @if
+}

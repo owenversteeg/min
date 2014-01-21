@@ -1,0 +1,57 @@
+@if $import-navbar == true{
+//-------------------------------------------------------------------
+//  Navigation Bar
+//-------------------------------------------------------------------
+
+.navbar {
+  background: #000;
+  color: #fff;
+  height: 1.5em;
+  padding: 1em 0 .6em;
+  text-align: left;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+  }
+
+  input, button, .btn {
+    margin-top: -20px;
+    // This ensures that any buttons and inputs in the
+    // navbar will not mess up its vertical alignment
+  }
+}
+
+
+.pagename {
+  color: #fff;
+  padding: 0 1em 0 2em;
+  font-weight: bold;
+}
+
+
+.navbar-link {
+  color: #aaa;
+  padding: .5em;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+
+@media(max-width:500px) {
+  .navbar {
+    height: 7.5em;
+
+    a {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+
+//-------------------------------------------------------------------
+// End @if
+}

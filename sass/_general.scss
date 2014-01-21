@@ -1,0 +1,54 @@
+//-------------------------------------------------------------------
+//  General Min Styling
+//-------------------------------------------------------------------
+
+body {
+  font: 16px sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+.smooth {
+  transition: all .2s;
+}
+
+hr {
+  margin: 2.5em auto;
+
+  &.mediumwidth {
+    margin: 2.5em auto;
+  }
+}
+
+.mediumwidth {
+  font-size: 16px;
+  margin-bottom: .3em;
+  margin-left: 30%;
+  margin-top: .3em;
+  width: 40%;
+}
+
+@media (max-width:870px) {
+  .mediumwidth {
+    margin-left: 15%;
+    width: 70%;
+  }
+  .row [class*='c']{
+    display: block;
+    margin: 1% auto;
+    width: 100%;
+  }
+  .row:last-child column {
+    margin-bottom: 2.5em;
+  }
+}
+
+@media (max-width:520px) {
+  .mediumwidth {
+    margin-left: 0;
+    width: 100%;
+  }
+  hr.mediumwidth {
+    width: auto;
+  }
+}
