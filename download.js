@@ -35,7 +35,7 @@ function calculateCSS() {
 		var currentTypeName = document.getElementById('checkboxes').children[i].children[0].name;
 		var isChecked = document.getElementsByName(currentTypeName)[0].checked;
 		
-		details[currentTypeName] = isChecked
+		details[currentTypeName] = isChecked;
 		
 		if (isChecked) {
 			var det = getNums(document.getElementsByName(currentTypeName)[0].parentElement.innerText || document.getElementsByName(currentTypeName)[0].parentElement.textContent);
@@ -43,38 +43,7 @@ function calculateCSS() {
 			details.totalmin += det[1];
 			details.totalmingzip += det[2];
 			
-			switch (currentTypeName) {
-				case "general": 
-					mincss += css['general'];
-					break;
-				case "headings":
-					mincss += css['headings']
-					break;
-				case "buttons":
-					mincss += css["buttons"]
-					break;
-				case "inputs":
-					mincss += css["inputs"];
-					break;
-				case "navbar":
-					mincss += css["navbar"];
-					break;
-				case "tables":
-					mincss += css["tables"];
-					break;
-				case "messages":
-					mincss += css["messages"];
-					break;
-				case "icons":
-					mincss += css["icons"];
-					break;
-				case "iehacks":
-					mincss += css["iehacks"];
-					break;
-				case "grid":
-					mincss += css["grid"];
-					break;
-			}
+			mincss += css[currentTypeName];
 		}
 	}
 
@@ -91,12 +60,12 @@ function calculateCSS() {
 	http.onreadystatechange = function() {
 		//Call a function when the state changes.
 		if (http.readyState == 4 && http.status == 200) {
-			details.totalmingzip = parseInt(http.responseText)
+			details.totalmingzip = parseInt(http.responseText);
 			document.getElementById('details').innerHTML = document.getElementById('details').innerHTML.replace(' and', ',');
-			document.getElementById('details').innerHTML += ", and " + details.totalmingzip + " bytes minified and gzipped."
+			document.getElementById('details').innerHTML += ", and " + details.totalmingzip + " bytes minified and gzipped.";
 			mixpanel.track('Calculate CSS', details);
 		}
-	}
+	};
 	http.send(params);
 
 	document.getElementById('details').innerHTML = "Your download of min is " + details.total + " bytes unminified and " + details.totalmin + " bytes minified (above)";
