@@ -9,6 +9,8 @@ Written in LESS and Sass, compiled to CSS. Access the current beta [here](http:/
 
 To download Min, go [here](http://minfwk.com/download.html).
 
+Congratulations 100th stargazer Matthew (@tropicalmug)
+
 ###Tiny
 995 bytes minified and gzipped.
 
