@@ -14,8 +14,6 @@
   }
 }
 
-
-
 @if $import-buttons == true{
 //-------------------------------------------------------------------
 // Button Styles & Classes
@@ -26,9 +24,8 @@ ico, button, .btn {
 }
 
 button, .btn {
-  background: #aaa;
-  border: none;
-  box-shadow: 3px 3px #000; // unshortenable
+  background: #fff;
+  border: 0;
   color: #fff;
   cursor: pointer;
   font-size: 2.5em;
@@ -36,6 +33,7 @@ button, .btn {
   padding: 15px 40px 16px;
   text-decoration: none;
   outline: 0;
+  border-radius: 10px;
 }
 
 .btn-a {
@@ -50,9 +48,16 @@ button, .btn {
   @include btn-style(#d33, #c22, #b22);
 }
 
+button:not([class*='btn-']) {
+	color: #000;
+	box-shadow: 0 0 0 2px inset; /* We use box shadow here because then we can apply a border without changing the element height */
+  @include btn-style(#fff, #eee, #ddd);
+}
+
 .btn-small {
-  padding: 7px 19px;
-  font-size: 16px;
+  padding: 7px 19px 8px;
+  font-size: 1em;
+  border-radius: 7px;
 }
 
 
