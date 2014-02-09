@@ -9,7 +9,7 @@
     background: $bg-hover;
   }
 
-  &:active {
+  &:active, &:focus {
     background: $bg-active;
   }
 }
@@ -35,6 +35,7 @@ button, .btn {
   margin: .3em .7em;
   padding: 15px 40px 16px;
   text-decoration: none;
+  outline: 0;
 }
 
 .btn-a {
