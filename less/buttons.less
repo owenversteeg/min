@@ -3,16 +3,28 @@ ico, button, .btn {
 }
 
 button, .btn {
-	background: #aaa;
-	box-shadow: 3px 3px #000; /* unshortenable */
+	background: #fff;
 	color: #fff;
 	font-size: 2.5em;
 	padding: 15px 40px 16px;
 	text-decoration: none;
 	margin: .3em .7em;
 	cursor: pointer;
-	border: none;
+	border: 0;
 	outline: 0;
+	border-radius: 10px;
+}
+
+button:not([class*='btn-']) {
+	color: #000;
+	box-shadow: 0 0 0 2px inset; /* We use box shadow here because then we can apply a border without changing the element height */
+	&:hover {
+		background: #eee;
+	}
+	
+	&:active, &:focus {
+		background: #ddd;
+	}
 }
 
 .btn-a {
@@ -20,6 +32,7 @@ button, .btn {
 	&:hover {
 		background: #09d; /* darken(@btn-a-bg, 5%) */
 	}
+
 	&:active, &:focus {
 		background: #08b; /* darken(@btn-a-bg, 10%) */
 	}
@@ -46,6 +59,7 @@ button, .btn {
 }
 
 .btn-small {
-	padding: 7px 19px;
-	font-size: 16px;
+	padding: 7px 19px 8px;
+	font-size: 1em;
+	border-radius: 7px;
 }
