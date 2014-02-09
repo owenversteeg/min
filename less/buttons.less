@@ -12,6 +12,7 @@ button, .btn {
 	margin: .3em .7em;
 	cursor: pointer;
 	border: none;
+	outline: 0;
 }
 
 .btn-a {
@@ -19,7 +20,7 @@ button, .btn {
 	&:hover {
 		background: #09d; /* darken(@btn-a-bg, 5%) */
 	}
-	&:active {
+	&:active, &:focus {
 		background: #08b; /* darken(@btn-a-bg, 10%) */
 	}
 }
@@ -29,7 +30,7 @@ button, .btn {
 	&:hover {
 		background: #2b4; /* darken(@btn-b-bg, 5%) */
 	}
-	&:active {
+	&:active, &.focus {
 		background: #2a4; /* darken(@btn-b-bg, 10%) */
 	}
 }
@@ -39,7 +40,7 @@ button, .btn {
 	&:hover {
 		background: #c22; /* darken(@btn-c-bg, 5%) */
 	}
-	&:active {
+	&:active, &.focus {
 		background: #b22; /* darken(@btn-c-bg, 10%) */
 	}
 }
