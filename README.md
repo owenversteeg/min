@@ -1,5 +1,3 @@
-###PLEASE go vote on new button styles [here](https://github.com/OwenVersteeg/min/issues/6)!
-
 min
 ===
 
