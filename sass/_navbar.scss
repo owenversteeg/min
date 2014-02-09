@@ -20,6 +20,16 @@
     // This ensures that any buttons and inputs in the
     // navbar will not mess up its vertical alignment
   }
+
+  // Update styling of .navbar for small screens
+  @media(max-width:500px) {
+    height: 7.5em;
+
+    a {
+      display: block;
+      text-align: center;
+    }
+  }
 }
 
 
@@ -36,18 +46,6 @@
 
   &:hover {
     color: #fff;
-  }
-}
-
-
-@media(max-width:500px) {
-  .navbar {
-    height: 7.5em;
-
-    a {
-      display: block;
-      text-align: center;
-    }
   }
 }
 
