@@ -4,17 +4,20 @@
 //-------------------------------------------------------------------
 
 message {
-  background: #ACE;
   display: block;
-  padding: 2em 0;
+  padding: 2em;
+  background: #def;
+  border-left: 5px solid #44e;
+}
 
-  &.warning {
-    background: #D99;
-  }
+.warning {
+  border-color: #e44; 
+  background: #fdd;
+}
 
-  &.great {
-    background: #9D9;
-  }
+.great {
+  border-color: #2d2;
+  background: #dfd;
 }
 
 
