@@ -14,28 +14,47 @@
   }
 }
 
-@if $import-buttons == true{
+
+@if $import-buttons == true {
 //-------------------------------------------------------------------
 // Button Styles & Classes
 //-------------------------------------------------------------------
 
+
+// Set font styles for buttons
 ico, button, .btn {
   font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
 }
 
+
+// Set Generic <button> and .btn styling.
+// use .btn on any element to give it the styling of a button
 button, .btn {
-  background: #fff;
+  @include btn-style(#fff, #eee, #ddd);
+  border-radius: 10px;
   border: 0;
   color: #fff;
   cursor: pointer;
+  display: inline-block;
   font-size: 2.5em;
   margin: .3em .7em;
+  outline: 0;
   padding: 15px 40px 16px;
   text-decoration: none;
-  outline: 0;
-  border-radius: 10px;
+
+  // to make sure buttons are visible when not paired with a coloring
+  // class, we give the <button> and .btn a dark border and text color
+  &:not([class*='btn-']) {
+    box-shadow: 0 0 0 2px inset;
+    color: #000;
+    // We use box shadow here because then we can
+    // apply a border without changing the element height
+  }
 }
 
+
+// Set colors for your buttons, see the button mixin at the top of this
+// file to see how the hex colors are allocated
 .btn-a {
   @include btn-style(#0ae, #09d, #08b);
 }
@@ -48,16 +67,13 @@ button, .btn {
   @include btn-style(#d33, #c22, #b22);
 }
 
-button:not([class*='btn-']) {
-	color: #000;
-	box-shadow: 0 0 0 2px inset; /* We use box shadow here because then we can apply a border without changing the element height */
-  @include btn-style(#fff, #eee, #ddd);
-}
 
+// Add this class to a <button> or element with a .btn class
+// to create a smaller sized button.
 .btn-small {
-  padding: 7px 19px 8px;
-  font-size: 1em;
   border-radius: 7px;
+  font-size: 1em;
+  padding: 7px 19px 8px;
 }
 
 
