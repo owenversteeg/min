@@ -1,31 +1,32 @@
-ico, button, .btn {
-	font-family: Arial Unicode MS, Lucida Sans Unicode, sans-serif;
+ico {
+	font-family: Arial Unicode MS, Lucida Sans Unicode, sans-serif; /* This combo of Unicode fonts means Min's icons support OSX 10.5+, Windows 98+, and Ubuntu. */
 }
 
-button, .btn {
+.btn {
 	background: #fff;
 	color: #fff;
-	display: inline-block;
-	font-size: 2.5em;
+	display: inline-block; /* Enables non-inline-block elements like <div>s to be buttons */
+	font-size: 2.5em; 
 	padding: 15px 40px 16px;
-	text-decoration: none;
+	text-decoration: none; 
 	margin: .3em .7em;
 	cursor: pointer;
 	border: 0;
-	outline: 0;
-	border-radius: 10px;
+	outline: 0; /* when the button is focused, don't show an outline */
+	border-radius: 10px; /* rounded corners */
 }
 
-button:not([class*='btn-']) {
+.btn:hover {
+	background: #eee;
+}
+
+.btn:active,.btn:focus {
+	background: #ddd;
+}
+
+.btn:not([class*='btn-']) {
 	color: #000;
 	box-shadow: 0 0 0 2px inset; /* We use box shadow here because then we can apply a border without changing the element height */
-	&:hover {
-		background: #eee;
-	}
-	
-	&:active, &:focus {
-		background: #ddd;
-	}
 }
 
 .btn-a {
@@ -62,5 +63,5 @@ button:not([class*='btn-']) {
 .btn-small {
 	padding: 7px 19px 8px;
 	font-size: 1em;
-	border-radius: 7px;
+	border-radius: 7px; /* rounded corners */
 }
