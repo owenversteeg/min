@@ -22,23 +22,23 @@
 
 
 // Set font styles for buttons
-ico, button, .btn {
-  font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+ico {
+  font-family: Arial Unicode MS, Lucida Sans Unicode, sans-serif; /* This combo of Unicode fonts means Min's icons support OSX 10.5+, Windows 98+, and Ubuntu. */
 }
 
 
 // Set Generic <button> and .btn styling.
 // use .btn on any element to give it the styling of a button
-button, .btn {
+.btn {
   @include btn-style(#fff, #eee, #ddd);
-  border-radius: 10px;
+  border-radius: 10px; /* rounded corners */
   border: 0;
   color: #fff;
   cursor: pointer;
-  display: inline-block;
+  display: inline-block; /* Enables non-inline-block elements like <div>s to be buttons */
   font-size: 2.5em;
   margin: .3em .7em;
-  outline: 0;
+  outline: 0; /* when the button is focused, don't show an outline */
   padding: 15px 40px 16px;
   text-decoration: none;
 
@@ -71,7 +71,7 @@ button, .btn {
 // Add this class to a <button> or element with a .btn class
 // to create a smaller sized button.
 .btn-small {
-  border-radius: 7px;
+  border-radius: 7px; /* rounded corners */
   font-size: 1em;
   padding: 7px 19px 8px;
 }
