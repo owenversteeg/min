@@ -1,5 +1,7 @@
 /* Grid system responsive code is in general.less */
 
+/* Since every column has 2% padding (1% on each side) its width is (((its number/12) * 100)-2) percent (truncated, to avoid spillage.) Thus, c12 has width 98%. */
+
 .row {
 	line-height: 2em;
 	margin-top: 2%;
@@ -12,33 +14,39 @@ column {
 .ie column {
 	margin: auto .7%;
 }
-.c10 {
+.c12 {
 	width: 98%;
 }
+.c11 {
+	width: 89.66%;
+}
+.c10 {
+	width: 81.33%;
+}
 .c9 {
-	width: 88%;
+	width: 73%;
 }
 .c8 {
-	width: 78%;
+	width: 64.66%;
 }
 .c7 {
-	width: 68%;
+	width: 56.33%;
 }
 .c6 {
-	width: 58%;
+	width: 48%;
 }
 .c5 {
-	width: 48%
+	width: 39.66%
 }
 .c4 {
-	width: 38%;
+	width: 31.33%;
 }
 .c3 {
-	width: 28%;
+	width: 23%;
 }
 .c2 {
-	width: 18%;
+	width: 14.66%;
 }
 .c1 {
-	width: 8%;
+	width: 6.33%;
 }
