@@ -9,7 +9,7 @@ table {
 }
 
 tbody tr:nth-child(2n-1) {
-  background: #ccc;
+  background: #ccc; /* Shade every other table row */
 }
 
 .table {
