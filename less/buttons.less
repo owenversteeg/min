@@ -22,7 +22,11 @@
 
 .btn:not([class*='btn-']) {
 	color: #000;
-	box-shadow: 0 0 0 2px inset; /* We use box shadow here because then we can apply a border without changing the element height */
+	border: 2px solid;
+	padding: 13px 38px 14px; /* This way we don't change the button size, as there's no border on other buttons */
+	&.small-btn {
+		padding: 5px 17px 6px;
+	}
 }
 
 .btn-a {
@@ -56,7 +60,7 @@
 	}
 }
 
-.btn-small {
+.small-btn {
 	padding: 7px 19px 8px;
 	font-size: 1em;
 	border-radius: 7px; /* rounded corners */
