@@ -8,25 +8,7 @@ body {
 	transition: all .2s;
 }
 
-hr {
-	margin: 2.5em auto;
-	&.mediumwidth {
-		margin: 2.5em auto;
-	}
-}
-
-.mediumwidth {
-	width: 40%;
-	margin-left: 30%;
-	margin-top: .3em;
-	margin-bottom: .3em;
-}
-
 @media (max-width:870px) {
-	.mediumwidth {
-		width: 70%;
-		margin-left: 15%;
-	}
 	.row [class*='c']{
 		width: 100%;
 		display: block;
@@ -37,12 +19,14 @@ hr {
 	}
 }
 
-@media (max-width:520px) {
-	.mediumwidth {
-		width: 100%;
-		margin-left: 0;
-	}
-	hr.mediumwidth {
+.container {
+	width: 1270px;
+	margin: auto;
+}
+
+@media(max-width:1310px) {
+	.container {
+		margin: 0 20px;
 		width: auto;
 	}
 }
