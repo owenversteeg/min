@@ -7,6 +7,7 @@
   background: #000;
   color: #fff;
   height: 1.5em;
+  // max-height: 1.5em; // needed for animations, uncomment to use
   padding: 1em 0 .6em;
   text-align: left;
   width: 100%;
@@ -35,14 +36,18 @@
 
 .pagename {
   color: #fff;
-  padding: 0 1em 0 2em;
-  font-weight: bold;
+  font-size: 22px;
+  top: 1px;
+  position: relative;
 }
 
 
 .navbar-link {
   color: #aaa;
-  padding: .5em;
+  font-size: 14px;
+  padding-right: 1em;
+  position: relative;
+  top: -1px;
 
   &:hover {
     color: #fff;
