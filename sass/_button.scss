@@ -2,10 +2,8 @@
 // Mixin to set btn background for inactive, active & hover states
 //-------------------------------------------------------------------
 
-@mixin btn-style($bg, $bg-hover, $bg-active, $b-color, $t-color) {
+@mixin btn-style($bg, $bg-hover, $bg-active) {
   background: $bg;
-  border-color: $b-color;
-  color: $t-color;
 
   &:hover {
     background: $bg-hover;
@@ -18,52 +16,61 @@
 
 
 
-
-
 @if $import-buttons == true {
 //-------------------------------------------------------------------
 // Button Styles & Classes
 //-------------------------------------------------------------------
 
-
-
 // Set Generic <button> and .btn styling.
 // use .btn on any element to give it the styling of a button
 .btn {
-  @include btn-style(#fff, #eee, #ddd, #000, #000);
+  @include btn-style(#fff, #eee, #ddd);
   border-radius: 10px; // rounded corners
-  border: 2px solid;
+  color: #fff;
   cursor: pointer;
-  display: inline-block; // Enables non-inline-block elements like <div>s to be buttons
+  display: inline-block; // Enables non-inline-block elements like <a>s to be buttons
   font-size: 2.5em;
-  margin: .3em .7em;
+  margin: .3em .2em 0 0;
   outline: 0; // when the button is focused, don't show an outline
-  padding: 13px 38px 14px;
+  padding: 15px 40px 16px;
   text-decoration: none;
+
+  &:not([class*='btn-']) {
+    color: #000;
+    border: 2px solid;
+    padding: 13px 38px 14px;
+    // Won't change the button size, as there's no border on other buttons
+
+    &.sm-btn {
+      padding: 8px 14px 9px;
+      // This padding is 2px smaller than the
+      // normal sm-btn padding to account for the border
+    }
+  }
 }
 
 
 // Set colors for your buttons, see the button mixin at the top of this
 // file to see how the hex colors are allocated
 .btn-a {
-  @include btn-style(#0ae, #09d, #08b, #0ae, #fff);
+  @include btn-style(#0ae, #09d, #08b);
 }
 
 .btn-b {
-  @include btn-style(#3c5, #2b4, #2a4, #3c5, #fff);
+  @include btn-style(#3c5, #2b4, #2a4);
 }
 
 .btn-c {
-  @include btn-style(#d33, #c22, #b22, #d33, #fff);
+  @include btn-style(#d33, #c22, #b22);
 }
 
 
 // Add this class to a <button> or element with a .btn class
 // to create a smaller sized button.
-.btn-sm {
-  border-radius: 7px; /* rounded corners */
-  font-size: 1em;
-  padding: 8px 14px 9px;
+.sm-btn {
+  border-radius: 4px; /* rounded corners */
+  font-size: .9em;
+  padding: 10px 15px 11px;
 }
 
 
