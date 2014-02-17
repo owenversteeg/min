@@ -2,8 +2,10 @@
 // Mixin to set btn background for inactive, active & hover states
 //-------------------------------------------------------------------
 
-@mixin btn-style($bg, $bg-hover, $bg-active) {
+@mixin btn-style($bg, $bg-hover, $bg-active, $b-color, $t-color) {
   background: $bg;
+  border-color: $b-color;
+  color: $t-color;
 
   &:hover {
     background: $bg-hover;
@@ -13,6 +15,9 @@
     background: $bg-active;
   }
 }
+
+
+
 
 
 @if $import-buttons == true {
@@ -25,58 +30,40 @@
 // Set Generic <button> and .btn styling.
 // use .btn on any element to give it the styling of a button
 .btn {
-  @include btn-style(#fff, #eee, #ddd);
+  @include btn-style(#fff, #eee, #ddd, #000, #000);
   border-radius: 10px; // rounded corners
-  border: 0;
-  color: #fff;
+  border: 2px solid;
   cursor: pointer;
   display: inline-block; // Enables non-inline-block elements like <div>s to be buttons
   font-size: 2.5em;
   margin: .3em .7em;
   outline: 0; // when the button is focused, don't show an outline
-  padding: 15px 40px 16px;
+  padding: 13px 38px 14px;
   text-decoration: none;
-
-  // to make sure buttons are visible when not paired with a coloring
-  // class, we give the <button> and .btn a dark border and text color
-  &:not([class*='btn-']) {
-    border: 2px solid;
-    box-shadow: 0 0 0 2px inset;
-    // We use box shadow here because then we can
-    // apply a border without changing the element height
-    color: #000;
-    padding: 13px 38px 14px;
-    // keeps relative sizing to buttons w/out borders
-
-    &.btn-small {
-      padding: 8px 14px 9px;
-      // 2px smaller than the normal padding to account for the border
-    }
-  }
 }
 
 
 // Set colors for your buttons, see the button mixin at the top of this
 // file to see how the hex colors are allocated
 .btn-a {
-  @include btn-style(#0ae, #09d, #08b);
+  @include btn-style(#0ae, #09d, #08b, #0ae, #fff);
 }
 
 .btn-b {
-  @include btn-style(#3c5, #2b4, #2a4);
+  @include btn-style(#3c5, #2b4, #2a4, #3c5, #fff);
 }
 
 .btn-c {
-  @include btn-style(#d33, #c22, #b22);
+  @include btn-style(#d33, #c22, #b22, #d33, #fff);
 }
 
 
 // Add this class to a <button> or element with a .btn class
 // to create a smaller sized button.
-.btn-small {
+.btn-sm {
   border-radius: 7px; /* rounded corners */
   font-size: 1em;
-  padding: 7px 19px 8px;
+  padding: 8px 14px 9px;
 }
 
 
