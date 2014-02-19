@@ -8,17 +8,19 @@ table {
   width: 100%;
 }
 
+
 tbody tr:nth-child(2n-1) {
   background: #ccc; // Shade every other table row
+  // We use tbody to ensure that we don't shade the heading
+  // this preserves the order of the shading
 }
 
-.table {
-  th, td {
-    line-height: 1.4em;
-    padding: .5em;
-    text-align: left;
-  }
+
+th, td {
+  padding: .5em;
+  text-align: left;
 }
+
 
 
 //-------------------------------------------------------------------

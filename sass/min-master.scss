@@ -5,6 +5,7 @@
 @import 'general.scss';
 
 
+
 // ------------------------------------------------------------------
 //  Customize Optional Components
 //
@@ -28,7 +29,7 @@ $import-icons:                            true!default;
 
 $import-grid:                             true!default;
 
-$import-ie-hacks:                         true!default;
+$import-ie-hacks:                         false!default;
 
 
 // ------------------------------------------------------------------

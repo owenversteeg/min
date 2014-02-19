@@ -2,6 +2,11 @@
 //-------------------------------------------------------------------
 //  Grid system responsive code is in _general.scss
 //  A hack (for old IEs) for the grid system is located in _iehacks.scss
+//
+//
+//  Every column has 2% padding (1% on each side) its width is
+//  (((its number/12) * 100)-2) percent (truncated, to avoid spillage.)
+//  Thus, c12 has width 98%.
 //-------------------------------------------------------------------
 
 .row {
@@ -13,6 +18,18 @@
 column {
   float: left;
   margin: auto 1%;
+}
+
+@media (max-width:870px) {
+  .row column {
+    margin: 1% auto;
+    width: 100%;
+  }
+}
+
+// IE Grid Fix
+.ie column {
+  margin: auto .7%;
 }
 
 .c12 {

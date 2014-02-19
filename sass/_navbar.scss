@@ -3,57 +3,99 @@
 //  Navigation Bar
 //-------------------------------------------------------------------
 
-.navbar {
+.nav {
   background: #000;
   color: #fff;
   height: 1.5em;
+  line-height: 1.5em;
   // max-height: 1.5em; // needed for animations, uncomment to use
-  padding: 1em 0 .6em;
-  text-align: left;
-  width: 100%;
+  padding: .7em 0 .95em;
 
   a {
+    color: #aaa;
+    font-size: 14px;
+    padding-right: 1em;
     text-decoration: none;
+
+    &:hover {
+      color: #fff;
+    }
   }
 
-  input, button, .btn {
+  .pagename {
+    color: #fff;
+    font-size: 22px;
+    position: relative;
+    top: 1px;
+  }
+
+  .current {
+    color: #fff;
+  }
+
+  input, .btn {
     margin-top: -20px;
     // This ensures that any buttons and inputs in the
-    // navbar will not mess up its vertical alignment
+    // .nav will not mess up its vertical alignment
+  }
+}
+
+
+.btn-close {
+  background: #000;
+  border: 0;
+  color: #fff;
+  float: right;
+  font-size: 25px;
+  margin-top: -44px;
+  visibility: hidden;
+}
+
+
+
+// Update styling of .nav for small screens
+@media(max-width:500px) {
+  .btn-close {
+    visibility: visible;
   }
 
-  // Update styling of .navbar for small screens
-  @media(max-width:500px) {
-    height: 7.5em;
+  .nav {
+    overflow: hidden;
+    // transition: max-height .5s ease-in-out, height .5s ease-in-out;
+
+    &:focus {
+      /* Necesary for animations
+      max-height: 500px;
+      height: 100%;
+      */
+      height: auto;
+    }
+
+    &:before {
+      background: #000;
+      border-bottom: 10px double;
+      content: '_';
+      float: right;
+      font-size: 32px;
+      font-weight: bold;
+      height: 21px;
+      line-height: 0;
+      margin-right: 10px;
+      margin-top: -10px;
+      position: relative;
+    }
 
     a {
       display: block;
-      text-align: center;
+      padding: .5em 0;
+      width: 50%;
     }
   }
-}
 
-
-.pagename {
-  color: #fff;
-  font-size: 22px;
-  top: 1px;
-  position: relative;
-}
-
-
-.navbar-link {
-  color: #aaa;
-  font-size: 14px;
-  padding-right: 1em;
-  position: relative;
-  top: -1px;
-
-  &:hover {
-    color: #fff;
+  .pagename {
+    margin-top: -11px;
   }
 }
-
 
 //-------------------------------------------------------------------
 // End @if
