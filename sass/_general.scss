@@ -21,3 +21,14 @@ body, textarea {
   }
 }
 
+
+
+// shared styling between btn and links in nav bars
+%nav-btn-shared {
+  outline: 0;
+  // when button or navbar is focused don't show an outline
+}
+
+%no-underline {
+  text-decoration: none;
+}
