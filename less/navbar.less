@@ -1,4 +1,4 @@
-nav, .navbar-link:hover, .navbar a.pagename, .navbar a {
+nav, .navbar-link:hover, .navbar a.pagename, .navbar a, .close {
 	background: #000;
 	color: #fff;
 	position: relative;
@@ -64,15 +64,13 @@ button.btn.close.btn-sm {
 	}
 	.navbar:before {
 		content: '_';
-		font-weight: bold;
 		border-bottom: 10px double;
-		line-height: 0;
 		float: right;
-		font-size: 32px;
 		margin-top: -10px;
 		position: relative;
 		background: #000;
 		height: 21px;
+		font: bold 32px/0 sans-serif; /* bold, 32px sans-serif text with a line-height of zero */
 	}
 	.navbar a {
 		padding: .5em 0;
