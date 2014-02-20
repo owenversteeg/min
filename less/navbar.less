@@ -1,4 +1,4 @@
-nav, .navbar-link:hover, .navbar a.pagename, .navbar a {
+nav, .navbar-link:hover, .navbar a.pagename {
 	background: #000;
 	color: #fff;
 }
@@ -6,7 +6,7 @@ nav, .navbar-link:hover, .navbar a.pagename, .navbar a {
 .navbar {
 	height: 1.5em;
 	padding: .7em 0 .95em;
-	/* Necessary for animations
+	/* Uncomment for animations
 	max-height: 1.5em;
 	*/
 }
@@ -28,17 +28,12 @@ button.btn.close.btn-sm {
 }
 
 .current {
-	color: #fff; /* make current page white */
+	color: #fff; /* make current page link white */
 }
 
 .navbar a.pagename {
 	font-size: 22px;
 	top: 1px;
-}
-
-.navbar input, .navbar .btn {
-	margin-top: -20px;
-	/* This ensures that any buttons and inputs in the navbar will not mess up its vertical alignment */
 }
 
 @media (max-width:500px) {
