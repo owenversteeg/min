@@ -3,9 +3,8 @@
 /* Since every column has 2% padding (1% on each side) its width is (((its number/12) * 100)-2) percent (truncated, to avoid spillage.) Thus, c12 has width 98%. */
 
 .row {
-	line-height: 2em;
 	margin-top: 2%;
-	overflow: auto;
+	overflow: auto; /* required - without this, the page layout is screwed up */
 }
 column {
 	float: left;
