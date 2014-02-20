@@ -1,11 +1,14 @@
 /* Grid system responsive code is in general.less */
 
-/* Since every column has 2% padding (1% on each side) its width is (((its number/12) * 100)-2) percent (truncated, to avoid spillage.) Thus, c12 has width 98%. */
+/*
+	Since every column has 2% padding (1% on each side) its width is (((its number/12) * 100)-2) percent (truncated, to avoid spillage.) Thus, c12 has width 98%.
+*/
 
 .row {
 	margin-top: 2%;
 	overflow: auto; /* required - without this, the page layout is screwed up */
 }
+
 column {
 	float: left;
 	margin: auto 1%;
@@ -48,4 +51,12 @@ column {
 }
 .c1 {
 	width: 6.33%;
+}
+
+/* For smaller screens, change all columns to 100% width */
+@media (max-width:870px) {
+	.row column {
+		margin: 1% auto;
+		width: 100%;
+	}
 }

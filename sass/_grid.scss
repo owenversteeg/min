@@ -10,21 +10,13 @@
 //-------------------------------------------------------------------
 
 .row {
-  line-height: 2em;
   margin-top: 2%;
-  overflow: auto;
+  overflow: auto; // needed for proper formed layout
 }
 
 column {
   float: left;
   margin: auto 1%;
-}
-
-@media (max-width:870px) {
-  .row column {
-    margin: 1% auto;
-    width: 100%;
-  }
 }
 
 // IE Grid Fix
@@ -67,6 +59,14 @@ column {
 }
 .c1 {
 	width: 6.33%;
+}
+
+
+@media (max-width:870px) {
+  .row column {
+    margin: 1% auto;
+    width: 100%;
+  }
 }
 
 //-------------------------------------------------------------------

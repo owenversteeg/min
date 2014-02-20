@@ -1,21 +1,28 @@
-@if $import-navbar == true{
+@if $import-navbar == true {
 //-------------------------------------------------------------------
 //  Navigation Bar
 //-------------------------------------------------------------------
 
-.nav {
+// CSS reused in multiple selectors
+%nav-global {
   background: #000;
   color: #fff;
+}
+
+
+
+.nav {
+  @extend %nav-global;
   height: 1.5em;
   line-height: 1.5em;
   // max-height: 1.5em; // needed for animations, uncomment to use
   padding: .7em 0 .95em;
 
   a {
+    @extend %no-underline;
     color: #aaa;
     font-size: 14px;
     padding-right: 1em;
-    text-decoration: none;
 
     &:hover {
       color: #fff;
@@ -42,9 +49,8 @@
 
 
 .btn-close {
-  background: #000;
+  @extend %nav-global;
   border: 0;
-  color: #fff;
   float: right;
   font-size: 25px;
   margin-top: -44px;

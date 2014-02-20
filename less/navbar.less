@@ -1,9 +1,9 @@
-nav, .navbar-link:hover, .navbar a.pagename {
+.nav, .nav-link:hover, .nav .pagename {
 	background: #000;
 	color: #fff;
 }
 
-.navbar {
+.nav {
 	height: 1.5em;
 	padding: .7em 0 .95em;
 	/* Uncomment for animations
@@ -11,7 +11,7 @@ nav, .navbar-link:hover, .navbar a.pagename {
 	*/
 }
 
-.navbar a {
+.nav a {
 	padding-right: 1em;
 	color: #aaa;
 	top: -1px;
@@ -19,7 +19,7 @@ nav, .navbar-link:hover, .navbar a.pagename {
 	position: relative;
 }
 
-button.btn.close.btn-sm {
+.btn-close {
 	background: #000;
 	visibility: hidden;
 	float: right;
@@ -31,7 +31,7 @@ button.btn.close.btn-sm {
 	color: #fff; /* make current page link white */
 }
 
-.navbar a.pagename {
+.nav .pagename {
 	font-size: 22px;
 	top: 1px;
 }
@@ -40,21 +40,21 @@ button.btn.close.btn-sm {
 	button.btn.close.btn-sm {
 		visibility: visible;
 	}
-	.navbar {
+	.nav {
 		/* transition: max-height .5s ease-in-out, height .5s ease-in-out; */
 		overflow: hidden;
 	}
 	.pagename {
 		margin-top: -11px;
 	}
-	.navbar:focus {
+	.nav:focus {
 		/* Necesary for animations
 		max-height: 500px;
 		height: 100%;
 		*/
 		height: auto;
 	}
-	.navbar:before {
+	.nav:before {
 		content: '_';
 		border-bottom: 10px double;
 		float: right;
@@ -64,7 +64,7 @@ button.btn.close.btn-sm {
 		height: 21px;
 		font: bold 32px/0 sans-serif; /* bold, 32px sans-serif text with a line-height of zero */
 	}
-	.navbar a {
+	.nav a {
 		padding: .5em 0;
 		width: 50%;
 		display: block;
