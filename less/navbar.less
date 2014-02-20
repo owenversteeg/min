@@ -19,7 +19,7 @@
 	position: relative;
 }
 
-.btn-close {
+.btn.btn-close {
 	background: #000;
 	visibility: hidden;
 	float: right;
@@ -37,7 +37,7 @@
 }
 
 @media (max-width:500px) {
-	button.btn.close.btn-sm {
+	.btn.btn-close {
 		visibility: visible;
 	}
 	.nav {
@@ -54,11 +54,11 @@
 		*/
 		height: auto;
 	}
-	.nav:before {
+	.nav div:before {
 		content: '_';
 		border-bottom: 10px double;
 		float: right;
-		margin-top: -10px;
+		top: 1px;
 		position: relative;
 		background: #000;
 		height: 21px;
