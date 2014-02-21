@@ -25,6 +25,7 @@
 // use .btn on any element to give it the styling of a button
 .btn {
   @extend %no-underline;
+  @extend outline-0;
   @include btn-style(#999, #888, #777);
   border: 0;
   border-radius: 10px; // rounded corners
@@ -32,8 +33,7 @@
   cursor: pointer;
   display: inline-block; // Enables non-inline-block elements like <a>s to be buttons
   font-size: 2.5em;
-  margin: .3em .2em 0 0;
-  outline: 0; // when the button is focused, don't show an outline
+  margin: .2em .3em .2em 0;
   padding: 15px 40px 16px;
 }
 

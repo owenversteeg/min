@@ -14,54 +14,43 @@
 .nav {
   @extend %nav-global;
   height: 1.5em;
-  line-height: 1.5em;
-  // max-height: 1.5em; // needed for animations, uncomment to use
   padding: .7em 0 .95em;
+  // max-height: 1.5em; // needed for animations, uncomment to use
 
   a {
     @extend %no-underline;
+    @extend %nav-global;
     color: #aaa;
     font-size: 14px;
     padding-right: 1em;
-
-    &:hover {
-      color: #fff;
-    }
+    position: relative;
+    top: -1px;
   }
 
   .pagename {
-    color: #fff;
+    @extend %nav-global;
     font-size: 22px;
-    position: relative;
     top: 1px;
   }
 
   .current {
-    color: #fff;
-  }
-
-  input, .btn {
-    margin-top: -20px;
-    // This ensures that any buttons and inputs in the
-    // .nav will not mess up its vertical alignment
+    @extend %nav-global;
   }
 }
 
-
-.btn-close {
+.btn.btn-close {
   @extend %nav-global;
-  border: 0;
   float: right;
   font-size: 25px;
-  margin-top: -44px;
+  margin-top: -54px;
   visibility: hidden;
 }
 
 
 
 // Update styling of .nav for small screens
-@media(max-width:500px) {
-  .btn-close {
+@media (max-width:500px) {
+  .btn.btn-close {
     visibility: visible;
   }
 
@@ -77,18 +66,15 @@
       height: auto;
     }
 
-    &:before {
+    & div:before {
       background: #000;
       border-bottom: 10px double;
       content: '_';
       float: right;
-      font-size: 32px;
-      font-weight: bold;
+      font: bold 32px/0 sans-serif; // bold, 32px sans-serif text with a line-height of zero
       height: 21px;
-      line-height: 0;
-      margin-right: 10px;
-      margin-top: -10px;
       position: relative;
+      top: 1px;
     }
 
     a {
