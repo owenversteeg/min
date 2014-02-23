@@ -68,13 +68,15 @@
 
     & div:before {
       background: #000;
+      border-top: 3px solid;
       border-bottom: 10px double;
-      content: '_';
+      content: '';
       float: right;
-      font: bold 32px/0 sans-serif; // bold, 32px sans-serif text with a line-height of zero
-      height: 21px;
+      height: 4px;
       position: relative;
-      top: 1px;
+      right: 3px;
+      top: 14px;
+      width: 20px;
     }
 
     a {
