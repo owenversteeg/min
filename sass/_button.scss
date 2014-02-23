@@ -15,36 +15,26 @@
 }
 
 
+
 @if $import-buttons == true {
 //-------------------------------------------------------------------
 // Button Styles & Classes
 //-------------------------------------------------------------------
 
-
-
 // Set Generic <button> and .btn styling.
 // use .btn on any element to give it the styling of a button
 .btn {
-  @include btn-style(#fff, #eee, #ddd);
-  border-radius: 10px; /* rounded corners */
+  @extend %no-underline;
+  @extend outline-0;
+  @include btn-style(#999, #888, #777);
   border: 0;
+  border-radius: 10px; // rounded corners
   color: #fff;
   cursor: pointer;
-  display: inline-block; /* Enables non-inline-block elements like <div>s to be buttons */
+  display: inline-block; // Enables non-inline-block elements like <a>s to be buttons
   font-size: 2.5em;
-  margin: .3em .7em;
-  outline: 0; /* when the button is focused, don't show an outline */
+  margin: .2em .3em .2em 0;
   padding: 15px 40px 16px;
-  text-decoration: none;
-
-  // to make sure buttons are visible when not paired with a coloring
-  // class, we give the <button> and .btn a dark border and text color
-  &:not([class*='btn-']) {
-    box-shadow: 0 0 0 2px inset;
-    color: #000;
-    // We use box shadow here because then we can
-    // apply a border without changing the element height
-  }
 }
 
 
@@ -65,10 +55,10 @@
 
 // Add this class to a <button> or element with a .btn class
 // to create a smaller sized button.
-.btn-small {
-  border-radius: 7px; /* rounded corners */
-  font-size: 1em;
-  padding: 7px 19px 8px;
+.btn-sm {
+  border-radius: 4px; /* rounded corners */
+  font-size: .9em;
+  padding: 10px 15px 11px;
 }
 
 

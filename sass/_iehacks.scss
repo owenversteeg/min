@@ -1,24 +1,9 @@
-@if $import-ie-hacks == true{
+@if $import-ie-hacks == true {
 //-------------------------------------------------------------------
 //  Internet Explorer Hacks
 //-------------------------------------------------------------------
 
-// IE Medium Width
-.ie .mediumwidth {
-  margin-left: 0;
-  width: 70%;
-
-  hr {
-    margin: 100px auto;
-    padding-left: 200px;
-  }
-}
-
-
-// IE Grid System
-.ie column {
-  margin: auto .7%;
-}
+//  no hacks (outside of the ie grid hack found in the grid.scss file)
 
 //-------------------------------------------------------------------
 // End @if

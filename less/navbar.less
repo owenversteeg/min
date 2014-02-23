@@ -1,93 +1,70 @@
-nav {
+.nav, .nav-link:hover, .nav .pagename {
 	background: #000;
+	color: #fff;
 }
 
-.navbar {
-	color: #fff;
+.nav {
 	height: 1.5em;
 	padding: .7em 0 .95em;
-	outline: 0;
+	/* Uncomment for animations
+	max-height: 1.5em;
+	*/
 }
 
-.navbar a {
-	text-decoration: none;
-}
-
-.navbar-link {
+.nav a {
 	padding-right: 1em;
 	color: #aaa;
 	top: -1px;
-	position: relative;
 	font-size: 14px;
-	&:hover {
-		color: #fff;
-	}
+	position: relative;
 }
 
-button.btn.close.small-btn {
+.btn.btn-close {
 	background: #000;
 	visibility: hidden;
 	float: right;
-	margin-right: 4px;
-	margin-top: -51px;
+	margin-top: -54px;
 	font-size: 25px;
-	color: #fff;
-	border: 0;
 }
 
 .current {
-	color: #fff; /* make current page white */
+	color: #fff; /* make current page link white */
 }
 
-.pagename {
-	color: #fff;
+.nav .pagename {
 	font-size: 22px;
 	top: 1px;
-	position: relative;
 }
-
-.navbar input, .navbar .btn {
-	margin-top: -20px;
-	/* This ensures that any buttons and inputs in the navbar will not mess up its vertical alignment */
-}
-
-/* Necessary for animations
-.navbar {
-	max-height: 1.5em;
-}
-*/
 
 @media (max-width:500px) {
-	button.btn.close.small-btn {
+	.btn.btn-close {
 		visibility: visible;
 	}
-	.navbar {
+	.nav {
 		/* transition: max-height .5s ease-in-out, height .5s ease-in-out; */
 		overflow: hidden;
 	}
 	.pagename {
 		margin-top: -11px;
 	}
-	.navbar:focus {
+	.nav:focus {
 		/* Necesary for animations
 		max-height: 500px;
 		height: 100%;
 		*/
 		height: auto;
 	}
-	.navbar:before {
+	.nav div:before {
 		content: '_';
-		font-weight: bold;
 		border-bottom: 10px double;
-		line-height: 0;
 		float: right;
-		font-size: 32px;
-		margin-top: -10px;
+		top: 1px;
 		position: relative;
 		background: #000;
 		height: 21px;
+		font: bold 32px/0 sans-serif; /* bold, 32px sans-serif text with a line-height of zero */
 	}
-	.navbar a {
+	.nav a {
 		padding: .5em 0;
 		width: 50%;
 		display: block;

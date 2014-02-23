@@ -5,6 +5,7 @@
 @import 'general.scss';
 
 
+
 // ------------------------------------------------------------------
 //  Customize Optional Components
 //
@@ -28,19 +29,18 @@ $import-icons:                            true!default;
 
 $import-grid:                             true!default;
 
-$import-ie-hacks:                         true!default;
+$import-ie-hacks:                         false!default;
 
 
 // ------------------------------------------------------------------
 //  Import Components based on above customization
 // ------------------------------------------------------------------
 
-@import 'button.scss';
-@import 'grid.scss';
-@import 'headings.scss';
-@import 'icons.scss';
-@import 'inputs.scss';
-@import 'messages.scss';
-@import 'navbar.scss';
-@import 'table.scss';
-@import 'iehacks.scss';
+@import 'button';
+@import 'grid';
+@import 'headings';
+@import 'icons';
+@import 'inputs';
+@import 'navbar';
+@import 'table';
+@import 'iehacks';

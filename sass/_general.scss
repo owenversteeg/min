@@ -2,51 +2,36 @@
 //  General Min Styling
 //-------------------------------------------------------------------
 
-body {
-  font: 16px sans-serif;
+body, textarea {
+  font: 16px Arial, sans-serif;
   margin: 0;
+  // Arial is used so the nav bar looks nice in iOS
 }
 
+
+// apply a smooth transition effect to an element's state change
 .smooth {
   transition: all .2s;
 }
 
-hr {
-  margin: 2.5em auto;
+.container {
+  margin: auto;
+  width: 1270px;
 
-  &.mediumwidth {
-    margin: 2.5em auto;
-  }
-}
-
-.mediumwidth {
-  margin-bottom: .3em;
-  margin-left: 30%;
-  margin-top: .3em;
-  width: 40%;
-}
-
-@media (max-width:870px) {
-  .mediumwidth {
-    margin-left: 15%;
-    width: 70%;
-  }
-  .row [class*='c']{
-    display: block;
-    margin: 1% auto;
-    width: 100%;
-  }
-  .row:last-child column {
-    margin-bottom: 2.5em;
-  }
-}
-
-@media (max-width:520px) {
-  .mediumwidth {
-    margin-left: 0;
-    width: 100%;
-  }
-  hr.mediumwidth {
+  @media(max-width:1310px) {
+    margin: 0 20px;
     width: auto;
   }
+}
+
+
+
+// shared styling between btn and links in nav bars
+%outline-0 {
+  outline: 0;
+  // when button or nav bar is focused don't show an outline
+}
+
+%no-underline {
+  text-decoration: none;
 }

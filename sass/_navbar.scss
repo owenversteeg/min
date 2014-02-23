@@ -1,54 +1,95 @@
-@if $import-navbar == true{
+@if $import-navbar == true {
 //-------------------------------------------------------------------
 //  Navigation Bar
 //-------------------------------------------------------------------
 
-.navbar {
+// CSS reused in multiple selectors
+%nav-global {
   background: #000;
   color: #fff;
+}
+
+
+
+.nav {
+  @extend %nav-global;
   height: 1.5em;
-  padding: 1em 0 .6em;
-  text-align: left;
-  width: 100%;
+  padding: .7em 0 .95em;
+  // max-height: 1.5em; // needed for animations, uncomment to use
 
   a {
-    text-decoration: none;
+    @extend %no-underline;
+    @extend %nav-global;
+    color: #aaa;
+    font-size: 14px;
+    padding-right: 1em;
+    position: relative;
+    top: -1px;
   }
 
-  input, button, .btn {
-    margin-top: -20px;
-    // This ensures that any buttons and inputs in the
-    // navbar will not mess up its vertical alignment
+  .pagename {
+    @extend %nav-global;
+    font-size: 22px;
+    top: 1px;
   }
 
-  // Update styling of .navbar for small screens
-  @media(max-width:500px) {
-    height: 7.5em;
+  .current {
+    @extend %nav-global;
+  }
+}
+
+.btn.btn-close {
+  @extend %nav-global;
+  float: right;
+  font-size: 25px;
+  margin-top: -54px;
+  visibility: hidden;
+}
+
+
+
+// Update styling of .nav for small screens
+@media (max-width:500px) {
+  .btn.btn-close {
+    visibility: visible;
+  }
+
+  .nav {
+    overflow: hidden;
+    // transition: max-height .5s ease-in-out, height .5s ease-in-out;
+
+    &:focus {
+      /* Necesary for animations
+      max-height: 500px;
+      height: 100%;
+      */
+      height: auto;
+    }
+
+    & div:before {
+      background: #000;
+      border-top: 3px solid;
+      border-bottom: 10px double;
+      content: '';
+      float: right;
+      height: 4px;
+      position: relative;
+      right: 3px;
+      top: 14px;
+      width: 20px;
+    }
 
     a {
       display: block;
-      text-align: center;
+      padding: .5em 0;
+      width: 50%;
     }
   }
-}
 
-
-.pagename {
-  color: #fff;
-  padding: 0 1em 0 2em;
-  font-weight: bold;
-}
-
-
-.navbar-link {
-  color: #aaa;
-  padding: .5em;
-
-  &:hover {
-    color: #fff;
+  .pagename {
+    margin-top: -11px;
   }
 }
-
 
 //-------------------------------------------------------------------
 // End @if

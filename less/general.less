@@ -1,18 +1,18 @@
 body, textarea {
-	font-family: Arial, sans-serif;
+	font: 16px Arial, sans-serif; /* Arial is used so that the navbar looks nice on iOS. */
 	margin: 0;
-	font-size: 16px;
 }
 
 .smooth {
 	transition: all .2s;
 }
 
-@media (max-width:870px) {
-	.row column {
-		width: 100%;
-		margin: 1% auto;
-	}
+.btn, .nav a {
+	text-decoration: none;
+}
+
+.btn, .nav {
+	outline: 0; /* when the button or navbar is focused, don't show an outline */
 }
 
 .container {

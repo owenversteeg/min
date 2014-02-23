@@ -1,32 +1,21 @@
 .btn {
-	background: #fff;
-	color: #fff;
-	display: inline-block; /* Enables non-inline-block elements like <div>s to be buttons */
-	font-size: 2.5em; 
-	padding: 15px 40px 16px;
-	text-decoration: none; 
-	margin: .3em .2em 0 0;
-	cursor: pointer;
-	border: 0;
-	outline: 0; /* when the button is focused, don't show an outline */
+	background: #999;
 	border-radius: 10px; /* rounded corners */
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block; /* Enables non-inline-block elements like <div>s to be buttons */
+	font-size: 2.5em;
+	margin: .2em .3em .2em 0;
+	padding: 15px 40px 16px;
 }
 
 .btn:hover {
-	background: #eee;
+	background: #888;
 }
 
 .btn:active,.btn:focus {
-	background: #ddd;
-}
-
-.btn:not([class*='btn-']) {
-	color: #000;
-	border: 2px solid;
-	padding: 13px 38px 14px; /* This way we don't change the button size, as there's no border on other buttons */
-	&.small-btn {
-		padding: 8px 14px 9px; /* This padding is 2px smaller than the normal small-btn padding to account for the border */
-	}
+	background: #777;
 }
 
 .btn-a {
@@ -60,8 +49,8 @@
 	}
 }
 
-.small-btn {
-	padding: 10px 15px 11px;
-	font-size: .9em;
+.btn-sm {
 	border-radius: 4px; /* rounded corners */
+	font-size: .9em;
+	padding: 10px 15px 11px;
 }

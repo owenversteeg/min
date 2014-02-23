@@ -12,12 +12,11 @@
 
 textarea, input {
   @extend %global-inputs;
-  font-family: sans-serif;
-  outline: none;
+  outline: 0;
   padding: 6px;
 
   &:focus {
-    border: 1px solid #5ab;
+    border-color: #5ab;
   }
 }
 
@@ -30,8 +29,7 @@ textarea, input[type='text'] {
 .addon-front {
   @extend %global-inputs;
   border-right: 0;
-  margin-right: -2px;
-  padding: 6px 11px 6px 10px;
+  padding: 6px 11px;
 }
 
 
