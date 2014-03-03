@@ -59,10 +59,9 @@
     // transition: max-height .5s ease-in-out, height .5s ease-in-out;
 
     &:focus {
-      /* Necesary for animations
-      max-height: 500px;
-      height: 100%;
-      */
+      // -- Necesary for animations
+      // max-height: 500px;
+      // height: 100%;
       height: auto;
     }
 
