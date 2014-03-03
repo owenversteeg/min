@@ -5,13 +5,13 @@
 
 // Styles to extend to all inputs
 %global-inputs {
-  border: 1px solid #ccc;
   font-size: .8em;
 }
 
 
 textarea, input {
   @extend %global-inputs;
+  border: 1px solid #ccc;
   outline: 0;
   padding: 6px;
 
@@ -28,7 +28,7 @@ textarea, input[type='text'] {
 
 .addon-front {
   @extend %global-inputs;
-  border-right: 0;
+  box-shadow: 0 0 0 1px #ccc;
   padding: 6px 11px;
 }
 
