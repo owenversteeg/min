@@ -11,6 +11,7 @@
 
 textarea, input {
   @extend %global-inputs;
+  	-webkit-appearance: none; // make iOS inputs pretty
   border: 1px solid #ccc;
   outline: 0;
   padding: 6px;
