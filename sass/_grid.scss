@@ -1,4 +1,4 @@
-@if $import-grid == true{
+@if $import-grid == true {
 //-------------------------------------------------------------------
 //  Grid system responsive code is in _general.scss
 //  A hack (for old IEs) for the grid system is located in _iehacks.scss
@@ -14,56 +14,40 @@
   overflow: auto; // needed for proper formed layout
 }
 
-column {
+.col {
   float: left;
   margin: auto 1%;
 }
 
 // IE Grid Fix
-.ie column {
+.ie .col {
   margin: auto .7%;
 }
 
-.c12 {
-	width: 98%;
-}
-.c11 {
-	width: 89.66%;
-}
-.c10 {
-	width: 81.33%;
-}
-.c9 {
-	width: 73%;
-}
-.c8 {
-	width: 64.66%;
-}
-.c7 {
-	width: 56.33%;
-}
-.c6 {
-	width: 48%;
-}
-.c5 {
-	width: 39.66%
-}
-.c4 {
-	width: 31.33%;
-}
-.c3 {
-	width: 23%;
-}
-.c2 {
-	width: 14.66%;
-}
-.c1 {
-	width: 6.33%;
-}
 
+$grid-list: (
+  c1   6.33%,
+  c2   14.66%,
+  c3   23%,
+  c4   31.33%,
+  c5   39.66%,
+  c6   48%,
+  c7   56.33%,
+  c8   64.66%,
+  c9   73%,
+  c10  81.33%,
+  c11  89.66%,
+  c12  98%
+);
+
+@each $value in $grid-list {
+  .#{nth($value, 1)} {
+    width: nth($value, 2);
+  }
+}
 
 @media (max-width:870px) {
-  .row column {
+  .row .col {
     margin: 1% auto;
     width: 100%;
   }
