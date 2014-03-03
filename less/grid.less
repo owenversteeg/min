@@ -9,54 +9,65 @@
 	overflow: auto; /* required - without this, the page layout is screwed up */
 }
 
-column {
+.col {
 	float: left;
-	margin: auto 1%;
 }
-.ie column {
+
+.ie .col {
 	margin: auto .7%;
 }
+
 .c12 {
-	width: 98%;
+	width: 100%;
 }
+
 .c11 {
-	width: 89.66%;
+	width: 91.66%;
 }
+
 .c10 {
-	width: 81.33%;
+	width: 83.33%;
 }
+
 .c9 {
-	width: 73%;
+	width: 75%;
 }
+
 .c8 {
-	width: 64.66%;
+	width: 66.66%;
 }
+
 .c7 {
-	width: 56.33%;
+	width: 58.33%;
 }
+
 .c6 {
-	width: 48%;
+	width: 50%;
 }
+
 .c5 {
-	width: 39.66%
+	width: 41.66%
 }
+
 .c4 {
-	width: 31.33%;
+	width: 33.33%;
 }
+
 .c3 {
-	width: 23%;
+	width: 25%;
 }
+
 .c2 {
-	width: 14.66%;
+	width: 16.66%;
 }
+
 .c1 {
-	width: 6.33%;
+	width: 8.33%;
 }
 
 /* For smaller screens, change all columns to 100% width */
 @media (max-width:870px) {
-	.row column {
-		margin: 1% auto;
+	.row .col {
 		width: 100%;
 	}
 }
