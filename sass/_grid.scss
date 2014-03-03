@@ -16,28 +16,21 @@
 
 .col {
   float: left;
-  margin: auto 1%;
 }
-
-// IE Grid Fix
-.ie .col {
-  margin: auto .7%;
-}
-
 
 $grid-list: (
-  c1   6.33%,
-  c2   14.66%,
-  c3   23%,
-  c4   31.33%,
-  c5   39.66%,
-  c6   48%,
-  c7   56.33%,
-  c8   64.66%,
-  c9   73%,
-  c10  81.33%,
-  c11  89.66%,
-  c12  98%
+  c1   8.33%,
+  c2   16.66%,
+  c3   25%,
+  c4   33.33%,
+  c5   41.66%,
+  c6   50%,
+  c7   58.33%,
+  c8   66.66%,
+  c9   75%,
+  c10  83.33%,
+  c11  91.66%,
+  c12  100%
 );
 
 @each $value in $grid-list {
@@ -48,7 +41,6 @@ $grid-list: (
 
 @media (max-width:870px) {
   .row .col {
-    margin: 1% auto;
     width: 100%;
   }
 }
