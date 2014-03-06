@@ -53,19 +53,8 @@ WARNING! This will build the latest, pre-release version of Min. It may be broke
     bash build.sh
 
 ###World's smallest? Really?
-Min really is is the world's smallest feature complete CSS framework, at 995 bytes (or less - check the Downloads page for its current size)
+TL;DR Min really is is the world's CSS framework, however you slice it. 
 
-When we say "feature complete" we mean that it includes the following features:
- - Buttons
- - Headings
- - Inputs
- - Navbars
- - Tables
- - Notifications
- - Icons
- - A grid system
- - Standardization of the look and feel of these elements across browsers
-
-Without these restrictions on what's considered a "feature complete CSS framework" someone could make a CSS framework with the following code: `*{}` (the smallest piece of CSS to validate) and call it the world's smallest CSS framework. Of course, such a "framework" would literally do nothing, so in order for a piece of CSS to be considered a "framework" it should be a little more substantial (thus meeting the requirements above.)
+We personally feel that the criteria for "world's smallest CSS framework" are buttons, inputs, navbars, tables, icons, grids, headings, and standardization of these elements across the "Big 5" browsers (Chrome, Firefox, Opera, Safari, and Internet Explorer.) Of course, your criteria for what a CSS framework is are likely to be different, and thus you are encouraged to (on the Downloads page) download whatever parts you feel to be relevant. Thus, Min really is the world's smallest CSS framework, no matter your criteria for what a CSS framework is.
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/OwenVersteeg/min/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
