@@ -2,11 +2,6 @@
 //-------------------------------------------------------------------
 //  Grid system responsive code is in _general.scss
 //  A hack (for old IEs) for the grid system is located in _iehacks.scss
-//
-//
-//  Every column has 2% padding (1% on each side) its width is
-//  (((its number/12) * 100)-2) percent (truncated, to avoid spillage.)
-//  Thus, c12 has width 98%.
 //-------------------------------------------------------------------
 
 .row {
@@ -19,7 +14,7 @@
 }
 
 $grid-list: (
-  c1   8.33%,
+  c1    8.33%,
   c2   16.66%,
   c3   25%,
   c4   33.33%,

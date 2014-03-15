@@ -1,4 +1,4 @@
-@if $import-inputs == true{
+@if $import-inputs == true {
 //-------------------------------------------------------------------
 //  Inputs
 //-------------------------------------------------------------------
@@ -9,27 +9,27 @@
 }
 
 
-textarea, input {
+input, textarea {
   @extend %global-inputs;
-  	-webkit-appearance: none; // make iOS inputs pretty
-  border: 1px solid #ccc;
+  -webkit-appearance: none; // make iOS inputs pretty
+  border: 1px solid $c-grey;
   outline: 0;
   padding: 6px;
 
   &:focus {
-    border-color: #5ab;
+    border-color: $c-focus;
   }
 }
 
 
-textarea, input[type='text'] {
+input[type='text'], textarea {
   width: 13em;
 }
 
 
 .addon-front {
   @extend %global-inputs;
-  box-shadow: 0 0 0 1px #ccc;
+  box-shadow: 0 0 0 1px $c-grey;
   padding: 6px 11px;
 }
 

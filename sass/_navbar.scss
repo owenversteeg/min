@@ -5,8 +5,8 @@
 
 // CSS reused in multiple selectors
 %nav-global {
-  background: #000;
-  color: #fff;
+  background: $c-black;
+  color: $c-white;
 }
 
 
@@ -20,7 +20,7 @@
   a {
     @extend %no-underline;
     @extend %nav-global;
-    color: #aaa;
+    color: $c-grey-dark;
     font-size: 14px;
     padding-right: 1em;
     position: relative;
@@ -59,14 +59,14 @@
     // transition: max-height .5s ease-in-out, height .5s ease-in-out;
 
     &:focus {
-      // -- Necesary for animations
-      // max-height: 500px;
-      // height: 100%;
       height: auto;
+      // -- Necessary for animations
+      // height: 100%;
+      // max-height: 500px;
     }
 
     & div:before {
-      background: #000;
+      background: $c-black;
       border-top: 3px solid;
       border-bottom: 10px double;
       content: '';
