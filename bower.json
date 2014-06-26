@@ -1,0 +1,27 @@
+{
+	"name": "min",
+	"version": "1.5.0",
+	"authors": [
+		"Owen Versteeg <me@owenversteeg.com>",
+		"Scott O'Hara"
+	],
+	"description": "The world's smallest CSS framework - only 995 bytes.",
+	"main": "entireframework.min.css",
+	"ignore": [
+		".gitignore",
+		"CNAME",
+		"**/*.md",
+		"**/*.html",
+		"**/*.sh",
+		"**/*.js",
+		"**/*.ico",
+		"**/*.php"
+	],
+	"keywords": [
+		"min",
+		"mincss",
+		"minimal"
+	],
+	"license": "MIT",
+	"homepage": "http://minfwk.com"
+}
