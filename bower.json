@@ -15,7 +15,8 @@
 		"**/*.sh",
 		"**/*.js",
 		"**/*.ico",
-		"**/*.php"
+		"**/*.php",
+		"download.less"
 	],
 	"keywords": [
 		"min",
