@@ -1,126 +1,322 @@
-<!DOCTYPE html><!--[if !IE]><html><![endif]--><!--[if lte IE 7]><html class="ie"><![endif]--><head>
-	<!--[if lt IE 9]> 
- <script> document.createElement("column"); document.createElement("message"); </script>
- <![endif]-->
-	<style type="text/css">pre {font-size: .9em;}.dark {background-color: rgb(172, 172, 172);}.light {background-color: rgb(223, 223, 223);}</style><meta charset="UTF-8"><title>min</title>
-	<link href="entireframework.min.css" rel="stylesheet" type="text/css" />
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script> 
+			document.createElement("nav"); document.createElement("ico"); document.createElement("button");
+			</script>
+		<!--[if lt IE 9]> 
+			<script> 
+				document.createElement("col"); document.createElement("message"); document.createElement("nav"); document.createElement("ico"); document.createElement("button");
+
+
+			</script>
+		<![endif]-->
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>min</title>
+
+		<!--[if lt IE 7]>
+		<script src="IE70.js"></script>
+		<![endif]-->
+
+		<link href="entireframework.min.css" rel="stylesheet" type="text/css" />
+		
+		<style type="text/css">
+			/* Min+ plugin*/
+			message {
+				display: block;
+				padding: 2em;
+				background: #def;
+				border-left: 5px solid #44e;
+			}
+
+			.warning {
+				border-color: #e44; 
+				background: #fdd;
+			}
+
+			.great {
+				border-color: #2d2;
+				background: #dfd;
+			}
+		</style>
+
+		<style type="text/css">
+			/* These styles are used on this page only to make the demo page look nicer. Don't use them in your project. */
+			
+			/* Bootstrap stuff */
+			.buttonsizes * {
+				vertical-align: bottom;
+				margin-bottom: 0;
+				margin-right: 10px;
+				margin-left: 0;
+			}
+
+			/* code blocks */
+			pre {
+				font-size: .9em;
+				word-wrap: break-word;
+			}
+			
+			/* formatting for grid system */
+			.dark {
+				background-color: rgb(172, 172, 172);
+			}
+			
+			.light {
+				background-color: rgb(223, 223, 223);
+			}
+			
+			.col {
+				text-align: center;
+			}
+			
+			.row {
+				line-height: 2em;
+			}
+			
+			/* pretty heading demo display (all headings on one line) */
+			.headings *:not(first-of-type) {
+				display: inline;
+			}
+			
+			/* fancy page heading styles */
+			h1:not(.exampleh1) {
+				margin: 0.2em 0;
+				border-bottom: 5px solid;
+				margin-bottom: 15px;
+				padding-bottom: 5px;
+			}
+			
+			/* normally, the button would extend past the page top and be invisible but when it's in the middle of the page it shows */
+			button.btn-close.btn-sm {
+				padding-top: 4px;
+				margin-top: -50px;
+			}
+
+			/* this fixes the display of the demo-navbar when the page is resized */
+			.navbar .container {
+				margin: 0 20px;
+			}
+			
+			/* support tables */
+			.support span.full, .support tr.full {
+				background: #3c5;
+			}
+			
+			.support span.partial, .support tr.partial {
+				background: #fd5;
+			}
+			
+			.support span.none, .support tr.none {
+				background: #d55;
+			}
+			
+			.key {
+				padding: 5px;
+				line-height: 30px;
+			}
+			
+			.support th, .support td, .support table {
+				border: 1px solid;
+			}
+			.support table, .support .key {
+				font-weight: bold;
+			}
+			
+			@media (max-width: 900px) {
+				.browserdetails {
+					display: none;
+				}
+			}
+
+			/* End this-page-only styles, start beta styles */
+			nav {
+				display: block;
+			}
+
+			/* IE styles */
+
+			/*
+			.btn-sm {
+				font-size:1em;
+				margin-top: 0;
+				padding-top: 1000px;
+			}
+
+			button {
+				line-height: .65em;
+			}
+
+			a.btn {
+				margin-top: -84px;
+			}
+
+			a.btn-sm, div.btn-sm {
+				margin-top: -49px;
+				padding-top: 10px;
+			}
+
+			button.btn-sm {
+				line-height: .7em;
+				padding-top: 11px;
+			}
+			
+			.btn {
+				width: auto;
+				display: inline;
+				overflow: visible;
+			}
+
+			*/
+
+			/* Changes to the main CSS:
+			 - move media query from max-width to min-width
+			*/
+
+			/* new beta styles */
+			h1.title {
+				border-bottom: none;
+				font-size: 90px;
+				margin-top: 0;
+				color: white;
+			}
+
+			.hero em {
+				color: #91D564;
+				font-style: normal;
+			}
+
+			.hero {
+				text-align: center;
+				background: #72bf9e;
+				background: #87aceb;
+				background: #80B6FA;
+				background-image: url('congruent_outline.png');
+				margin: 0;
+				width: 100%;
+				padding: 50px;
+				box-sizing: border-box;
+				color: #ddd;
+			}
+			.intro .c2 {
+				height: 1px;
+			}
+			.intro .c4 {
+				box-sizing: border-box;
+			}
+			.intro .c4:nth-child(2) {
+				padding-right: 15px;
+			}
+			.intro .c4:nth-child(3) {
+				padding-left: 15px;
+			}
+			@media (max-width: 870px) {
+				.intro .c2 {
+					width: 16.66%;
+				}
+				.intro .c4 {
+					width: 33.33%;
+				}
+			}
+			@media (max-width: 660px) {
+				.intro .c2 {
+					display: none;
+				}
+				.intro .c4 {
+					width: 50%;
+					padding: 10px;
+				}
+			}
+			.intro .c4 p {
+				line-height: 1.4;
+			}
+		</style>
+
+		<!--[if lte IE 6]>
+			<style>
+				.col {
+					margin: 0.5%;
+				}
+				.c12 {
+					margin: 0.5%;
+					margin-left: 0.5%;
+					width: 97%;
+				}
+				.container {
+					width: 90%;
+				}
+			</style>
+		<![endif]-->
 	</head>
-	<body><br><h1 class="title">min</h1><h3>995 byte CSS framework &middot; supports ie5.5+ &middot; <a href="https://github.com/owenversteeg/min"><u>on github</u></a></h3><hr class="mediumwidth"><div class="buttons"><a href="#"><button class="smooth btn-a">btn-a</button></a><a href="#"><button class="smooth btn-b">btn-b</button></a><a href="#"><button class="smooth btn-c">btn-c</button></a>
-	<br><br><pre>&lt;button class="smooth btn-b"&gt;btn-small&lt;/button&gt;</pre>
-	<br><a href="http://minframework.com"><button class="smooth btn-b btn-small">btn-small</button></a>
-	<br><br><pre>&lt;button class="smooth btn-b btn-small"&gt;btn-small&lt;/button&gt;</pre>
-	</div>
-
-	<hr class="mediumwidth">
-	<h1 class="title">h1 title</h1><h1>h1</h1><h2>h2</h2><h3>h3</h3><h4>h4</h4><h5>h5</h5><h6>h6</h6><br>
-	<pre>&lt;h1 class="title"&gt;h1 title&lt;/h1&gt;</pre>
-
-	<hr class="mediumwidth">
-	<div class="mediumwidth">
-	<input type="text" class="smooth" placeholder="input type=&quot;text&quot;"><br><br>
-	<textarea rows="3" class="smooth" placeholder="textarea"></textarea><br><br><span class="addon-front">$</span><input type="text" class="smooth" placeholder="span class=&quot;addon-front&quot;">
-	<br><br>
-	<pre>&lt;input type="text" class="smooth"&gt;
-	<br>&lt;textarea rows="3" class="smooth"&gt;
-	<br>&lt;span class="addon-front"&gt;&lt;/span&gt;&lt;input type="text" class="smooth"&gt;</pre>
-	</div>
-	
-	<hr class="mediumwidth"><div class="mediumwidth"><div class="navbar"><a class="pagename" href="#"><!--[if lt IE 6]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->Min Framework</a> <a class="navbar-link" href="#">One</a> <a class="navbar-link" href="#">Two</a> <a class="navbar-link" href="#">Three</a></div></div>
-	<br><pre>&lt;div class=&quot;navbar&quot;&gt;<br>&lt;a class=&quot;pagename&quot; href=&quot;#&quot;&gt;Min Framework&lt;/a&gt;<br>&lt;a class=&quot;navbar-link&quot; href=&quot;#&quot;&gt;One&lt;/a&gt;<br> &lt;a class=&quot;navbar-link&quot; href=&quot;#&quot;&gt;Two&lt;/a&gt; <br>&lt;a class=&quot;navbar-link&quot; href=&quot;#&quot;&gt;Three&lt;/a&gt;<br>&lt;/div&gt;</pre>
-	
-	<hr class="mediumwidth">
-	<div class="mediumwidth"><table class="table-striped table"><thead><tr><th>#</th><th>Widgets Sold</th><th>Revenue (£)</th><th>Profit (£)</th></tr></thead><tbody><tr><td>1</td><td>5</td><td>10</td><td>2</td></tr><tr><td>2</td><td>10</td><td>20</td><td>4</td></tr><tr><td>3</td><td>500</td><td>1000</td><td>200</td></tr></tbody></table>
-	<br><br>
-	<pre>&lt;table class=&quot;table-striped table&quot;&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;#&lt;/th&gt;
-&lt;th&gt;Widgets Sold&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;5&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;10&lt;/td&gt;
-&lt;/tr&gt;&lt;tr&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;500&lt;/td&gt;
-&lt;/tr&gt;&lt;/tbody&gt;
-&lt;/table&gt;</pre>
-</div>
-	<hr class="mediumwidth"><div class="mediumwidth"><message class="warning"><strong>Watch out!</strong> You don't have H9RBS.js installed.</message><br><message class="great"><strong>Great!</strong> You successfully frobjugated the minlingator's snorbdralob.</message><br><message><strong>Hey!</strong> You've got four thousand new grabjalognibs!</message>
-	<br><br>
-	<pre>&lt;message class=&quot;warning&quot;&gt;<br>&lt;strong&gt;Watch out!&lt;/strong&gt; <br>You don&#39;t have H9RBS.js installed.<br>&lt;/message&gt;
-	<br>&lt;message class=&quot;great&quot;&gt;<br>&lt;strong&gt;Great!&lt;/strong&gt; <br>You successfully frobjugated the minlingator&#39;s snorbdralob.<br>&lt;/message&gt;
-	<br>&lt;message&gt;<br>&lt;strong&gt;Hey!&lt;/strong&gt; <br> You&#39;ve got four thousand new grabjalognibs!<br>&lt;/message&gt;</pre>
-	</div>
-	<hr class="mediumwidth">
-	<div class="icons">
-	<ico>✉ ✰ ☁ ⌚ ⌘ ☎ ✈ ☑ ☒</ico><br><br>
-	<ico>♂ ♀ ⌛ ☀ ☮ ☢ ☠ ☣ ⌨</ico><br><br>
-	<ico>ⓧ © § ® ⌂ ℗ ☺ ☻ ☼</ico><br><br>
-	<ico>⇦ ⇧ ⇨ ⇩ ∡ ∿ ⊝ ⊘ ⌂</ico><br><br>
-	<ico>⁂ ⚛ ☤ ♠ ♣ ♥ ♦ ♪ ♫</ico><br><br>
-	<ico>♚ ♛ ♜ ♝ ♞ ♟ ☕ ⚰ ☄ </ico><br><br>
-	<ico>☟ ☜ ☝ ☞ ♱ ⚑ ☹ ⚘ ☙ </ico><br><br>
-	<ico>⚒ ☭ ☚ ☛ ⚥ ✌ 〠 ♨ ☃</ico><br><br>
-	<ico>♭ ♮ ♯ ⚔ ⚢ ⚣ ⚜ ⚒ </ico><br><br>
-	<ico>☂ ⚱ ⚡ ♰ ☸ ✍ ☯ ⍨ ✂</ico><br><br>
-	<pre>&lt;ico&gt;Copy and paste icons from above here!&lt;/ico&gt;</pre>	
-	</div>
-	<hr class="mediumwidth"><div class="mediumwidth">
-	<div class="row"><column class="dark c10">10</column></div><div class="row"><column class="dark c9">9</column><column class="light c1">1</column></div><div class="row"><column class="dark c8">8</column><column class="light c2">2</column></div><div class="row"><column class="dark c7">7</column><column class="light c3">3</column></div><div class="row"><column class="dark c6">6</column><column class="light c4">4</column></div><div class="row"><column class="dark c5">5</column><column class="light c5">5</column></div><div class="row"><column class="dark c4">4</column><column class="light c6">6</column></div><div class="row"><column class="dark c3">3</column><column class="light c7">7</column></div><div class="row"><column class="dark c2">2</column><column class="light c8">8</column></div><div class="row"><column class="dark c1">1</column><column class="light c9">9</column></div><div class="row"><column class="light c10">10</column></div>
-<br>	<pre>&lt;div class=&quot;row&quot;&gt;<br>&lt;column class=&quot;c10&quot;&gt;10&lt;/column&gt;<br>&lt;/div&gt;
-		<br>&lt;div class=&quot;row&quot;&gt;<br>&lt;column class=&quot;c4&quot;&gt;4&lt;/column&gt;<br>&lt;column class=&quot;c6&quot;&gt;6&lt;/column&gt;<br>&lt;/div&gt;
-	</pre>
-	</div>
-	<hr class="mediumwidth"><a href="download.html"><button class="smooth btn-a" style="margin: 0 0 .2em 0;">Download</button></a>
-	<hr class="mediumwidth">
-	<!--analytics-->
-	
-	<h2><a href="bootstrapconverter.html">bootstrap to min converter</a></h2>
-	
-	<h2>websites built using min:</h2><br><a href="http://goalcalendar.com">GoalCalendar</a> &middot; <a href="http://openleap.org">OpenLeap</a><br><br>
-	to encourage further development, you can tip me with <a href="https://www.gittip.com/OwenVersteeg/">gittip</a>, <a href="https://blockchain.info/address/1Na9Nuk8WNm59JjcFG1Nvgsg29GHJyT8pV">bitcoin</a>, or <a href="http://dogechain.info/address/DQowenvAUoF5rQrhq8s53Cesg9Y3nU857G">dogecoin</a>. thanks!<br><br>
-
-	<script type="text/javascript">
-		function downloadJSAtOnload() {
-			var element = document.createElement("script");
-			element.src = "defer.js";
-			document.body.appendChild(element);
-		}
-		if (window.addEventListener)
-		window.addEventListener("load", downloadJSAtOnload, false);
-		else if (window.attachEvent)
-		window.attachEvent("onload", downloadJSAtOnload);
-		else window.onload = downloadJSAtOnload;
-	</script>
-	<!-- Quantcast Tag -->
-	<script type="text/javascript">
-		var _qevents = _qevents || [];
-		
-		(function() {
-		var elem = document.createElement('script');
-		elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
-		elem.async = true;
-		elem.type = "text/javascript";
-		var scpt = document.getElementsByTagName('script')[0];
-		scpt.parentNode.insertBefore(elem, scpt);
-		})();
-		
-		_qevents.push({
-		qacct:"p-4UQY7SYFeUHE_"
-		});
-	</script>
-	
-	<noscript>
-		<div style="display:none;">
-			<img src="//pixel.quantserve.com/pixel/p-4UQY7SYFeUHE_.gif" border="0" height="1" width="1" alt="Quantcast"/>
+	<body>
+		<nav class="nav" tabindex="-1" onclick="this.focus()">
+			<div class="container">
+				<a class="pagename current" href="index.html">Min</a>
+				<a href="docs.html">Docs</a>
+				<!--
+					<a href="bootstrapconverter.html">Bootstrap Converter</a>
+					<a href="examples.html">Examples</a>
+				-->
+				<a href="download.html">Download</a>
+			</div>
+		</nav>
+		<button class="btn btn-sm btn-close">×</button>
+		<div class="hero">
+			<h1 class="title">Min</h1>
+			<h3>The <em>995 byte</em> CSS framework that supports <em>IE5.5+</em></h3>
 		</div>
-	</noscript>
-	<!-- End Quantcast tag -->
+		<div class="row intro">
+			<div class="col c2">&nbsp;</div>
+			<div class="col c4">
+				<h3>Exceptional browser support</h3>
+				<p>Min supports IE5.5+, FF3+, Opera 9+, and Safari 4+, the best browser support of any CSS framework by far. Unfortunately, IE5.5 does not support border-radius and as such does not have rounded button corners.That said, IE5.5 users will be so surprised to see a site load correctly they will overlook this.</p>
+			</div>
+			<div class="col c4">
+				<h3>Ridiculously small</h3>
+				<p>Min is only 995 bytes, so it will never slow down your website unlike bulky frameworks like Bootstrap. Min also does not require Javascript. Pages built with Min can faster than a blink of an eye. (Average loading times for three Min pages tested were 334ms; a human eye blink is 400ms.)</p>
+			</div>
+			<div class="col c2">&nbsp;</div>
+		</div>
+		<div class="row intro">
+			<div class="col c2">&nbsp;</div>
+			<div class="col c4">
+				<h3>Unprescriptive</h3>
+				<p>Min is extremely lightweight and doesn't prescribe a certain design for you, like Bootstrap. It's easy to override the default rules since there are so few of them and they are at low specificity levels. This customizability helps you avoid the Yet Another Bootstrap Site phenomenon.</p>
+			</div>
+			<div class="col c4">
+				<h3>Semantic markup</h3>
+				<p>Min uses the new HTML5 semantic elements liberally, has clear and short class names, and uses &lt;div&gt;s sparingly. Patients that switched from Bootstrap to Min reported up to a ninefold decrease in markup and drastic improvements in most cases of divitis. Ask your CSS-atrician if Min is right for you.</p>
+			</div>
+			<div class="col c2">&nbsp;</div>
+		</div>
+		<div class="row intro">
+			<div class="col c2">&nbsp;</div>
+			<div class="col c4">
+				<a href="docs.html" class="btn btn-a">Docs</a>
+			</div>
+			<div class="col c4">
+				<a href="download.html" class="btn btn-b">Download</a>
+			</div>
+			<div class="col c2">&nbsp;</div>
+		</div>
+		<br>
+		<div class="container">
+
+			<script type="text/javascript">
+				function downloadJSAtOnload() {
+					var element = document.createElement("script");
+					element.src = "defer.js";
+					document.body.appendChild(element);
+				}
+				if (window.addEventListener)
+				window.addEventListener("load", downloadJSAtOnload, false);
+				else if (window.attachEvent)
+				window.attachEvent("onload", downloadJSAtOnload);
+				else window.onload = downloadJSAtOnload;
+			</script>
+		</div>
+		<script src="defer.js"></script>
 	</body>
 </html>

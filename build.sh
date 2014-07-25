@@ -3,7 +3,7 @@
 mkdir compiled -p
 #The compiled folder holds all the separate compiled CSS files.
 
-subtypes=(general buttons grid headings icons iehacks inputs navbar tables)
+subtypes=(general buttons grid headings icons inputs navbar tables)
 #You can change the subtypes used by changing this.
 
 rm -f compiledcss.js
@@ -13,6 +13,9 @@ rm -f entireframework.min.css
 i="0"
 echo "var css = {" >> compiledcss.js
 #Begin making compiledcss.js
+
+echo -n "/*Copyright 2014 Owen Versteeg; MIT licensed*/" >> entireframework.min.css
+#Begin making entireframework.min.css; -n is to remove the newline
 
 #For each subtype, we compile the LESS file, minify it, and concatenate it into two files:
 #entireframework.min.css and compiledcss.js

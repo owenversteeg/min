@@ -1,6 +1,5 @@
 function prettyOutput() {
 	document.getElementById('result').style.display = "inline-block";
-	document.getElementById('warning').style.display = "inline-block";
 	document.getElementById('result').innerText = calculateCSS();
 }
 
@@ -22,13 +21,8 @@ function calculateCSS() {
 		inputs: false,
 		navbar: false,
 		tables: false,
-		messages: false,
 		icons: false,
-		iehacks: false,
 		grid: false,
-		total: 0,
-		totalmin: 0,
-		totalmingzip: 0
 	};
 	
 	for (var i=0; i<document.getElementById('checkboxes').children.length; i++) {
@@ -38,11 +32,6 @@ function calculateCSS() {
 		details[currentTypeName] = isChecked;
 		
 		if (isChecked) {
-			var det = getNums(document.getElementsByName(currentTypeName)[0].parentElement.innerText || document.getElementsByName(currentTypeName)[0].parentElement.textContent);
-			details.total += det[0];
-			details.totalmin += det[1];
-			details.totalmingzip += det[2];
-			
 			mincss += css[currentTypeName];
 		}
 	}
@@ -68,7 +57,7 @@ function calculateCSS() {
 	};
 	http.send(params);
 
-	document.getElementById('details').innerHTML = "Your download of min is " + details.total + " bytes unminified and " + details.totalmin + " bytes minified (above)";
+	document.getElementById('details').innerHTML = "Your download of min is " + mincss.length + " bytes minified and un-gzipped."
 
 	console.log(details);
 	return mincss;

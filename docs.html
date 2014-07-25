@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script> 
+			document.createElement("nav"); document.createElement("ico"); document.createElement("button");
+			</script>
+		<!--[if lt IE 9]> 
+			<script> 
+				document.createElement("col"); document.createElement("message"); document.createElement("nav"); document.createElement("ico"); document.createElement("button");
+
+
+			</script>
+		<![endif]-->
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>min - docs</title>
+
+		<!--[if lt IE 7]>
+		<script src="IE70.js"></script>
+		<![endif]-->
+
+		<link href="entireframework.min.css" rel="stylesheet" type="text/css" />
+		
+		<style type="text/css">
+			/* Min+ plugin*/
+			message {
+				display: block;
+				padding: 2em;
+				background: #def;
+				border-left: 5px solid #44e;
+			}
+
+			.warning {
+				border-color: #e44; 
+				background: #fdd;
+			}
+
+			.great {
+				border-color: #2d2;
+				background: #dfd;
+			}
+		</style>
+
+		<style type="text/css">
+			/* These styles are used on this page only to make the demo page look nicer. Don't use them in your project. */
+			
+			/* Bootstrap stuff */
+			.buttonsizes * {
+				vertical-align: bottom;
+				margin-bottom: 0;
+				margin-right: 10px;
+				margin-left: 0;
+			}
+
+			/* code blocks */
+			pre {
+				font-size: .9em;
+				word-wrap: break-word;
+			}
+			
+			/* formatting for grid system */
+			.dark {
+				background-color: rgb(172, 172, 172);
+			}
+			
+			.light {
+				background-color: rgb(223, 223, 223);
+			}
+			
+			.col {
+				text-align: center;
+			}
+			
+			.row {
+				line-height: 2em;
+			}
+			
+			/* pretty heading demo display (all headings on one line) */
+			.headings *:not(first-of-type) {
+				display: inline;
+			}
+			
+			/* fancy page heading styles */
+			h1:not(.exampleh1) {
+				margin: 0.2em 0;
+				border-bottom: 5px solid;
+				margin-bottom: 15px;
+				padding-bottom: 5px;
+			}
+			
+			/* normally, the button would extend past the page top and be invisible but when it's in the middle of the page it shows */
+			button.btn-close.btn-sm {
+				padding-top: 4px;
+				margin-top: -50px;
+			}
+
+			/* this fixes the display of the demo-navbar when the page is resized */
+			.navbar .container {
+				margin: 0 20px;
+			}
+			
+			/* support tables */
+			.support span.full, .support tr.full {
+				background: #3c5;
+			}
+			
+			.support span.partial, .support tr.partial {
+				background: #fd5;
+			}
+			
+			.support span.none, .support tr.none {
+				background: #d55;
+			}
+			
+			.key {
+				padding: 5px;
+				line-height: 30px;
+			}
+			
+			.support th, .support td, .support table {
+				border: 1px solid;
+			}
+			.support table, .support .key {
+				font-weight: bold;
+			}
+			
+			@media (max-width: 900px) {
+				.browserdetails {
+					display: none;
+				}
+			}
+
+			/* End this-page-only styles, start beta styles */
+			nav {
+				display: block;
+			}
+
+			/* IE styles */
+
+			/*
+			.btn-sm {
+				font-size:1em;
+				margin-top: 0;
+				padding-top: 1000px;
+			}
+
+			button {
+				line-height: .65em;
+			}
+
+			a.btn {
+				margin-top: -84px;
+			}
+
+			a.btn-sm, div.btn-sm {
+				margin-top: -49px;
+				padding-top: 10px;
+			}
+
+			button.btn-sm {
+				line-height: .7em;
+				padding-top: 11px;
+			}
+			
+			.btn {
+				width: auto;
+				display: inline;
+				overflow: visible;
+			}
+
+			*/
+
+			/* Changes to the main CSS:
+			 - move media query from max-width to min-width
+			*/
+
+			/* new beta styles */
+			
+		</style>
+
+		<!--[if lte IE 6]>
+			<style>
+				.col {
+					margin: 0.5%;
+				}
+				.c12 {
+					margin: 0.5%;
+					margin-left: 0.5%;
+					width: 97%;
+				}
+				.container {
+					width: 90%;
+				}
+			</style>
+		<![endif]-->
+	</head>
+	<body>
+		<nav class="nav" tabindex="-1" onclick="this.focus()">
+			<div class="container">
+				<a class="pagename current" href="index.html">Min</a>
+				<a class="current" href="#">Docs</a>
+				<!--
+					<a href="bootstrapconverter.html">Bootstrap Converter</a>
+					<a href="examples.html">Examples</a>
+				-->
+				<a href="download.html">Download</a>
+			</div>
+		</nav>
+		<button class="btn btn-sm btn-close">×</button>
+		<div class="container">
+			<div>
+				<h1>Min Basics</h1>
+				<p>
+					Min's minimalism has several advantages. Firstly, it doesn't prescribe a specific design for you. Each element has just a handful of CSS rules applied to it, and as a result overriding default styles is extremely easy. Min being only 995 bytes means that there's less of it to get in your way when you want to customize your site. Contrast this with Bootstrap, where you may have to override many different rules to get what you want. 
+				</p>
+				<p>
+					Secondly, there's less markup to type. Patients that switched from Bootstrap to Min reported up to a ninefold decrease in markup and drastic improvements in most cases of divitis. Ask your CSS-atrician if Min is right for you.
+				</p>
+				<p>
+					Min is also extremely flexible: you can apply the btn class to any element - a link, a &lt;button&gt;, a div - anything. The same goes for any of the column sizes, any of the button coloration styles, and many more classes in plugins. You can apply the smooth class to anything to give it a 200ms transition.
+				</p>
+				<p>
+					Because of its minimalist goal, Min core has fewer features than Bootstrap. Many of the features omitted in Min are superfluous, unsemantic, and just plain idiotic (I'm looking at you, text-left class.) However, when using the <a href="https://owenversteeg.com/min-bootstrap-plugin">3.5kB Min Bootstrap plugin</a>, Min has full feature parity with Bootstrap. If you are migrating a complex site from Bootstrap to Min, it is highly recommended that you use this plugin.
+				</p>
+			</div>
+			<h1>Browser support</h1>
+			<div class="support">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Chrome</th>
+							<th>IE</th>
+							<th>FF</th>
+							<th>Opera</th>
+							<th>Safari</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="full">
+							<td>33 - 2 <span class="browserdetails">(27.32%) [2014 - 2009]</span></td>
+							<td>11 - 9 <span class="browserdetails">(5.22% + 0.20% + 0.20%) [2014 - 2011]</span></td>
+							<td>27 - 3.5 <span class="browserdetails">(18.66% + 0.09% + 0.04%) [2014 - 2009]</span></td>
+							<td>19 - 10 <span class="browserdetails">(1.51% + 1.32%) [2014 - 2009]</span></td>
+							<td>7 - 4 <span class="browserdetails">(3.88% + 11.66% + 5.55%) [2014 - 2009]</span></td>
+						</tr>
+						<tr class="partial">
+							<td>None</td>
+							<td>8 - 5.5 <span class="browserdetails">(4.56%) [2009 - 2000]</span></td>
+							<td onclick="alert(&#39;Tables are not shaded&#39;)">3 <span class="browserdetails">(0.03%) [2008]</span></td>
+							<td onclick="alert(&#39;Tables are not shaded and buttons are not rounded&#39;)">9 <span class="browserdetails">(0.00%) [2006]</span></td>
+							<td>None</td>
+						</tr>
+						<tr class="none">
+							<td onclick="alert(&#39;page overflows&#39;)">1 - 0.2 <span class="browserdetails">(0.00%) [2008 - 2008]</span></td>
+							<td onclick="alert(&#39;Navbars don&#39;t work at all, neither do grids or icons, and buttons are not padded&#39;)">5 - 1 <span class="browserdetails">(0.01%) [1999 - 1995]</span></td>
+							<td onclick="alert(&#39;navbars broken (replace nav elements with divs for a fix)&#39;)">2 - 0.8 <span class="browserdetails">(0.05%) [2006 - 2004]</span></td>
+							<td>8 - 2 <span class="browserdetails">(0.00%) [2005 - 1996]</span></td>
+							<td onclick="alert(&#39;page overflows, no rounded buttons&#39;)">3 - 1 <span class="browserdetails">(0.00%) [2007 - 2003]</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- Reverse Mali flag, Bolivian flag, and Helvetic Republic flag -->
+
+				<p>Key: <span class="full key">Full support</span>, <span class="partial key">partial support</span>, and <span class="none key">no support</span>. <span class="browserdetails">Market share data <a href="http://stats.wikimedia.org/archive/squid_reports/2014-01/SquidReportClients.htm">from Wikimedia</a> is in parens (in the format desktop+mobile+tablet); browser release dates are in brackets. Due to web crawlers and other mobile browsers, numbers will add up to about 80%.</span> Click on each cell for details (if available.) </p>
+				<p>
+					Partial support means that Min supports that browser but there may be a small visual quibble, such as no rounded corners on buttons, a difference in how the page responds to resizing, or slight table shading differences.
+				</p>
+				<p>
+					Netscape support has ended with the release of Min 2.0 as part of a push towards using semantic HTML5 elements. Replace all &lt;nav&gt; elements with &lt;div&gt;s to make Min work in Netscape 7+.
+				</p>
+			</div>
+			<div class="buttons">
+				<h1>Buttons</h1>
+				<a class="btn smooth btn-a" href="#">btn-a</a>
+				<a class="smooth btn-b btn" href="#">btn-b</a>    
+				<a class="smooth btn-c btn" href="#">btn-c</a>
+				<a class="smooth btn" href="#">classless</a>
+			
+				<br><br><pre>&lt;a class="btn btn-b smooth"&gt;btn-b&lt;/a&gt;</pre>
+				<br>
+				<a class="btn smooth btn-a btn-sm" href="#">btn-sm btn-a</a>
+				<a class="btn smooth btn-b btn-sm" href="#">btn-sm btn-b</a>
+				<a class="btn smooth btn-c btn-sm" href="#">btn-sm btn-c</a>
+				<a class="btn smooth btn-sm" href="#">btn-sm classless</a>
+				
+				<br><br><pre>&lt;a class="btn btn-b btn-sm smooth"&gt;btn-sm&lt;/a&gt;</pre>
+			</div>
+		
+			<div>
+				<h1>Inputs</h1>
+				<input type="text" class="smooth" placeholder="input type=&quot;text&quot;"><br><br>
+				<textarea rows="3" class="smooth" placeholder="textarea"></textarea><br><br><span class="addon-front">$</span><input type="text" class="smooth" placeholder="span class=&quot;addon-front&quot;">
+				<br><br>
+				<pre>&lt;input type="text" class="smooth"&gt;
+				<br>&lt;textarea rows="3" class="smooth"&gt;
+				<br>&lt;span class="addon-front"&gt;&lt;/span&gt;&lt;input type="text" class="smooth"&gt;</pre>
+			</div>
+			
+			<div class="navbar">
+				<h1>Navbars</h1>
+				<nav class="nav" tabindex="-1" onclick="this.focus()">
+					<div class="container">
+						<a class="pagename current" href="#">Min</a>
+						<a href="#">One</a>
+						<a href="#">Two</a> 
+						<a href="#">Three</a>
+						<a href="#">Four</a>            
+					</div>
+				</nav>
+				<button class="btn-close btn btn-sm">×</button>
+				<br>
+				<pre>&lt;nav class="nav" tabindex="-1" onclick="this.focus()"&gt;<br>    &lt;div class="container"&gt;<br>        &lt;a class="pagename current" href="#"&gt;Min&lt;/a&gt;<br>        &lt;a href="#"&gt;One&lt;/a&gt;<br>        &lt;a href="#"&gt;Two&lt;/a&gt; <br>        &lt;a href="#"&gt;Three&lt;/a&gt;<br>    &lt;/div&gt;<br>&lt;/nav&gt;<br>&lt;button class="btn-close btn btn-sm"&gt;×&lt;/button&gt;</pre>                
+			</div>
+			
+			<div>
+				<h1>Tables</h1>
+				<table class="table"><thead><tr><th>#</th><th>Widgets Sold</th><th>Revenue (£)</th><th>Profit (£)</th></tr></thead><tbody><tr><td>1</td><td>5</td><td>10</td><td>2</td></tr><tr><td>2</td><td>10</td><td>20</td><td>4</td></tr><tr><td>3</td><td>500</td><td>1000</td><td>200</td></tr></tbody></table>
+				<br><br>
+				<pre>&lt;table class="table"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;#&lt;/th&gt;
+			&lt;th&gt;Widgets Sold&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;5&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;2&lt;/td&gt;
+			&lt;td&gt;10&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;3&lt;/td&gt;
+			&lt;td&gt;500&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+				</pre>
+			</div>
+			
+			<div class="icons">
+				<h1>Icons</h1>
+				<i class="ico"><b>Android Safe</b> ☎ ♂ ♀ ⓧ © § ® ⇦ ⇧ ⇨ ⇩♠ ♣ ♥ ♦ ♪ ♛ ♜ ♝ ♞ ♟☜ ☞ ♨ ♭ ♯ ￥￡ ￠❊ ฿ ๏ ※ ₧ ₨ ₪ € №</i>
+				<br><br><message class="great">The "Android Safe" icons work everywhere, tested on hundreds of devices. </message>
+				<br>
+				<i class="ico"><b>Total Set</b> ✉ ✰ ☁ ✈ ☑ ☒ ✆ ☀ ☮ ☢ ☠ ☣ ⌂ ℗ ☺ ☻ ☼ ∡ ∿ ⊝ ⊘ ⁂ ☤ ♫ ☄ ✎ ☟ ☝ ☹ ☭ ☚ ☛ ✌ 〠 ☃ ♮ ☂ ☸ ✍ ☯ ✂ ₩ ◍ ۩</i>
+				<br><br><message class="warning">Although over 75% of Android devices we tested support all "Total Set" icons, if a substantial portion of your users use old Android devices you should stick to the "Android Safe" set. (The "Total Set" does not include icons from the "Android Safe" set.)</message>
+				<pre>&lt;i class="ico"&gt;Copy and paste icons from above here!&lt;/i&gt;</pre>
+				<h1>Grids</h1>
+				<div class="row">
+					<div class="col dark c12">12</div>
+				</div>
+				<div class="row">
+					<div class="col dark c11">11</div>
+					<div class="col light c1">1</div>
+				</div>
+				<div class="row">
+					<div class="col dark c10">10</div>
+					<div class="col light c2">2</div>
+				</div>
+				<div class="row">
+					<div class="col dark c9">9</div>
+					<div class="col light c3">3</div>
+				</div>
+				<div class="row">
+					<div class="col dark c8">8</div>
+					<div class="col light c4">4</div>
+				</div>
+				<div class="row">
+					<div class="col dark c7">7</div>
+					<div class="col light c5">5</div>
+				</div>
+				<div class="row">
+					<div class="col dark c6">6</div>
+					<div class="col light c6">6</div>
+				</div>
+				<div class="row">
+					<div class="col dark c5">5</div>
+					<div class="col light c7">7</div>
+				</div>
+				<div class="row">
+					<div class="col dark c4">4</div>
+					<div class="col light c8">8</div>
+				</div>
+				<div class="row">
+					<div class="col dark c3">3</div>
+					<div class="col light c9">9</div>
+				</div>
+				<div class="row">
+					<div class="col dark c2">2</div>
+					<div class="col light c10">10</div>
+				</div>
+				<div class="row">
+					<div class="col dark c1">1</div>
+					<div class="col light c11">11</div>
+				</div>
+				<div class="row">
+					<div class="col light c12">12</div>
+				</div>
+	
+				<br>
+
+				<!--[if lte IE 6]><br><br><br><![endif]-->
+				
+				<pre>&lt;div class="row"&gt;<br>    &lt;div class="col c12"&gt;12&lt;/div&gt;<br>&lt;/div&gt;
+					<br>&lt;div class="row"&gt;<br>    &lt;div class="col c4"&gt;4&lt;/div&gt;<br>    &lt;div class="col c8"&gt;8&lt;/div&gt;<br>&lt;/div&gt;
+				</pre>
+			</div>
+			
+			<h1>Headings</h1>
+			<div class="headings">
+				<h1 class="exampleh1">h1</h1>
+				<h2>h2</h2>
+				<h3>h3</h3>
+				<h4>h4</h4>
+				<h5>h5</h5>
+				<h6>h6</h6>
+				<br>
+				<pre>&lt;h1&gt;Level One Heading&lt;/h1&gt;</pre>
+			</div>
+			<br>
+
+			<script type="text/javascript">
+				function downloadJSAtOnload() {
+					var element = document.createElement("script");
+					element.src = "defer.js";
+					document.body.appendChild(element);
+				}
+				if (window.addEventListener)
+				window.addEventListener("load", downloadJSAtOnload, false);
+				else if (window.attachEvent)
+				window.attachEvent("onload", downloadJSAtOnload);
+				else window.onload = downloadJSAtOnload;
+			</script>
+		</div>
+		<script src="defer.js"></script>
+	</body>
+</html>

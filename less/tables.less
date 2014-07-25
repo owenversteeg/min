@@ -1,14 +1,13 @@
-table {
-	width: 100%;
+.table {
 	border-spacing: 0;
 }
 
-th, td {
+.table th, .table td {
 	padding: .5em;
 	text-align: left;
 }
 
-tbody tr:nth-child(2n-1) {
+.table tbody>*:nth-child(2n-1) {
 	/* We use tbody to ensure that we don't shade the heading - this preserves the order of the shading */
-	background: #ccc; /* Shade every other table row */
+	background: #ddd; /* Shade every other table row */
 }

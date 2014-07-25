@@ -11,8 +11,8 @@ body, textarea {
 	text-decoration: none;
 }
 
-.btn, .nav {
-	outline: 0; /* when the button or navbar is focused, don't show an outline */
+* {
+	outline: 0;
 }
 
 .container {
@@ -25,4 +25,13 @@ body, textarea {
 		margin: 0 20px;
 		width: auto;
 	}
+}
+
+label > * {
+	display:inline
+}
+
+form > * {
+	display: block;
+	margin-bottom: 10px;
 }

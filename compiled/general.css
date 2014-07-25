@@ -1,0 +1,32 @@
+body,
+textarea {
+  font: 16px sans-serif;
+  margin: 0;
+}
+.smooth {
+  transition: all .2s;
+}
+.btn,
+.nav a {
+  text-decoration: none;
+}
+* {
+  outline: 0;
+}
+.container {
+  width: 1270px;
+  margin: auto;
+}
+@media (max-width: 1310px) {
+  .container {
+    margin: 0 20px;
+    width: auto;
+  }
+}
+label > * {
+  display: inline;
+}
+form > * {
+  display: block;
+  margin-bottom: 10px;
+}
