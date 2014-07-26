@@ -5,8 +5,10 @@
   color: #fff;
 }
 .nav {
-  height: 1.5em;
-  padding: .7em 0 .95em;
+  height: 24px;
+  padding: 11px 0 15px;
+  /* TODO: migrate to ems (currently we don't use them because of iOS compatibility problems (has to do with unicode icon for close)) */
+
   /* Uncomment for animations
 	max-height: 1.5em;
 	*/
