@@ -188,11 +188,18 @@
 				font-style: normal;
 			}
 
+			html {
+				background: #f0f0f0;
+			}
+
 			.hero {
 				text-align: center;
+				/*
 				background: #72bf9e;
 				background: #87aceb;
 				background: #80B6FA;
+				*/
+				background: #333;
 				background-image: url('congruent_outline.png');
 				margin: 0;
 				width: 100%;
@@ -231,6 +238,15 @@
 			}
 			.intro .c4 p {
 				line-height: 1.4;
+			}
+			.btn.em {
+				background: #91D564;
+			}
+			.btn.em:hover {
+				background: #81c554;
+			}
+			.btn.em:active, .btn.em:focus {
+				background: #71c544;
 			}
 		</style>
 
@@ -271,7 +287,7 @@
 			<div class="col c2">&nbsp;</div>
 			<div class="col c4">
 				<h3>Exceptional browser support</h3>
-				<p>Min supports IE5.5+, FF3+, Opera 9+, and Safari 4+, the best browser support of any CSS framework by far. Unfortunately, IE5.5 does not support border-radius and as such does not have rounded button corners.That said, IE5.5 users will be so surprised to see a site load correctly they will overlook this.</p>
+				<p>Min supports IE5.5+, FF3+, Opera 9+, and Safari 4+, the best browser support of any CSS framework by far. Unfortunately, IE5.5 does not support border-radius and as such does not have rounded button corners. That said, IE5.5 users will be so surprised to see a site load correctly they will overlook this.</p>
 			</div>
 			<div class="col c4">
 				<h3>Ridiculously small</h3>
@@ -294,10 +310,10 @@
 		<div class="row intro">
 			<div class="col c2">&nbsp;</div>
 			<div class="col c4">
-				<a href="docs.html" class="btn btn-a">Docs</a>
+				<a href="docs.html" class="btn em smooth">Docs</a>
 			</div>
 			<div class="col c4">
-				<a href="download.html" class="btn btn-b">Download</a>
+				<a href="download.html" class="btn smooth">Download</a>
 			</div>
 			<div class="col c2">&nbsp;</div>
 		</div>
