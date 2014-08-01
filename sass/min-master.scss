@@ -2,9 +2,8 @@
 //  Core Styles of Min
 // ------------------------------------------------------------------
 
-@import '__var-lib.scss';
-
-@import 'general.scss';
+@import '__var-lib.scss',
+        'general.scss';
 
 
 // ------------------------------------------------------------------
@@ -37,11 +36,11 @@ $import-ie-hacks:                         false!default;
 //  Import Components based on above customization
 // ------------------------------------------------------------------
 
-@import 'button';
-@import 'grid';
-@import 'headings';
-@import 'icons';
-@import 'inputs';
-@import 'navbar';
-@import 'table';
-@import 'iehacks';
+@import 'button',
+        'grid',
+        'headings',
+        'icons',
+        'inputs',
+        'navbar',
+        'table',
+        'iehacks';

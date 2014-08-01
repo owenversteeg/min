@@ -3,18 +3,19 @@
 //  Inputs
 //-------------------------------------------------------------------
 
-// Styles to extend to all inputs
-%global-inputs {
-  font-size: .8em;
+label > * {
+  display: inline;
 }
 
+form > * {
+  display: block;
+  margin-bottom: 10px;
+}
 
 input, textarea {
-  @extend %global-inputs;
-  -webkit-appearance: none; // make iOS inputs pretty
+  @extend %shared-font-size;
   border: 1px solid $c-grey;
-  outline: 0;
-  padding: 6px;
+  padding: 8px;
 
   &:focus {
     border-color: $c-focus;
@@ -23,14 +24,15 @@ input, textarea {
 
 
 input[type='text'], textarea {
+  -webkit-appearance: none; // make iOS inputs pretty
   width: 13em;
 }
 
 
 .addon-front {
-  @extend %global-inputs;
+  @extend %shared-font-size;
   box-shadow: 0 0 0 1px $c-grey;
-  padding: 6px 11px;
+  padding: 8px 12px;
 }
 
 

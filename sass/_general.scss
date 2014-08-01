@@ -3,9 +3,13 @@
 //-------------------------------------------------------------------
 
 body,
-textarea {
+textarea, input {
   font: 16px sans-serif;
   margin: 0;
+}
+
+* {
+  outline: 0;
 }
 
 
@@ -24,14 +28,17 @@ textarea {
   }
 }
 
-
-
-// shared styling between btn and links in nav bars
-%outline-0 {
-  outline: 0;
-  // when button or nav bar is focused don't show an outline
-}
-
+// this extends into both nav a and .btn
 %no-underline {
   text-decoration: none;
+}
+
+// shared large text size
+%txt-large {
+  font-size: 2em;
+}
+
+// shared smaller text size
+%shared-font-size {
+  font-size: .9em;
 }
