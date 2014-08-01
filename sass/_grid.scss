@@ -1,7 +1,10 @@
 @if $import-grid == true {
 //-------------------------------------------------------------------
 //  Grid system responsive code is in _general.scss
-//  A hack (for old IEs) for the grid system is located in _iehacks.scss
+//
+// Since every column has 2% padding (1% on each side) its width is
+// (((its number/12) * 100)-2) percent (truncated, to avoid spillage.)
+// Thus, c12 has width 98%.
 //-------------------------------------------------------------------
 
 .row {
@@ -11,6 +14,10 @@
 
 .col {
   float: left;
+}
+
+.c12, .table {
+  width: 100%;
 }
 
 $grid-list: (
@@ -25,7 +32,6 @@ $grid-list: (
   c9   75%,
   c10  83.33%,
   c11  91.66%,
-  c12  100%
 );
 
 @each $value in $grid-list {

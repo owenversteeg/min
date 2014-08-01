@@ -10,7 +10,7 @@ h1 {
 
 // Sets style for <h2>
 h2 {
-  font-size: 2em;
+  @extend %txt-large;
 }
 
 

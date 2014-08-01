@@ -13,22 +13,28 @@
 
 .nav {
   @extend %nav-global;
-  height: 1.5em;
-  padding: .7em 0 .95em;
-  // max-height: 1.5em; // needed for animations, uncomment to use
+   // TODO: migrate to ems
+   // (currently we don't use them because of iOS compatibility problems
+   // -- has to do with unicode icon for close) */
+  height: 24px;
+  padding: 11px 0 15px;
+  // Uncomment for animations
+  // max-height: 1.5em;
 
   a {
+    @extend %shared-font-size;
     @extend %no-underline;
-    @extend %nav-global;
     color: $c-grey-dark;
-    font-size: 14px;
     padding-right: 1em;
     position: relative;
     top: -1px;
+
+    &:hover {
+      @extend %nav-global;
+    }
   }
 
   .pagename {
-    @extend %nav-global;
     font-size: 22px;
     top: 1px;
   }
@@ -39,7 +45,7 @@
 }
 
 .btn.btn-close {
-  @extend %nav-global;
+  background: $c-black;
   float: right;
   font-size: 25px;
   margin-top: -54px;
@@ -49,7 +55,7 @@
 
 
 // Update styling of .nav for small screens
-@media (max-width:500px) {
+@media(max-width:500px) {
   .btn.btn-close {
     visibility: visible;
   }
