@@ -2,42 +2,23 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-        
-        <script> 
-            document.createElement("nav"); document.createElement("button");
-		</script>        
-        
-        <!--[if IE 7]> 
-	        <style>
-	        	.col { margin: 0 0.9% !important; }
-	        </style>
-        <![endif]-->
+		
+		<script> 
+			document.createElement("nav"); document.createElement("button");
+		</script>
+		
+		<!--[if IE 7]> 
+			<style>
+				.col { margin: 0 0.9% !important; }
+			</style>
+		<![endif]-->
 
 		<title>min - docs</title>
 
 		<link href="entireframework.min.css" rel="stylesheet" type="text/css" />
 
-		<style>
-        /*.container{width:1270px;margin:auto}@media(max-width:1310px){.container{margin:0 20px;width:auto}}*/
-        /* when we're at least 1310px wide, screen width is 1270px */
-        .container{margin:0 20px;width:auto}@media(min-width:1310px){.container{width:1270px;margin:auto}}
-        
-        button.btn-close.btn-sm { padding: 0; margin: -49px 25px !important; }
-        
-        input,textarea { background: 0; line-height: 16px; }
-        
-        .c12{width:98%}.c11{width:89.66%}.c10{width:81.33%}.c9{width:73%}.c8{width:64.66%}.c7{width:56.33%}.c6{width:48%}.c5{width:39.66%}.c4{width:31.33%}.c3{width:23%}.c2{width:14.66%}.c1{width:6.33%}
-        .col { margin: 0 1%; }
-        @media (max-width: 870px) {
-            .row .col {
-                margin: 0;
-            }
-        }
-        </style>
-        
 		<style type="text/css">
 			/* Min+ plugin*/
 			message {
@@ -106,9 +87,9 @@
 			}
 			
 			/* normally, the button would extend past the page top and be invisible but when it's in the middle of the page it shows */
-			button.btn-close.btn-sm {
+			.navbar button.btn-close.btn-sm {
 				padding-top: 4px;
-				margin-top: -50px;
+				margin-top: -49px;
 			}
 
 			/* this fixes the display of the demo-navbar when the page is resized */
@@ -147,52 +128,19 @@
 				}
 			}
 
-			/* End this-page-only styles, start beta styles */
 			nav {
 				display: block;
 			}
 
-			/* IE styles */
+			.c12{width:98%}.c11{width:89.66%}.c10{width:81.33%}.c9{width:73%}.c8{width:64.66%}.c7{width:56.33%}.c6{width:48%}.c5{width:39.66%}.c4{width:31.33%}.c3{width:23%}.c2{width:14.66%}.c1{width:6.33%}
 
-			/*
-			.btn-sm {
-				font-size:1em;
-				margin-top: 0;
-				padding-top: 1000px;
+			.col { margin: 0 1%; }
+
+			@media (max-width: 870px) {
+				.row .col {
+					margin: 0;
+				}
 			}
-
-			button {
-				line-height: .65em;
-			}
-
-			a.btn {
-				margin-top: -84px;
-			}
-
-			a.btn-sm, div.btn-sm {
-				margin-top: -49px;
-				padding-top: 10px;
-			}
-
-			button.btn-sm {
-				line-height: .7em;
-				padding-top: 11px;
-			}
-			
-			.btn {
-				width: auto;
-				display: inline;
-				overflow: visible;
-			}
-
-			*/
-
-			/* Changes to the main CSS:
-			 - move media query from max-width to min-width
-			*/
-
-			/* new beta styles */
-			
 		</style>
 
 		<!--[if lte IE 6]>
@@ -321,7 +269,7 @@
 						<a href="#">One</a>
 						<a href="#">Two</a> 
 						<a href="#">Three</a>
-						<a href="#">Four</a>            
+						<a href="#">Four</a>
 					</div>
 				</nav>
 				<button class="btn-close btn btn-sm">×</button>
