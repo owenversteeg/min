@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<script> 
-			document.createElement("nav"); document.createElement("ico"); document.createElement("button");
-			</script>
-		<!--[if lt IE 9]> 
-			<script> 
-				document.createElement("col"); document.createElement("message"); document.createElement("nav"); document.createElement("ico"); document.createElement("button");
-
-
-			</script>
-		<![endif]-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<script> 
+			document.createElement("nav"); document.createElement("button");
+		</script>
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>min</title>
 
-		<!--[if lt IE 7]>
-		<script src="IE70.js"></script>
-		<![endif]-->
-
 		<link href="entireframework.min.css" rel="stylesheet" type="text/css" />
 		
+		<style>
+            .row {
+                margin-top: 0;
+            }
+        </style>
+        
+        <!--[if lt IE 9]>
+        <style>
+            html {
+                overflow-x: hidden;
+            }
+        </style>
+		<![endif]-->
+        
+        <!--[if lt IE 8]>
+    	<style>
+            .hero {
+                margin-top: -10px !important;
+            }
+        </style>
+		<![endif]-->
+        
 		<style type="text/css">
 			/* Min+ plugin*/
 			message {
@@ -194,11 +207,6 @@
 
 			.hero {
 				text-align: center;
-				/*
-				background: #72bf9e;
-				background: #87aceb;
-				background: #80B6FA;
-				*/
 				background: #333;
 				background-image: url('congruent_outline.png');
 				margin: 0;
@@ -287,6 +295,7 @@
 					<a href="examples.html">Examples</a>
 				-->
 				<a href="download.html">Download</a>
+				<a href="https://github.com/owenversteeg/min">Github</a>
 			</div>
 		</nav>
 		<button class="btn btn-sm btn-close">×</button>
@@ -306,8 +315,9 @@
 			</div>
 			<div class="col c2">&nbsp;</div>
 		</div>
+        <!--[if lt IE 7]> <br><br><br><![endif]-->
 		<div class="row intro">
-			<div class="col c2">&nbsp;</div>
+    		<div class="col c2">&nbsp;</div>
 			<div class="col c4">
 				<h3>Unprescriptive</h3>
 				<p>Min is extremely lightweight and doesn't prescribe a certain design for you, like Bootstrap. It's easy to override the default rules since there are so few of them and they are at low specificity levels. This customizability helps you avoid the Yet Another Bootstrap Site phenomenon.</p>
@@ -318,6 +328,7 @@
 			</div>
 			<div class="col c2">&nbsp;</div>
 		</div>
+        <!--[if lt IE 7]> <br><br><br><![endif]-->
 		<div class="row intro">
 			<div class="col c2">&nbsp;</div>
 			<div class="col c4">
@@ -328,7 +339,6 @@
 			</div>
 			<div class="col c2">&nbsp;</div>
 		</div>
-		<br>
 		<div class="container">
 
 			<script type="text/javascript">
@@ -345,5 +355,12 @@
 			</script>
 		</div>
 		<script src="defer.js"></script>
+		<!-- Quantcast Tag -->
+		<noscript>
+			<div style="display:none;">
+				<img src="//pixel.quantserve.com/pixel/p-4UQY7SYFeUHE_.gif" border="0" height="1" width="1" alt="Quantcast"/>
+			</div>
+		</noscript>
+		<!-- End Quantcast tag -->
 	</body>
 </html>

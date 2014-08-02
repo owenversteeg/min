@@ -1,27 +1,43 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<script> 
-			document.createElement("nav"); document.createElement("ico"); document.createElement("button");
-			</script>
-		<!--[if lt IE 9]> 
-			<script> 
-				document.createElement("col"); document.createElement("message"); document.createElement("nav"); document.createElement("ico"); document.createElement("button");
-
-
-			</script>
-		<![endif]-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        
+        <script> 
+            document.createElement("nav"); document.createElement("button");
+		</script>        
+        
+        <!--[if IE 7]> 
+	        <style>
+	        	.col { margin: 0 0.9% !important; }
+	        </style>
+        <![endif]-->
 
 		<title>min - docs</title>
 
-		<!--[if lt IE 7]>
-		<script src="IE70.js"></script>
-		<![endif]-->
-
 		<link href="entireframework.min.css" rel="stylesheet" type="text/css" />
-		
+
+		<style>
+        /*.container{width:1270px;margin:auto}@media(max-width:1310px){.container{margin:0 20px;width:auto}}*/
+        /* when we're at least 1310px wide, screen width is 1270px */
+        .container{margin:0 20px;width:auto}@media(min-width:1310px){.container{width:1270px;margin:auto}}
+        
+        button.btn-close.btn-sm { padding: 0; margin: -49px 25px !important; }
+        
+        input,textarea { background: 0; line-height: 16px; }
+        
+        .c12{width:98%}.c11{width:89.66%}.c10{width:81.33%}.c9{width:73%}.c8{width:64.66%}.c7{width:56.33%}.c6{width:48%}.c5{width:39.66%}.c4{width:31.33%}.c3{width:23%}.c2{width:14.66%}.c1{width:6.33%}
+        .col { margin: 0 1%; }
+        @media (max-width: 870px) {
+            .row .col {
+                margin: 0;
+            }
+        }
+        </style>
+        
 		<style type="text/css">
 			/* Min+ plugin*/
 			message {
@@ -215,7 +231,7 @@
 					Min's minimalism has several advantages. Firstly, it doesn't prescribe a specific design for you. Each element has just a handful of CSS rules applied to it, and as a result overriding default styles is extremely easy. Min being only 995 bytes means that there's less of it to get in your way when you want to customize your site. Contrast this with Bootstrap, where you may have to override many different rules to get what you want. 
 				</p>
 				<p>
-					Secondly, there's less markup to type. Patients that switched from Bootstrap to Min reported up to a ninefold decrease in markup and drastic improvements in most cases of divitis. Ask your CSS-atrician if Min is right for you.
+					Secondly, there's less markup to type. Min requires fewer superfluous divs and classes than any other framework, allowing every part of your code to be readable and semantically correct.
 				</p>
 				<p>
 					Min is also extremely flexible: you can apply the btn class to any element - a link, a &lt;button&gt;, a div - anything. The same goes for any of the column sizes, any of the button coloration styles, and many more classes in plugins. You can apply the smooth class to anything to give it a 200ms transition.
