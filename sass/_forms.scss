@@ -1,7 +1,16 @@
-@if $import-inputs == true {
+@if $import-forms == true {
 //-------------------------------------------------------------------
-//  Inputs
+//  Form Elements
 //-------------------------------------------------------------------
+
+form > * {
+  display: block;
+  margin-bottom: 10px;
+}
+
+label > * {
+  display: inline;
+}
 
 input, textarea {
   @extend %shared-font-size;

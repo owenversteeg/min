@@ -14,16 +14,6 @@ textarea, input {
   outline: 0;
 }
 
-label > * {
-  display: inline;
-}
-
-form > * {
-  display: block;
-  margin-bottom: 10px;
-}
-
-
 // apply a smooth transition effect to an element's state change
 .smooth {
   transition: all .2s;
