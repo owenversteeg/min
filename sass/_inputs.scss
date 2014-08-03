@@ -3,15 +3,6 @@
 //  Inputs
 //-------------------------------------------------------------------
 
-label > * {
-  display: inline;
-}
-
-form > * {
-  display: block;
-  margin-bottom: 10px;
-}
-
 input, textarea {
   @extend %shared-font-size;
   border: 1px solid $c-grey;

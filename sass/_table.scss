@@ -12,7 +12,7 @@
   }
 
   tbody>*:nth-child(2n-1) {
-    background: $c-grey; // Shade every other table row
+    background: $c-grey;
     // We use tbody to ensure that we don't shade the heading
     // this preserves the order of the shading
   }
