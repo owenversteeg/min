@@ -23,6 +23,7 @@ MIT licensed.
 We encourage you to contribute anything you can to Min. If you have an idea for a new feature, open a new issue with the Enhancement tag.
 
 If you want to contribute code:
+
 1. Fork Min
 2. You can edit either the Sass or LESS files. 
  - DO NOT change any of the compiled files, either by using build.sh or by editing them manually.
