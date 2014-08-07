@@ -3,7 +3,7 @@
 mkdir compiled -p
 #The compiled folder holds all the separate compiled CSS files.
 
-subtypes=(general buttons grid headings icons inputs navbar tables)
+subtypes=(general buttons grid headings icons forms navbar tables)
 #You can change the subtypes used by changing this.
 
 rm -f compiledcss.js

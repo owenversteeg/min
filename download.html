@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<script> 
-			document.createElement("nav"); document.createElement("ico"); document.createElement("button");
-			</script>
-		<!--[if lt IE 9]> 
-			<script> 
-				document.createElement("col"); document.createElement("message"); document.createElement("nav"); document.createElement("ico"); document.createElement("button");
-
-
-			</script>
-		<![endif]-->
-
+			document.createElement("nav"); document.createElement("button");
+		</script>
+		
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>min - download</title>
 
-		<!--[if lt IE 7]>
-		<script src="IE70.js"></script>
+		<link href="entireframework.min.css" rel="stylesheet" type="text/css" />
+
+		<!--[if lt IE 9]>
+		<style>
+			html {
+				overflow-x: hidden;
+			}
+		</style>
 		<![endif]-->
 
-		<link href="entireframework.min.css" rel="stylesheet" type="text/css" />
-		
 		<style type="text/css">
 			/* Min+ plugin*/
 			message {
@@ -40,143 +39,6 @@
 				border-color: #2d2;
 				background: #dfd;
 			}
-		</style>
-
-		<style type="text/css">
-			/* These styles are used on this page only to make the demo page look nicer. Don't use them in your project. */
-			
-			/* Bootstrap stuff */
-			.buttonsizes * {
-				vertical-align: bottom;
-				margin-bottom: 0;
-				margin-right: 10px;
-				margin-left: 0;
-			}
-
-			/* code blocks */
-			pre {
-				font-size: .9em;
-				word-wrap: break-word;
-			}
-			
-			/* formatting for grid system */
-			.dark {
-				background-color: rgb(172, 172, 172);
-			}
-			
-			.light {
-				background-color: rgb(223, 223, 223);
-			}
-			
-			.col {
-				text-align: center;
-			}
-			
-			.row {
-				line-height: 2em;
-			}
-			
-			/* pretty heading demo display (all headings on one line) */
-			.headings *:not(first-of-type) {
-				display: inline;
-			}
-			
-			/* fancy page heading styles */
-			h1:not(.exampleh1) {
-				margin: 0.2em 0;
-				border-bottom: 5px solid;
-				margin-bottom: 15px;
-				padding-bottom: 5px;
-			}
-			
-			/* normally, the button would extend past the page top and be invisible but when it's in the middle of the page it shows */
-			button.btn-close.btn-sm {
-				padding-top: 4px;
-				margin-top: -50px;
-			}
-
-			/* this fixes the display of the demo-navbar when the page is resized */
-			.navbar .container {
-				margin: 0 20px;
-			}
-			
-			/* support tables */
-			.support span.full, .support tr.full {
-				background: #3c5;
-			}
-			
-			.support span.partial, .support tr.partial {
-				background: #fd5;
-			}
-			
-			.support span.none, .support tr.none {
-				background: #d55;
-			}
-			
-			.key {
-				padding: 5px;
-				line-height: 30px;
-			}
-			
-			.support th, .support td, .support table {
-				border: 1px solid;
-			}
-			.support table, .support .key {
-				font-weight: bold;
-			}
-			
-			@media (max-width: 900px) {
-				.browserdetails {
-					display: none;
-				}
-			}
-
-			/* End this-page-only styles, start beta styles */
-			nav {
-				display: block;
-			}
-
-			/* IE styles */
-
-			/*
-			.btn-sm {
-				font-size:1em;
-				margin-top: 0;
-				padding-top: 1000px;
-			}
-
-			button {
-				line-height: .65em;
-			}
-
-			a.btn {
-				margin-top: -84px;
-			}
-
-			a.btn-sm, div.btn-sm {
-				margin-top: -49px;
-				padding-top: 10px;
-			}
-
-			button.btn-sm {
-				line-height: .7em;
-				padding-top: 11px;
-			}
-			
-			.btn {
-				width: auto;
-				display: inline;
-				overflow: visible;
-			}
-
-			*/
-
-			/* Changes to the main CSS:
-			 - move media query from max-width to min-width
-			*/
-
-			/* new beta styles */
-			
 		</style>
 
 		<!--[if lte IE 6]>
