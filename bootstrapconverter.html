@@ -1,202 +1,236 @@
 <!DOCTYPE html>
 <html>
-    <head>
+	<head>
 		<title>Bootstrap to Min converter</title>
 		<link rel="stylesheet" href="http://minfwk.com/entireframework.min.css" type="text/css">
-        <style type="text/css">
-            iframe {
-                width: 800px;
-                height: 400px;
-            }
-            #convertedHTMLDiv {
-                max-width: 70%;
-                margin-left: 15%;
-            }
-        </style>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-        <script type="text/javascript">
-            (function($) {
-                $.fn.changeElementType = function(newType) {
-                    var attrs = {};
+		<style type="text/css">
+			iframe {
+				width: 800px;
+				height: 400px;
+			}
+			#convertedHTMLDiv {
+				max-width: 70%;
+				margin-left: 15%;
+				text-align: left;
+			}
+			body {
+				text-align: center;
+			}
+		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script>
+			//jQuery plugin to change an element's tagname
+			//http://stackoverflow.com/questions/8584098/how-to-change-an-element-type-using-jquery
+			(function($) {
+				$.fn.changeElementType = function(newType) {
+					if (this[0]) {
+						var attrs = {};
 
-                    $.each(this[0].attributes, function(idx, attr) {
-                        attrs[attr.nodeName] = attr.nodeValue;
-                    });
+						$.each(this[0].attributes, function(idx, attr) {
+							attrs[attr.nodeName] = attr.nodeValue;
+						});
 
-                    this.replaceWith(function() {
-                        return $("<" + newType + "/>", attrs).append($(this).contents());
-                    });
-                };
-            })(jQuery);
-        </script>
+						this.replaceWith(function() {
+							return $("<" + newType + "/>", attrs).append($(this).contents());
+						});
+					} else {
+						console.log('Error - no such element')
+					}
+				};
+			})(jQuery);
+		</script>
 	</head>
 	<body>
-        <br>
-        <h1>Bootstrap to Min converter</h1>
+		<h2>Bootstrap to Min converter</h2>
 		<textarea id="enteredHTML" placeholder="Enter the body of your HTML page here"></textarea>
-        <br>
-		<a onclick="convertHTML(document.getElementById('enteredHTML').value)"><button class="smooth btn-a dontconvert">Convert HTML</button></a>
-        <br>
-        <a onclick="document.getElementById('enteredHTML').value=bootstrapExamples[0]"><button class="smooth btn-b btn-small dontconvert">Load 1st Bootstrap example</button></a>
-        <br>
-        <a onclick="document.getElementById('enteredHTML').value=bootstrapExamples[1]"><button class="smooth btn-c btn-small dontconvert">Load 2nd Bootstrap example</button></a>
-        <br>
-        <a onclick="document.getElementById('enteredHTML').value=bootstrapExamples[2]"><button class="smooth btn-a btn-small dontconvert">Load 3rd Bootstrap example</button></a>
-        <br><br>
-        <div id="messagesDiv" class="mediumwidth"></div>
-        <br>
+		<br>
+		<a onclick="convertHTML(document.getElementById('enteredHTML').value)"><button class="smooth btn btn-a dontconvert">Convert HTML</button></a>
+		<br>
+		<a onclick="document.getElementById('enteredHTML').value=bootstrapExamples[0]"><button class="smooth btn btn-b btn-sm dontconvert">Load 1st Bootstrap example</button></a>
+		<br>
+		<a onclick="document.getElementById('enteredHTML').value=bootstrapExamples[1]"><button class="smooth btn btn-c btn-sm dontconvert">Load 2nd Bootstrap example</button></a>
+		<br>
+		<a onclick="document.getElementById('enteredHTML').value=bootstrapExamples[2]"><button class="smooth btn btn-a btn-sm dontconvert">Load 3rd Bootstrap example</button></a>
+		<br><br>
+		<div id="messagesDiv" class="mediumwidth"></div>
+		<br>
 		<div id="convertedHTMLDiv">
 		</div>
 		<script type="text/javascript">
-            bootstrapExamples = [
-                '<div class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">Project name</a></div><div class="navbar-collapse collapse"><form class="navbar-form navbar-right" role="form"><div class="form-group"> <input type="text" placeholder="Email" class="form-control"></div> <div class="form-group"> <input type="password" placeholder="Password" class="form-control"></div><button type="submit" class="btn btn-success">Sign in</button></form></div><!--/.navbar-collapse --></div></div><!-- Main jumbotron for a primary marketing message or call to action --><div class="jumbotron"><div class="container"><h1>Hello, world!</h1><p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p><p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p></div></div><div class="container"><!-- Example row of columns --><div class="row"><div class="col-md-4"><h2>Heading</h2><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p><p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p></div><div class="col-md-4"><h2>Heading</h2><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p><p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p></div><div class="col-md-4"><h2>Heading</h2><p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p><p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p></div></div><hr><footer><p>&copy; Company 2013</p></footer></div>',
-                '<div class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">Project name</a></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="active"><a href="#">Home</a> </li><li><a href="#about">About</a> </li><li><a href="#contact">Contact</a> </li></ul></div><!--/.nav-collapse --></div></div><div class="container"><div class="starter-template"><h1>Bootstrap starter template</h1><p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p></div></div><!-- /.container -->',
-                '<div class="navbar navbar-default navbar-static-top" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">Project name</a></div><div class="navbar-collapse collapse"><ul class="nav navbar-nav"><li class="active"><a href="#">Home</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="#">Action</a></li><li><a href="#">Another action</a></li><li><a href="#">Something else</a></li><li class="divider"></li><li class="dropdown-header">Nav header</li><li><a href="#">Separated link</a></li><li><a href="#">One more link</a></li></ul></li></ul><ul class="nav navbar-nav navbar-right"><li><a href="../navbar/">Default</a></li><li class="active"><a href="./">Static top</a></li><li><a href="../navbar-fixed-top/">Fixed top</a></li></ul></div><!--/.nav-collapse --></div></div><div class="container"><!-- Main component for a primary marketing message or call to action --><div class="jumbotron"><h1>Navbar example</h1><p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p><p>To see the difference between static and fixed top navbars, just scroll.</p><p><a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a></p></div>'
-            ]
-        
-            function moveFromAToB(a, b, which) {
-                if (!which) var which = [0,0]
-                
-                $(b)[which[1]].innerHTML += $(a)[which[0]].innerHTML;
-                $(a)[which[0]].remove();
-            }
-            
-            function printMessage(messageText, messageType) {
-                $('#messagesDiv')[0].innerHTML += "<message class='"+messageType+"'>"+messageText+"</message><br>";
-            }
+			bootstrapExamples = [
+				'<div class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">Project name</a></div><div class="navbar-collapse collapse"><form class="navbar-form navbar-right" role="form"><div class="form-group"> <input type="text" placeholder="Email" class="form-control"></div> <div class="form-group"> <input type="password" placeholder="Password" class="form-control"></div><button type="submit" class="btn btn-success">Sign in</button></form></div><!--/.navbar-collapse --></div></div><!-- Main jumbotron for a primary marketing message or call to action --><div class="jumbotron"><div class="container"><h1>Hello, world!</h1><p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p><p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p></div></div><div class="container"><!-- Example row of columns --><div class="row"><div class="col-md-4"><h2>Heading</h2><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p><p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p></div><div class="col-md-4"><h2>Heading</h2><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p><p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p></div><div class="col-md-4"><h2>Heading</h2><p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p><p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p></div></div><hr><footer><p>&copy; Company 2013</p></footer></div>',
+				'<div class="navbar navbar-inverse navbar-fixed-top" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">Project name</a></div><div class="collapse navbar-collapse"><ul class="nav navbar-nav"><li class="active"><a href="#">Home</a> </li><li><a href="#about">About</a> </li><li><a href="#contact">Contact</a> </li></ul></div><!--/.nav-collapse --></div></div><div class="container"><div class="starter-template"><h1>Bootstrap starter template</h1><p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p></div></div><!-- /.container -->',
+				'<div class="navbar navbar-default navbar-static-top" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#">Project name</a></div><div class="navbar-collapse collapse"><ul class="nav navbar-nav"><li class="active"><a href="#">Home</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="#">Action</a></li><li><a href="#">Another action</a></li><li><a href="#">Something else</a></li><li class="divider"></li><li class="dropdown-header">Nav header</li><li><a href="#">Separated link</a></li><li><a href="#">One more link</a></li></ul></li></ul><ul class="nav navbar-nav navbar-right"><li><a href="../navbar/">Default</a></li><li class="active"><a href="./">Static top</a></li><li><a href="../navbar-fixed-top/">Fixed top</a></li></ul></div><!--/.nav-collapse --></div></div><div class="container"><!-- Main component for a primary marketing message or call to action --><div class="jumbotron"><h1>Navbar example</h1><p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p><p>To see the difference between static and fixed top navbars, just scroll.</p><p><a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a></p></div>',
+				'<nav class="navbar navbar-default" role="navigation"> <div class="container-fluid"> <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">Brand</a> </div><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> <ul class="nav navbar-nav"> <li class="active"><a href="#">Link</a></li> <li><a href="#">Link</a></li> <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a> <ul class="dropdown-menu" role="menu"> <li><a href="#">Action</a></li> <li><a href="#">Another action</a></li> <li><a href="#">Something else here</a></li> <li class="divider"></li> <li><a href="#">Separated link</a></li> <li class="divider"></li> <li><a href="#">One more separated link</a></li> </ul> </li> </ul> <form class="navbar-form navbar-left" role="search"> <div class="form-group"> <input type="text" class="form-control" placeholder="Search"> </div> <button type="submit" class="btn btn-default">Submit</button> </form> <ul class="nav navbar-nav navbar-right"> <li><a href="#">Link</a></li> <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a> <ul class="dropdown-menu" role="menu"> <li><a href="#">Action</a></li> <li><a href="#">Another action</a></li> <li><a href="#">Something else here</a></li> <li class="divider"></li> <li><a href="#">Separated link</a></li> </ul> </li> </ul> </div></div></nav>'
+			]
+
+			function moveFromAToB(a, b, which) {
+				//Moves the inside of an element to the inside of another.
+				//Takes two strings (for element selectors)
+				//and an array, which, that says what nth element to select.
+				if (!which) var which = [0,0]
+				
+				if ($(a)[which[0]] && $(b)[which[1]]) {
+					$(b)[which[1]].innerHTML += $(a)[which[0]].innerHTML;
+					$(a)[which[0]].remove();
+				}
+			}
+
+			function printMessage(messageText, messageType) {
+				$('#messagesDiv')[0].innerHTML += "<message class='"+messageType+"'>"+messageText+"</message><br>";
+			}
 
 			function convertHTML(htmlToConvert) {
-                //Erase previous messages
-                $('#messagesDiv')[0].innerHTML = "";
-                
-                convertedHTML = htmlToConvert;
+				//Erase previous messages
+				$('#messagesDiv')[0].innerHTML = "";
+				
+				convertedHTML = htmlToConvert;
 				convertedHTMLDiv.innerHTML = convertedHTML;
-                
-                //First, we convert from Bootstrap's columns to Min's columns.
-                var columndivs = $('div[class^="col-"]');
-                var widthUnaccountedFor = 0;
-                for (var i=0; i<columndivs.length; i++) {
-                    var htmlText = columndivs[i].innerHTML;
-                    var parentElement = $('div[class^="col"]')[0].parentElement;
+				
+				//First, we convert from Bootstrap's columns to Min's columns.
+				var columndivs = $('div[class^="col-"]');
 
-                    $('div[class^="col-"]')[0].remove();
+				for (var i=0; i<columndivs.length; i++) {
+					columndivs[i].className = columndivs[i].className.replace('col-md-', 'c')
+					columndivs[i].classList.add('col')
+				}
 
-                    widthUnaccountedFor += parseInt(columndivs[0].className.match(/\d+/)[0], 10)/1.2 - Math.round(parseInt(columndivs[0].className.match(/\d+/)[0], 10)/1.2)
-                    widthToSet = Math.round(parseInt(columndivs[0].className.match(/\d+/)[0], 10)/1.2)
+				//Oh no, we have some weird (not col-md) columns! They need the Bootstrap plugin.
+				if ($('div[class^="col-"]:not([class^="col-md-"])')[0])
+				printMessage('Because your page uses Bootstrap grid class prefixes other than col-md, your page requires the Min Bootstrap plugin, which has been included automatically.')
+				
+				//Next, we convert the navbar
+				/* Old navbar stuff
+				if ($('.navbar-header')[0] && $('.navbar-collapse')[0]) moveFromAToB('.navbar-header', '.navbar-collapse')
+				if ($('.navbar-collapse')[0] && $('.navbar .container')[0]) moveFromAToB('.navbar-collapse', '.navbar .container')
+				if ($('.navbar .container')[0] && $('.navbar')[0]) moveFromAToB('.navbar .container', '.navbar')
+				$('.navbar-toggle')[0]) $('.navbar-toggle')[0].remove()
+				
+				//Dump the navbar forms stuff right into the navbar
+				//form-group to navbar-form and navbar-form to navbar
+				var navbarFormItems = $('.form-group');
+				for (var i=0; i<navbarFormItems.length; i++) {
+					moveFromAToB('div.form-group','.navbar-form');
+				}
+				if ($('.navbar-form')[0] && $('.navbar')[0]) moveFromAToB('.navbar-form', '.navbar');
+				
+				//Of course, Bootstrap *has* to have two ways to make a navbar
+				var lisToSquash = $('.nav.navbar-nav li').not('.dropdown').not('ul.dropdown-menu li').not('ul.navbar-right li');
+				for (var i=0; i<lisToSquash.length; i++) {
+					moveFromAToB('.navbar .nav.navbar-nav:not(.dropdown-menu) > li[class!="dropdown"]', '.nav.navbar-nav')
+				}*/
 
-                    if (Math.round(widthUnaccountedFor)==1) {
-                        widthToSet += 1;
-                        widthUnaccountedFor = 0;
-                    }
-                    parentElement.innerHTML += '<column class="c'+widthToSet+'">'+htmlText+"</column>";
-                }
-                
-                //Next, we convert the navbar.
-                if ($('.navbar-header')[0] && $('.navbar-collapse')[0]) moveFromAToB('.navbar-header', '.navbar-collapse')
-                if ($('.navbar-collapse')[0] && $('.navbar .container')[0]) moveFromAToB('.navbar-collapse', '.navbar .container')
-                if ($('.navbar .container')[0] && $('.navbar')[0]) moveFromAToB('.navbar .container', '.navbar')
-                if ($('.navbar-toggle')[0]) $('.navbar-toggle')[0].remove()
-                
-                //Dump the navbar forms stuff right into the navbar
-                //form-group to navbar-form and navbar-form to navbar
-                var navbarFormItems = $('.form-group');
-                for (var i=0; i<navbarFormItems.length; i++) {
-                    moveFromAToB('div.form-group','.navbar-form');
-                }
-                if ($('.navbar-form')[0] && $('.navbar')[0]) moveFromAToB('.navbar-form', '.navbar');
-                
-                //Of course, Bootstrap *has* to have two fucking ways to make a goddamn navbar
-                var lisToSquash = $('.nav.navbar-nav li').not('.dropdown').not('ul.dropdown-menu li').not('ul.navbar-right li');
-                for (var i=0; i<lisToSquash.length; i++) {
-                    moveFromAToB('.navbar .nav.navbar-nav:not(.dropdown-menu) > li[class!="dropdown"]', '.nav.navbar-nav')
-                }
-                
-                var navbarPluginCSS = '<link rel="stylesheet" href="http://owenversteeg.com/min-navbar-plugin/navbar-plugin.css" type="text/css">'
-                
-                if ($('li.dropdown')[0]) {
-                    //If we have any dropdowns here, we have to include the min-navbar-plugin
-                    convertedHTMLDiv.innerHTML += navbarPluginCSS;
+				//Convert navbars
+				var navbars = $('.navbar');
 
-                    //Let the user know that we've included it
-                    printMessage('Your page requires the navbar plugin, which has been automatically included.<br><br>It adds dropdowns and right-positioned link capabilities to the navbar.', 'warning');
-                    
-                    //Now, we need to convert from Bootstrap's weird-ass navbar dropdowns to Min's nice navbar dropdowns
-                    var x = $('li.dropdown > a').length;
-                    for (i=0; i<x; i++) {
-                        moveFromAToB('li.dropdown > a', 'li.dropdown')
-                    }
-                    
-                    $('.caret').remove(); //we make carets automatically over here in min-land, unlike *some* frameworks I know
-                    
-                    //now, we transmogrify all of Bootstrap's elements into Min elements.
-                    $('li.dropdown').changeElementType('div');
-                    $('div.dropdown').addClass('navbar-link').addClass('wpd').removeClass('dropdown');
-                    
-                    var x = $('ul.dropdown-menu').length;
-                    for (var i=0; i<x; i++) {
-                        var pulldownDiv = document.createElement('div');
-                        $(pulldownDiv).addClass('pulldown');
-                        
-                        var ulInsidePulldownDiv = document.createElement('ul');
-                        pulldownDiv.appendChild(ulInsidePulldownDiv);
-                        
-                        $('ul.dropdown-menu')[0].parentElement.appendChild(pulldownDiv);
-                        
-                        moveFromAToB('ul.dropdown-menu', 'div.pulldown ul', [i,i]);
-                    }
-                    $('div.wpd ul li a').removeClass('navbar-link')
-                    
-                    $('ul.dropdown-menu').removeClass('dropdown-menu');
-                    
-                    //Of course, Bootstrap *has* to make dropdown headers the fucking unstandard way. 
-                    $('li.dropdown-header').removeClass('dropdown-header').changeElementType('h5');
-                    
-                    //Given that, what do you think Bootstrap uses to make a divider?
-                    //Yes, that's right, folks: Bootstrap uses a fucking *li* element as a divider. No, not a <hr> or even a <div> - but a <li>. What the hell.
-                    //I'm pretty sure the only thing that could possibly be less semantically correct would be a <canvas>
-                    $('li.divider').removeClass('divider').changeElementType('hr');
-                }
-                
-                //Now, we need to check if we have any right-positioned elements
-                if ($('.navbar-right')[0]) {
-                    //If we don't already have the navbar plugin CSS, include it and let the user know that we did so
-                    if (convertedHTMLDiv.innerHTML.indexOf(navbarPluginCSS) == -1) {
-                        convertedHTMLDiv.innerHTML += navbarPluginCSS;
-                        printMessage('Your page requires the navbar plugin, which has been automatically included.<br><br>It adds dropdowns and right-positioned link capabilities to the navbar.', 'warning');
-                    }
-                    
-                    var lisToRighten = $('ul.navbar-right > li[class!="dropdown"]');
-                    
-                    for (var i=0; i<lisToRighten.length; i++) {
-                        //Unwrap the <a>s from their oppressive <li> overlords.
-                        moveFromAToB('ul.navbar-right > li[class!="dropdown"]', 'ul.navbar-right');
-                        //Be free, my darlings!
-                    }
-                    
-                    //Now, we convert the navbar right <ul> to a navbar right div
-                    $('ul.navbar-right').addClass('navlink-right').removeClass('nav').removeClass('navbar-nav').removeClass('navbar-right').changeElementType('div');
-                }
-                
-                //if we have the second way to make a navbar, we need to push the links into the main navbar
-                if ($('.nav.navbar-nav')[0] && $('.navbar')[0]) moveFromAToB('.nav.navbar-nav', '.navbar')
-                
-                //Now we make the page name nice and pretty
-                if ($('.navbar-brand')[0]) $('.navbar-brand').removeClass('navbar-brand').addClass('pagename')
-                
-                //We then make the navbar links nice and pretty
-                $('.navbar a').not('.pagename').addClass('navbar-link')
+				for (var i=0; i<navbars.length; i++) {
+					$(navbars[i]).addClass('nav').removeClass('navbar')
+					//Wrap them in a container
+					navbars[i].innerHTML = '<div class="container">'+navbars[i].innerHTML + '</div>'
+				}
 
-                //Make sure to convert from Bootstrap's link-buttons to Min's normal buttons.
-                var aButtons = $('a[class^="btn"]');
-                for (var i=0; i<aButtons.length; i++) {
-                    var newButton = document.createElement('button');
-                    newButton.innerText = aButtons[i].innerText;
-                    aButtons[i].innerText = "";
-                    aButtons[i].appendChild(newButton);
-                }
+				$('div.nav').changeElementType('nav')
 
-                //Now we make the buttons reasonably sized.
-                $('button').not('[class*="dontconvert"]').not('[class^="btn-lg"]').addClass('btn-small');
+				//Delete elements that don't exist in Min
+				$('.navbar-toggle').remove()
+				$('.nav .nav > *').unwrap();
+				$('.navbar-header > *, .container-fluid > *, .navbar-collapse > *').unwrap();
+
+
+				var navbarPluginCSS = '<link rel="stylesheet" href="http://owenversteeg.com/min-navbar-plugin/navbar-plugin.css?200" type="text/css">'
+				
+				if ($('li.dropdown')[0]) {
+					//If we have any dropdowns here, we have to include the min-navbar-plugin
+					convertedHTMLDiv.innerHTML += navbarPluginCSS;
+
+					//Let the user know that we've included it
+					printMessage('Your page requires the navbar plugin, which has been automatically included.<br><br>It adds dropdowns and right-positioned link capabilities to the navbar.', 'warning');
+					
+					//Now, we need to convert from Bootstrap's weird navbar dropdowns to Min's nice navbar dropdowns
+					var x = $('li.dropdown > a').length;
+					for (i=0; i<x; i++) {
+						$('li.dropdown > a')[0].outerHTML = $('li.dropdown > a')[0].innerHTML;
+					}
+					
+					$('.caret').remove(); //we make carets automatically over here in min-land, unlike *some* frameworks I know
+					
+					//now, we transmogrify all of Bootstrap's elements into Min elements.
+
+					$('li.dropdown').changeElementType('div');
+					$('div.dropdown').addClass('wpd').removeClass('dropdown');
+					$('ul.dropdown-menu').wrap('<div class="pulldown"></div>')
+					/*
+					var x = $('ul.dropdown-menu').length;
+					for (var i=0; i<x; i++) {
+						var pulldownDiv = document.createElement('div');
+						$(pulldownDiv).addClass('pulldown');
+						
+						var ulInsidePulldownDiv = document.createElement('ul');
+						pulldownDiv.appendChild(ulInsidePulldownDiv);
+						
+						$('ul.dropdown-menu')[0].parentElement.appendChild(pulldownDiv);
+						
+						moveFromAToB('ul.dropdown-menu', 'div.pulldown ul', [i,i]);
+					}*/
+					
+					$('ul.dropdown-menu').removeClass('dropdown-menu');
+					
+					//Of course, Bootstrap *has* to make dropdown headers the unstandard way. 
+					$('li.dropdown-header').removeClass('dropdown-header').changeElementType('h5');
+					
+					//Given that, what do you think Bootstrap uses to make a divider?
+					//Yes, that's right, folks: Bootstrap uses a fucking *li* element as a divider. No, not a <hr> or even a <div> - but a <li>. What the hell.
+					//I'm pretty sure the only thing that could possibly be less semantically correct would be a <canvas>
+					$('li.divider').removeClass('divider').changeElementType('hr');
+				}
+				
+				//Now, we need to check if we have any right-positioned elements
+				if ($('.navbar-right')[0]) {
+					//If we don't already have the navbar plugin CSS, include it and let the user know that we did so
+					if (convertedHTMLDiv.innerHTML.indexOf(navbarPluginCSS) == -1) {
+						convertedHTMLDiv.innerHTML += navbarPluginCSS;
+						printMessage('Your page requires the navbar plugin, which has been automatically included.<br><br>It adds dropdowns and right-positioned link capabilities to the navbar.', 'warning');
+					}
+					
+					var lisToRighten = $('ul.navbar-right > li[class!="dropdown"]');
+					
+					for (var i=0; i<lisToRighten.length; i++) {
+						//Unwrap the <a>s from their oppressive <li> overlords.
+						moveFromAToB('ul.navbar-right > li[class!="dropdown"]', 'ul.navbar-right');
+						//Be free, my darlings!
+					}
+					
+					//Now, we convert the navbar right <ul> to a navbar right div
+					$('ul.navbar-right').addClass('navlink-right').removeClass('nav').removeClass('navbar-nav').removeClass('navbar-right').changeElementType('div');
+				}
+
+				//if we have the second way to make a navbar, we need to push the links into the main navbar
+				if ($('.nav.navbar-nav')[0] && $('.navbar')[0]) moveFromAToB('.nav.navbar-nav', '.navbar')
+				
+				//Now we make the page name nice and pretty
+				if ($('.navbar-brand')[0]) $('.navbar-brand').removeClass('navbar-brand').addClass('pagename current')
+
+				//Unwrap links
+				$('.container .container').unwrap()
+				$('.nav > div > li > *').unwrap();
+
+				//Make sure to convert from Bootstrap's link-buttons to Min's normal buttons.
+				/*
+				var aButtons = $('a[class^="btn"]');
+				for (var i=0; i<aButtons.length; i++) {
+					var newButton = document.createElement('button');
+					newButton.innerText = aButtons[i].innerText;
+					aButtons[i].innerText = "";
+					aButtons[i].appendChild(newButton);
+				}*/
+
+				//Now we make the buttons reasonably sized.
+				$('.btn').not('[class*="dontconvert"]').not('[class^="btn-lg"]').addClass('btn-sm');
+
+				$('.btn-default').removeClass('btn-default')
+				$('.btn-primary').addClass('btn-a').removeClass('btn-primary')
+				$('.btn-success').addClass('btn-b').removeClass('btn-success')
+				$('.btn-danger').addClass('btn-c').removeClass('btn-danger')
 			}
 		</script>
 	</body>
