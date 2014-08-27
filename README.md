@@ -15,6 +15,10 @@ Works with IE5.5 and onward, as well as all other major browsers. Check out the 
 
 Of course, modern browsers give you pretty transitions and rounded corners.
 
+###Converter
+
+Check out the (beta) Min -> Bootstrap converter. http://minfwk.com/bootstrapconverter.html
+
 ###License
 MIT licensed.
 
