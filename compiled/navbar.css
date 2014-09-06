@@ -8,24 +8,22 @@
   height: 24px;
   padding: 11px 0 15px;
   /* TODO: migrate to ems (currently we don't use them because of iOS compatibility problems (has to do with unicode icon for close)) */
-
   /* Uncomment for animations
 	max-height: 1.5em;
 	*/
-
 }
 .nav a {
-  padding-right: 1em;
   color: #aaa;
-  top: -1px;
+  padding-right: 1em;
   position: relative;
+  top: -1px;
 }
 .btn.btn-close {
   background: #000;
-  visibility: hidden;
   float: right;
-  margin-top: -54px;
   font-size: 25px;
+  margin-top: -54px;
+  display: none;
 }
 .nav .pagename {
   font-size: 22px;
@@ -33,39 +31,37 @@
 }
 @media (max-width: 500px) {
   .btn.btn-close {
-    visibility: visible;
+    display: block;
   }
   .nav {
     /* transition: max-height .5s ease-in-out, height .5s ease-in-out; */
-  
     overflow: hidden;
   }
   .pagename {
     margin-top: -11px;
   }
   .nav:focus {
-    /* Necesary for animations
-  		max-height: 500px;
-  		height: 100%;
-  		*/
-  
     height: auto;
+    /* Necesary for animations
+		max-height: 500px;
+		height: 100%;
+		*/
   }
   .nav div:before {
-    content: '';
-    border-top: 3px solid;
+    background: #000;
     border-bottom: 10px double;
+    border-top: 3px solid;
+    content: '';
     float: right;
     height: 4px;
+    position: relative;
     right: 3px;
     top: 14px;
     width: 20px;
-    position: relative;
-    background: #000;
   }
   .nav a {
+    display: block;
     padding: .5em 0;
     width: 50%;
-    display: block;
   }
 }

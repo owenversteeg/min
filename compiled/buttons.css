@@ -2,13 +2,11 @@
   background: #999;
   border-radius: 6px;
   /* rounded corners */
-
   border: 0;
   color: #fff;
   cursor: pointer;
   display: inline-block;
   /* Enables non-inline-block elements like <div>s to be buttons */
-
   margin: .2em .3em .2em 0;
   padding: 12px 30px 14px;
 }
@@ -25,13 +23,11 @@
 .btn-a:hover {
   background: #09d;
   /* darken(@btn-a-bg, 5%) */
-
 }
 .btn-a:active,
 .btn-a:focus {
   background: #08b;
   /* darken(@btn-a-bg, 10%) */
-
 }
 .btn-b {
   background: #3c5;
@@ -39,13 +35,11 @@
 .btn-b:hover {
   background: #2b4;
   /* darken(@btn-b-bg, 5%) */
-
 }
 .btn-b:active,
 .btn-b:focus {
   background: #2a4;
   /* darken(@btn-b-bg, 10%) */
-
 }
 .btn-c {
   background: #d33;
@@ -53,17 +47,14 @@
 .btn-c:hover {
   background: #c22;
   /* darken(@btn-c-bg, 5%) */
-
 }
 .btn-c:active,
 .btn-c:focus {
   background: #b22;
   /* darken(@btn-c-bg, 10%) */
-
 }
 .btn-sm {
   border-radius: 4px;
   /* rounded corners */
-
   padding: 10px 15px 11px;
 }

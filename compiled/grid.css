@@ -3,7 +3,6 @@
   margin: 1% 0;
   overflow: auto;
   /* required - without this, the page layout is screwed up */
-
 }
 .col {
   float: left;
