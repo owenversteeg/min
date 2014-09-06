@@ -39,6 +39,8 @@ If you want to contribute code:
 
 WARNING! This will build the latest, pre-release version of Min. It may be broken. If you want to use an already-built Min, it's available in the file entireframework.min.css as well as through the [downloads page](http://minfwk.com/download.html).
 
+You must have lessc (to compile the LESS, obviously) and Java (to run YUI compressor) installed.
+
     bash build.sh
 
 ###World's smallest? Really?
