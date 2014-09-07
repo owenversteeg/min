@@ -29,7 +29,7 @@ input[type='text'], textarea {
 }
 
 
-.addon-front {
+.addon {
   @extend %shared-font-size;
   box-shadow: 0 0 0 1px $c-grey;
   padding: 8px 12px;

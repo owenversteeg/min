@@ -7,6 +7,10 @@
 // Thus, c12 has width 98%.
 //-------------------------------------------------------------------
 
+%w-100 {
+  width: 100%;
+}
+
 .row {
   margin: 1% 0;
   overflow: auto; // needed for proper formed layout
@@ -16,8 +20,8 @@
   float: left;
 }
 
-.c12, .table {
-  width: 100%;
+.c12 {
+  @extend %w-100;
 }
 
 $grid-list: (

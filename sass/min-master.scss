@@ -13,23 +13,25 @@
 //  the final Min CSS output.
 // ------------------------------------------------------------------
 
-$import-headings:                         true!default;
+$import-headings:                         true !default;
 
-$import-buttons:                          true!default;
+$import-buttons:                          true !default;
 
-$import-forms:                            true!default;
+$import-forms:                            true !default;
 
-$import-navbar:                           true!default;
+$import-navbar:                           true !default;
 
-$import-tables:                           true!default;
+$import-tables:                           true !default;
 
-$import-messages:                         true!default;
+$import-messages:                         true !default;
 
-$import-icons:                            true!default;
+$import-icons:                            true !default;
 
-$import-grid:                             true!default;
+$import-grid:                             true !default;
 
-$import-ie-hacks:                         false!default;
+$import-messages:                         true !default;
+
+$import-ie-hacks:                         false !default;
 
 
 // ------------------------------------------------------------------
@@ -43,4 +45,5 @@ $import-ie-hacks:                         false!default;
         'forms',
         'navbar',
         'table',
+        'messages'
         'iehacks';
