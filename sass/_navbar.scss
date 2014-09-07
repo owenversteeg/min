@@ -13,11 +13,13 @@
 
 .nav {
   @extend %nav-global;
+  height: 24px;
+  padding: 11px 0 15px;
+
    // TODO: migrate to ems
    // (currently we don't use them because of iOS compatibility problems
    // -- has to do with unicode icon for close) */
-  height: 24px;
-  padding: 11px 0 15px;
+
   // Uncomment for animations
   // max-height: 1.5em;
 
@@ -46,10 +48,10 @@
 
 .btn.btn-close {
   background: $c-black;
+  display: none;
   float: right;
   font-size: 25px;
   margin-top: -54px;
-  visibility: hidden;
 }
 
 
@@ -57,7 +59,7 @@
 // Update styling of .nav for small screens
 @media(max-width:500px) {
   .btn.btn-close {
-    visibility: visible;
+    display: block;
   }
 
   .nav {
