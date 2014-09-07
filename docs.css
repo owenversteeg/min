@@ -99,3 +99,25 @@ nav {
 		margin: 0;
 	}
 }
+
+.krakenholder {
+	display: block;
+	width: 150px;
+	margin: auto;
+}
+
+.krakenholder:hover .kraken {
+	height: 0;
+}
+
+.krakenholder:hover:before {
+	position: relative;
+	display: block;
+	height: 150px;
+	text-align: center;
+	font-size: 40px;
+	line-height: 150px;
+	font-weight: bold;
+	background: red;
+	content: "ROAR";
+}
