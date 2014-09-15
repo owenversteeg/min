@@ -44,7 +44,7 @@ You must have lessc (to compile the LESS, obviously) and Java (to run YUI compre
     bash build.sh
 
 ###World's smallest? Really?
-TL;DR Min really is the world's CSS framework, however you slice it. 
+TL;DR Min really is the world's smallest CSS framework, however you slice it. 
 
 We personally feel that the criteria for "world's smallest CSS framework" are buttons, inputs, navbars, tables, icons, grids, headings, and standardization of these elements across the "Big 5" browsers (Chrome, Firefox, Opera, Safari, and Internet Explorer.) Of course, your criteria for what a CSS framework is are likely to be different, and thus you are encouraged to (on the Downloads page) download whatever parts you feel to be relevant. No matter what you select (and what you compare Min to) Min will be smaller. Thus, Min really is the world's smallest CSS framework, no matter your criteria for what a CSS framework is.
 
