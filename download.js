@@ -18,11 +18,12 @@ function calculateCSS() {
 		general: false,
 		headings: false,
 		buttons: false,
-		inputs: false,
+		forms: false,
 		navbar: false,
 		tables: false,
 		icons: false,
 		grid: false,
+		messages: false
 	};
 	
 	for (var i=0; i<document.getElementById('checkboxes').children.length; i++) {
