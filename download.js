@@ -58,7 +58,7 @@ function calculateCSS() {
 	};
 	http.send(params);
 
-	document.getElementById('details').innerHTML = "Your download of min is " + mincss.length + " bytes minified and un-gzipped."
+	document.getElementById('details').innerHTML = "Your customized Min is about " + Math.round(-1*(((mincss.length/2274)-1)*100)) + "% smaller, or about "+ Math.round(((mincss.length/2274)*995)) +" bytes minified and gzipped."
 
 	console.log(details);
 	return mincss;

@@ -39,6 +39,23 @@
 				border-color: #2d2;
 				background: #dfd;
 			}
+
+			/* Fun h1s */
+			h1:not(.exampleh1) {
+				margin: 0.2em 0;
+				border-bottom: 5px solid;
+				margin-bottom: 15px;
+				padding-bottom: 5px;
+			}
+
+			.fourways {
+				color: #666;
+				margin-bottom: 0;
+			}
+			small {
+				color: #6b6;
+				font-size: 0.6em;
+			}
 		</style>
 
 		<!--[if lte IE 6]>
@@ -72,29 +89,36 @@
 		</nav>
 		<button class="btn btn-sm btn-close">×</button>
 		<div class="container">
-			<div>
-				<h1>Download</h1>
+			<h2 class="fourways">There are four ways to use Min:</h2>
+			<h1>CDN <small>(Recommended)</small></h1>
+			<p>
+				Since Min is only 995 bytes and all of the core components are very commonly used, for most developers it makes sense to use <a href="http://www.jsdelivr.com/#!min">the CDN version from jsdelivr</a>. This provides several benefits: the user may have cached the framework, and if they have not, it will be served from a blazingly-fast server in their location instead.
+			</p>
+			<h1>Download</h1>
+			<p>
+				Some developers prefer to serve Min from their own servers. Make sure that your server automatically gzips Min (and other CSS files) to ensure that your users get the fastest page times possible.
+			</p>
+			<a class="btn btn-sm btn-a" href="entireframework.min.css" download>Download Min</a>
+			<h1>Customized download</h1>
 				<p>
-					Since Min is only 995 bytes and all of the core components are very commonly used, for most developers it makes sense to use <a href="http://www.jsdelivr.com/#!min">the CDN version from jsdelivr</a>. This provides several benefits: the user may have cached the framework, and if they have not, it will be served from a blazingly-fast server in their location instead.
-				</p>
-				<p>
-					However, for some developers each byte counts and it makes sense to pick and choose each component. You can do so below.
-					<div id="checkboxes">
-						<label><input name="general" type="checkbox" checked disabled/>General (required)</label>
-						<label><input name="headings" type="checkbox" checked/>Headings</label>
-						<label><input name="buttons" type="checkbox" checked/>Buttons</label>
-						<label><input name="forms" type="checkbox" checked/>Forms</label>
-						<label><input name="navbar" type="checkbox"/>Navbar</label>
-						<label><input name="tables" type="checkbox"/>Tables</label>
-						<label><input name="icons" type="checkbox"/>Icons</label>
-						<label><input name="grid" type="checkbox"/>Grid</label>
-						<label><input name="messages" type="checkbox"/>Messages</label>
-					</div>
-					<a href="javascript:prettyOutput()"><button class="btn smooth btn-a">Get CSS</button></a>
-					<br>
-					<textarea id="result" rows="5" class="smooth" onclick="this.select();" readonly></textarea>
-					<h4 id="details"></h4>
-				</p>
+					For some developers, every byte counts, so it makes sense to pick and choose each component of Min. You can do so below.
+						<div id="checkboxes">
+							<label><input name="general" type="checkbox" checked disabled/>General (required)</label>
+							<label><input name="headings" type="checkbox" checked/>Headings</label>
+							<label><input name="buttons" type="checkbox" checked/>Buttons</label>
+							<label><input name="forms" type="checkbox" checked/>Forms</label>
+							<label><input name="navbar" type="checkbox"/>Navbar</label>
+							<label><input name="tables" type="checkbox"/>Tables</label>
+							<label><input name="icons" type="checkbox"/>Icons</label>
+							<label><input name="grid" type="checkbox"/>Grid</label>
+							<label><input name="messages" type="checkbox"/>Messages</label>
+						</div>
+						<a href="javascript:prettyOutput()"><button class="btn smooth btn-a">Get CSS</button></a>
+						<br>
+						<textarea id="result" rows="5" class="smooth" onclick="this.select();" readonly></textarea>
+						<h4 id="details"></h4>
+					</p>
+				</div>
 			</div>
 
 			<script src="compiledcss.js" type="text/javascript"></script>
