@@ -20,7 +20,7 @@ select {
   padding: 8px;
 }
 textarea:focus,
-input.focus {
+input:focus {
   border-color: #5ab;
 }
 textarea,

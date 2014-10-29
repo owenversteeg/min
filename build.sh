@@ -14,7 +14,7 @@ i="0"
 echo "var css = {" >> compiledcss.js
 #Begin making compiledcss.js
 
-echo -n "/* Copyright 2014 Owen Versteeg; MIT licensed */" >> entireframework.min.css
+echo -n "/*Copyright 2014 Owen Versteeg; MIT licensed*/" >> entireframework.min.css
 #Begin making entireframework.min.css; -n is to remove the newline
 
 #For each subtype, we compile the LESS file, minify it, and concatenate it into two files:
