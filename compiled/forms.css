@@ -1,24 +1,34 @@
-textarea,
-input,
+label > * {
+  display: inline;
+}
+form > * {
+  display: block;
+  margin-bottom: 10px;
+}
 .addon,
 .btn-sm,
-.nav a {
+.nav a,
+textarea,
+input,
+select {
   font-size: 14px;
 }
 textarea,
-input {
+input,
+select {
   border: 1px solid #ccc;
   padding: 8px;
 }
 textarea:focus,
-input:focus {
+input.focus {
   border-color: #5ab;
 }
 textarea,
-input[type='text'] {
+input[type=text] {
   -webkit-appearance: none;
   /* make iOS inputs pretty */
   width: 13em;
+  outline: 0;
 }
 .addon {
   box-shadow: 0 0 0 1px #ccc;

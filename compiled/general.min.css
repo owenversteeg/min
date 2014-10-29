@@ -1,1 +1,1 @@
-body,textarea,input{background:0;border-radius:0;font:16px sans-serif;margin:0}.smooth{transition:all .2s}.btn,.nav a{text-decoration:none}*{outline:0}.container{margin:0 20px;width:auto}@media(min-width:1310px){.container{margin:auto;width:1270px}}label>*{display:inline}form>*{display:block;margin-bottom:10px}
+body,textarea,input,select{background:0;border-radius:0;font:16px sans-serif;margin:0}.smooth{transition:all .2s}.btn,.nav a{text-decoration:none}.container{margin:0 20px;width:auto}@media(min-width:1310px){.container{margin:auto;width:1270px}}h2,.btn{font-size:2em}

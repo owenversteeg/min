@@ -1,19 +1,29 @@
-textarea, input, .addon, .btn-sm, .nav a {
+label > * {
+  display:inline;
+}
+
+form > * {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.addon, .btn-sm, .nav a, textarea, input, select {
 	font-size: 14px;
 }
 
-textarea, input {
+textarea, input, select {
 	border: 1px solid #ccc;
 	padding: 8px;
-
-	&:focus {
-		border-color: #5ab;
-	}
 }
 
-textarea, input[type='text'] {
+textarea:focus, input.focus {
+	border-color: #5ab;
+}
+
+textarea, input[type=text] {
 	-webkit-appearance: none; /* make iOS inputs pretty */
 	width: 13em;
+	outline: 0;
 }
 
 .addon {

@@ -18,16 +18,16 @@
   position: relative;
   top: -1px;
 }
+.nav .pagename {
+  font-size: 22px;
+  top: 1px;
+}
 .btn.btn-close {
   background: #000;
   float: right;
   font-size: 25px;
   margin-top: -54px;
   display: none;
-}
-.nav .pagename {
-  font-size: 22px;
-  top: 1px;
 }
 @media (max-width: 500px) {
   .btn.btn-close {
@@ -40,6 +40,7 @@
   .pagename {
     margin-top: -11px;
   }
+  .nav:active,
   .nav:focus {
     height: auto;
     /* Necesary for animations
