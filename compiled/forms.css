@@ -12,7 +12,8 @@ select {
   padding: 8px;
 }
 textarea:focus,
-input:focus {
+input:focus,
+select:focus {
   border-color: #5ab;
 }
 textarea,

@@ -33,7 +33,7 @@ select {
     width: 1270px;
   }
 }
-h2,
-.btn {
+.btn,
+h2 {
   font-size: 2em;
 }
