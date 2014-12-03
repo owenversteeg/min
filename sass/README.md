@@ -3,7 +3,7 @@ min sass
 
 a tiny framework that makes websites pretty
 
-To download Min, go [here](http://minfwk.com/download.html).
+To download Min, go [here](http://mincss.com/download.html).
 
 
 ###Tiny
