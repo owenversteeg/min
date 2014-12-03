@@ -11,13 +11,13 @@ Congratulations 100th stargazer Matthew (@tropicalmug)
 995 bytes minified and gzipped.
 
 ###Compatible
-Works with IE5.5 and onward, as well as all other major browsers. Check out the [docs](http://minfwk.com/docs.html) for exact support data.
+Works with IE5.5 and onward, as well as all other major browsers. Check out the [docs](http://mincss.com/docs.html) for exact support data.
 
 Of course, modern browsers give you pretty transitions and rounded corners.
 
 ###Converter
 
-Check out the (beta) Min -> Bootstrap converter. http://minfwk.com/bootstrapconverter.html
+Check out the (beta) Min -> Bootstrap converter. http://mincss.com/bootstrapconverter.html
 
 ###License
 MIT licensed.
@@ -37,7 +37,7 @@ If you want to contribute code:
 
 ###Building the latest Min
 
-WARNING! This will build the latest, pre-release version of Min. It may be broken. If you want to use an already-built Min, it's available in the file entireframework.min.css as well as through the [downloads page](http://minfwk.com/download.html).
+WARNING! This will build the latest, pre-release version of Min. It may be broken. If you want to use an already-built Min, it's available in the file entireframework.min.css as well as through the [downloads page](http://mincss.com/download.html).
 
 You must have lessc (to compile the LESS, obviously) and Java (to run YUI compressor) installed.
 
