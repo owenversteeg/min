@@ -46,44 +46,50 @@
   }
 }
 
-.btn.btn-close {
+.btn.btn-close,
+.btn-nav {
   background: $c-black;
   display: none;
-  float: right;
   font-size: 25px;
-  margin-top: -54px;
+  margin: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 
 
 // Update styling of .nav for small screens
 @media(max-width:500px) {
-  .btn.btn-close {
+  .btn.btn-close,
+  .btn-nav {
     display: block;
+  }
+  .btn-nav {
+    background: $c-black;
+    border-top: 3px solid;
+    border-bottom: 10px double;
+    color: $c-white;
+    height: 3px;
+    top: 16px;
+    outline: 13px solid $c-black;
+    right: 12px;
+    width: 20px;
+    z-index: 2;
   }
 
   .nav {
     overflow: hidden;
     // transition: max-height .5s ease-in-out, height .5s ease-in-out;
 
-    &:focus {
+    &:target {
       height: auto;
       // -- Necessary for animations
       // height: 100%;
       // max-height: 500px;
-    }
-
-    & div:before {
-      background: $c-black;
-      border-top: 3px solid;
-      border-bottom: 10px double;
-      content: '';
-      float: right;
-      height: 4px;
-      position: relative;
-      right: 3px;
-      top: 14px;
-      width: 20px;
+      & ~ .btn-nav {
+        display: none;
+      }
     }
 
     a {

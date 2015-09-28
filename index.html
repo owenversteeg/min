@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="google-site-verification" content="6K0jyXHnCKUqFBgxR_CiAo7rvsfLNCXwHPt3zetR_wk" />
-		<script> 
+		<script>
 			document.createElement("nav"); document.createElement("button");
 		</script>
 
@@ -12,8 +12,9 @@
 
 		<title>min</title>
 
-		<link href="entireframework.min.css" rel="stylesheet" type="text/css" />
-		
+		<!-- <link href="entireframework.min.css" rel="stylesheet" type="text/css" /> -->
+		<link href="sass/min-master.css" rel="stylesheet" type="text/css" />
+
 		<!--[if lt IE 9]>
 		<style>
 			html {
@@ -21,7 +22,7 @@
 			}
 		</style>
 		<![endif]-->
-		
+
 		<style type="text/css">
 			/* Min+ plugin*/
 			message {
@@ -32,7 +33,7 @@
 			}
 
 			.warning {
-				border-color: #e44; 
+				border-color: #e44;
 				background: #fdd;
 			}
 
@@ -57,25 +58,25 @@
 				}
 			</style>
 		<![endif]-->
-		
+
 		<!--[if IE 5]>
 			<style>
 				.container {
 					width: 100%;
 				}
-	
+
 				.btn-close {
 					display: none;
 				}
-	
+
 				body {
 					font: 16px Arial;
 				}
-	
+
 				h3 {
 					font-size: 20px;
 				}
-	
+
 				.nav {
 					height: 60px;
 				}
@@ -183,7 +184,7 @@
 				margin: 7px 9px 7px 0;
 			}
 		</style>
-		<nav class="nav" tabindex="-1" onclick="this.focus()">
+		<nav class="nav" id="nav">
 			<div class="container">
 				<a class="pagename current" href="index.html">Min</a>
 				<a href="docs.html">Docs</a>
@@ -195,7 +196,8 @@
 				<a href="https://github.com/owenversteeg/min">Github</a>
 			</div>
 		</nav>
-		<button class="btn btn-sm btn-close">×</button>
+		<a href="#nav" class="btn-nav"></a>
+		<a href="#close" class="btn btn-sm btn-close">×</a>
 		<div class="hero">
 			<h1 class="title">Min</h1>
 			<h3>The <em>995 byte</em> CSS framework that supports <em>IE5.5+</em></h3>
@@ -251,7 +253,7 @@
 				else window.onload = downloadJSAtOnload;
 			</script>
 		</div>
-		
+
 		<!-- Quantcast Tag -->
 		<noscript>
 			<div style="display:none;">
