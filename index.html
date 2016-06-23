@@ -13,6 +13,7 @@
 		<title>min</title>
 
 		<link href="entireframework.min.css" rel="stylesheet" type="text/css" />
+		<link href="hireme.css" rel="stylesheet" type="text/css" />
 		
 		<!--[if lt IE 9]>
 		<style>
@@ -21,26 +22,6 @@
 			}
 		</style>
 		<![endif]-->
-		
-		<style type="text/css">
-			/* Min+ plugin*/
-			message {
-				display: block;
-				padding: 2em;
-				background: #def;
-				border-left: 5px solid #44e;
-			}
-
-			.warning {
-				border-color: #e44; 
-				background: #fdd;
-			}
-
-			.great {
-				border-color: #2d2;
-				background: #dfd;
-			}
-		</style>
 
 		<!--[if lte IE 6]>
 			<style>
@@ -102,6 +83,7 @@
 				font-size: 90px;
 				margin-top: 0;
 				color: white;
+				margin-bottom: 20px;
 			}
 
 			.hero em {
@@ -119,7 +101,7 @@
 				background-image: url('congruent_outline.png');
 				margin: 0;
 				width: 100%;
-				padding: 50px;
+				padding: 50px 50px 10px 50px;
 				-webkit-box-sizing: border-box;
 				-moz-box-sizing: border-box;
 				box-sizing: border-box;
@@ -173,11 +155,11 @@
 			}
 
 			/* Otherwise it spills over on iOS */
-			.download-btn {
+			/*.download-btn {
 				font-size: 1.3em;
 				padding: 8px 19px 9px;
 				line-height: 2em;
-			}
+			}*/
 
 			.btn {
 				margin: 7px 9px 7px 0;
@@ -197,67 +179,282 @@
 			.hireme h1 {
 				margin: 30px 0 0 0;
 			}
+
+			.i {  
+				color: #91D564;
+				position: relative;
+			}
+			.i:before {
+				content: "ı";
+				position: absolute; 
+				color: white;
+			}
+
+			.money input, select {
+				color: white;
+				width: 7em;
+			}
+
+			.money input {
+				text-align: center;
+			}
+
+			.money input, .money label, .money select {
+				font-size: 20px;
+			}
+
+			.money input.short {
+				width: 2em;
+			}
+
+			.money select {
+				width: 10.15em;
+			}
+
+			.c4 {
+				padding: 10px;
+				box-sizing: border-box;
+			}
+
+			option {
+				color: black;
+			}
+
+			h3 {
+				font-size: 27px;
+				margin: 0 0 20px 0;
+			}
+
+			.hero input:focus, .hero select:focus {
+				border-color: #91D564;
+			}
+
+			.mobileonly {
+				display: none;
+			}
+
+			.hero > *:not(.timeismoney):not(.maintext) br {
+				display: none;
+			}
+
+			.timeholder {
+					box-shadow: -3px 0 0 0;
+			}
+
+			@media (max-width: 870px) {
+			.timeholder {
+				box-shadow: 0 0 0 0;
+			}
+
+				.hero {
+					padding: 14px;
+				}
+
+				.hero .row .col.c4 {
+					width: 100%;
+					/*width: 33.33%;*/
+					padding: 0;
+					font-size: 15px;
+					line-height: 20px;
+				}
+
+				.hero h3 {
+					margin: 10px 0 10px 0;
+				}
+
+				.hero .c4:first-of-type h3 {
+					margin-top: 0;
+				}
+
+				.unnecessary {
+					display: none;
+				}
+
+				.mobileonly {
+					display: initial;
+				}
+
+				h4.mobileonly {
+					margin-top: 3px;
+					display: block;
+				}
+
+				h1.title {
+					margin-bottom: 0;
+				}
+
+				/* Fancy! https://css-tricks.com/line-on-sides-headers/ */
+				.fancy {
+				  text-align: center;
+				  display: inline-block;
+				  position: relative;
+				}
+				.fancy:before,
+				.fancy:after {
+				  content: "";
+				  position: absolute;
+				  height: 5px;
+				  border-bottom: 3px solid white;
+				  /*border-top: 1px solid white;*/
+				  top: 4px;
+				  width: 600px;
+				}
+				.fancy:before {
+				  right: 100%;
+				  margin-right: 8px;
+				}
+				.fancy:after {
+				  left: 100%;
+				  margin-left: 8px;
+				}
+
+				.hero br {
+					display: block;
+				}
+
+				/*@media (min-height: 600px) {*/
+					.hero h3 {
+						margin: 20px 0 20px 0
+					}
+				/*}*/
+
+				#lt {
+					margin: 0;
+				}
+			}
+
+			.timeismoney h3:not(#lt) {
+				font-size: 38px;
+			}
+
+			.timeholder {
+				padding: 0 15px;
+				box-sizing: border-box;
+			}
+
+			/* I like big btns and i cannot lie */
+			.bigbtns .btn {
+				width: 140px;
+			}
+
+			.timeismoney h3.fancy {
+				line-height: 0.5;
+			}
+
+			.sitebutton {
+				border: 1px solid;
+				padding: 9.5px;
+				border-radius: 4px;
+				color: black;
+				font-size: 1.2em;
+				text-align: center;
+				width: 100%;
+				display: inline-block;
+				font-weight: bold;
+				box-sizing: border-box;
+				text-decoration: none;
+			}
 		</style>
-		<nav class="nav" tabindex="-1" onclick="this.focus()">
+		<!--<nav class="nav" tabindex="-1" onclick="this.focus()">
 			<div class="container">
 				<a class="pagename current" href="index.html">Min</a>
 				<a href="docs.html">Docs</a>
-				<!--
-					<a href="bootstrapconverter.html">Bootstrap Converter</a>
-					<a href="examples.html">Examples</a>
-				-->
+				<a href="examples.html">Examples</a>
 				<a href="download.html">Download</a>
 				<a href="https://github.com/owenversteeg/min">Github</a>
 			</div>
-		</nav>
+		</nav>-->
 		<button class="btn btn-sm btn-close">×</button>
 		<div class="hero">
-			<h1 class="title">Min</h1>
-			<h3>The <em>995 byte</em> CSS framework that supports <em>IE5.5+</em></h3>
+			<h1 class="title">M<span class="i">i</span>n</h1>
+			<!--<h3>The <em>995 byte</em> CSS framework that supports <em>IE5.5+</em></h3>-->
+			<h4 class="mobileonly">The world's <em>fastest</em> CSS framework</h4>
+			<div class="row maintext">
+				<div class="col c4"><h3 class="fancy">Milliseconds matter<span class="unnecessary">.</span></h3><br>Amazon found that each 100ms delay cost them over a <em>billion</em> dollars in sales. Google found that 1/3 of this hit remained after decreasing loading times. <span class="unnecessary">Your CSS framework is costing you money. </span></div>
+				
+				<div class="col c4"><h3 class="fancy">Tried and tested<span class="unnecessary">.</span></h3><br>Min is used by over <em>65,000</em> people in 195<span class="unnecessary">+</span> countries, from North Korea to <span class="unnecessary"> South Sudan to Mongolia to</span> Somalia. Think your software is critical? Try a webapp keeping you alive in a warzone.</div>
+				
+				<div class="col c4"><h3 class="fancy">Works everywhere<span class="unnecessary">.</span></h3><br>That's no exaggeration. Min works on your decade-old Opera 9 install, your grandpa's <em>IE5.5</em>, and your kid's Nintendo DS. Wikipedia gets 500MM hits from IE6 a month... Bootstrap 4 doesn't even support IE8.</div>
+			</div>
+			<div class="row timeismoney">
+				<div class="col c6 moneyholder">
+					<div class="money">
+						<h3 class="fancy">Save money<span class="unnecessary">.</span></h3><br>
+						<label for="revenue">Revenue $ </label> <input value="500,000" type="text" onchange="updateLosses()" onkeyup="updateLosses()" class="smooth" id="revenue" name="revenue"> <label class="unnecessary">per year</label><label class="mobileonly">/yr</label>
+						<br><br><label for="timehit">Current framework load time: </label><select onchange="updateLosses()" class="smooth" name="timehit" id="timehit">
+							<option value="0">None</option>
+							<option value=".01">100ms</option> 
+							<option value=".02">200ms (PureCSS)</option>
+							<option value=".03">300ms</option>
+							<option value=".04" selected>400ms (Bootstrap)</option>
+							<option value=".05">500ms</option>
+							<option value=".06">600ms</option>
+							<option value=".07">700ms</option>
+						</select>
+						<br><br>
+						<label>Switching to Min saves you</label><h3 id="lt"><span id="lossText_e">$20,000</span> per year.</h3>
+						<!--<label for="devtime">Developer time </label> <input value="9" type="text" class="short" id="revenue" name="revenue"> hours <label for="rates">at $</label> <input class="short" value="200" type="text" id="rates" name="rates"> /hr-->
+						<script>
+							function numberWithCommas(x) {
+								return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+							}
+
+							function updateLosses() {
+								var totalRev = parseInt(revenue.value.replace(/\,/g,''))
+								var losses = Math.round(totalRev * timehit.value)
+								var lossText = '$' + numberWithCommas(losses)
+								lossText_e.innerHTML = lossText
+							}
+						</script>
+					</div>
+				</div>
+				<div class="col c6 timeholder">
+					<h3 class="fancy">Save time<span class="unnecessary">.</span></h3><br>
+					Min provides easy copy-and-paste examples for every element. You can get started with any of the provided templates, or you can read the complete and concise documentation with visual examples for every part of Min.
+					<br><br>Min also styles your page using hundreds of times fewer properties vs. other CSS frameworks. This makes it easy to customize your page to look novel, avoiding the "bootstrapization" trend that makes your page look exactly like the rest.
+				</div>
+			</div>
+			
+			<div class="row intro bigbtns">
+				<div class="col c2">&nbsp;</div>
+				<div class="col c4">
+					<a href="docs.html" class="btn em smooth">Docs</a>
+				</div>
+				<div class="col c4">
+					<a href="examples.html" class="btn smooth">Examples</a>
+				</div>
+				<div class="col c2">&nbsp;</div>
+			</div>
 		</div>
-		<!--[if IE 5]> <br><br><![endif]-->
-		<div class="row intro">
-			<div class="col c2">&nbsp;</div>
-			<div class="col c4">
-				<h3>Exceptional browser support</h3>
-				<p>Min supports IE5.5+, FF3+, Opera 9+, and Safari 4+, the best browser support of any CSS framework by far. Unfortunately, IE5.5 does not support border-radius and as such does not have rounded button corners. That said, IE5.5 users will be so surprised to see a site load correctly they will overlook this.</p>
-			</div>
-			<div class="col c4">
-				<h3>Ridiculously small</h3>
-				<p>Min is only 995 bytes, so it will never slow down your website unlike bulky frameworks like Bootstrap. Min also does not require Javascript. Pages built with Min can load faster than a blink of an eye. (Average loading times for three Min pages tested were 334ms; a human eye blink is 400ms.)</p>
-			</div>
-			<div class="col c2">&nbsp;</div>
-		</div>
-		<!--[if lt IE 7]> <br><br><br><![endif]-->
-		<div class="row intro">
-			<div class="col c2">&nbsp;</div>
-			<div class="col c4">
-				<h3>Unprescriptive</h3>
-				<p>Min is extremely lightweight and doesn't prescribe a certain design for you, like Bootstrap. It's easy to override the default rules since there are so few of them and they are at low specificity levels. This customizability helps you avoid the Yet Another Bootstrap Site phenomenon.</p>
-			</div>
-			<div class="col c4">
-				<h3>Semantic markup</h3>
-				<p>Min uses the new HTML5 semantic elements liberally, has clear and short class names, and uses &lt;div&gt;s sparingly. Patients that switched from Bootstrap to Min reported up to a ninefold decrease in markup and drastic improvements in most cases of divitis. Ask your CSS-atrician if Min is right for you.</p>
-			</div>
-			<div class="col c2">&nbsp;</div>
-		</div>
-		<!--[if lt IE 7]> <br><br><br><![endif]-->
-		<div class="row intro">
-			<div class="col c2">&nbsp;</div>
-			<div class="col c4">
-				<a href="docs.html" class="btn em smooth">Docs</a>
-			</div>
-			<div class="col c4">
-				<a href="download.html" class="btn smooth download-btn">Download</a>
-			</div>
-			<div class="col c2">&nbsp;</div>
-		</div>
-		<div class="container intro hireme">
+
+		<div class="pod hire">
 			<h1>Hire Owen</h1>
-			<p>As the creator of Min, the smallest and fastest CSS framework in the world, I know CSS. My software is used by over 100,000 people in 185+ countries, and I have countless years of experience with front-end work. Nobody knows Min better than I do, and for this month only I am offering a <b>50% discount to anyone using Min in their project.</b> Use the link below to get a quote at my website.</p>
-			<a href="http://owenversteeg.com" class="btn smooth download-btn btn-a">Hire Me</a>
-			<br><br>
+			<h1 id="totalestimate" class="right">$35</h1>
+
+			<p>As the creator of Min, I know CSS. My software is used by over 100,000 people in 200+ countries, and I have countless years of experience with front-end work. Nobody knows Min better than I do.</p>
+
+			<form class="right" action="//formspree.io/me@owenversteeg.com" method="POST">
+				<input class="right notinyfonts" id="email" type="email" required placeholder="Email" name="_replyto">
+				<textarea id="message" onkeyup="if (messageModified === false) mixpanel.track('Message modified'); messageModified = true;" name="message" class="right"></textarea>
+				<input class="right notinyfonts" type="submit" value="Send message">
+			</form>
+
+			<div class="timepicker">
+				<!-- the this.value fuckery is to set the cursor to the end of the textbox -->
+				<div><input type="number" value=0 class="notinyfonts" min=0 id="hourinput"> <h3 id="hourh3" class="notinyfonts">hours</h3> </div>&nbsp;<div><input type="number" class="notinyfonts" value=20 min=0 max=59 id="minuteinput" autofocus onfocus="this.value = this.value"> <h3 id="minute3" class="notinyfonts">minutes</h3></div>
+			</div>
+
+			
+
+			<label class="notinyfonts"><input type="checkbox" id="nonprofit"> Nonprofit (-30%)</label>
+			<label class="notinyfonts"><input type="checkbox" id="min" checked> Involves Min (-50%, June only)</label>
+			<label class="notinyfonts"><input type="checkbox" id="fullstack"> Full-stack (+15%)</label>
+			<label class="notinyfonts"><input type="checkbox" id="hackhands"> Hire me on HackHands (+20%, I have all 5-star reviews)</label>
+
+			<a class="sitebutton notinyfonts" href="http://owenversteeg.com">Go to OwenVersteeg.com for more about me</a>
 		</div>
+		<script src="hireme.js"></script>
+
 		<div class="container">
 			<script type="text/javascript">
 				function downloadJSAtOnload() {
@@ -272,6 +469,8 @@
 				else window.onload = downloadJSAtOnload;
 			</script>
 		</div>
+
+
 		
 		<!-- Quantcast Tag -->
 		<noscript>
