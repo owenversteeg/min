@@ -17,6 +17,7 @@
 }
 
 .col {
+  margin: 0 1%;
   float: left;
 }
 
@@ -40,7 +41,7 @@ $grid-list: (
 
 @each $value in $grid-list {
   .#{nth($value, 1)} {
-    width: nth($value, 2);
+    width: nth($value, 2) - 2%;
   }
 }
 
