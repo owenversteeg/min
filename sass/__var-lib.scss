@@ -12,20 +12,20 @@
 
 
 // Dark Colors
-$c-black:         #000;
-$c-off-black:     #999;
-$c-darker:        #888;
-$c-dark:          #777;
+$c-black:         #000 !default;
+$c-off-black:     #999 !default;
+$c-darker:        #888 !default;
+$c-dark:          #777 !default;
 
 
 // Medium Colors
-$c-grey-dark:     #aaa;
-$c-grey:          #ccc;
-$c-grey-light:    #eee;
+$c-grey-dark:     #aaa !default;
+$c-grey:          #ccc !default;
+$c-grey-light:    #eee !default;
 
 // Light Colors
-$c-white:         #fff;
+$c-white:         #fff !default;
 
 
 // Inputs
-$c-focus:         #5ab;
+$c-focus:         #5ab !default;
