@@ -23,7 +23,7 @@ input, textarea {
 }
 
 
-input[type='text'], textarea {
+input[type='text'], input[type='password'], textarea {
   -webkit-appearance: none; // make iOS inputs pretty
   width: 13em;
 }
