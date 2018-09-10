@@ -5,7 +5,6 @@ a tiny framework that makes websites pretty
 
 Written in LESS and Sass, compiled to CSS.
 
-Congratulations 100th stargazer Matthew (@tropicalmug)
 
 ### Tiny
 995 bytes minified and gzipped.
@@ -48,7 +47,6 @@ TL;DR Min really is the world's smallest CSS framework, however you slice it.
 
 We personally feel that the criteria for "world's smallest CSS framework" are buttons, inputs, navbars, tables, icons, grids, headings, and standardization of these elements across the "Big 5" browsers (Chrome, Firefox, Opera, Safari, and Internet Explorer.) Of course, your criteria for what a CSS framework is are likely to be different, and thus you are encouraged to (on the Downloads page) download whatever parts you feel to be relevant. No matter what you select (and what you compare Min to) Min will be smaller. Thus, Min really is the world's smallest CSS framework, no matter your criteria for what a CSS framework is.
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/OwenVersteeg/min/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ### Sponsors
 
